@@ -36,7 +36,7 @@ There are several stretch goals inside `index.js`. You may work on these once yo
 
 **Why aren't my results showing up in the console?**
 
-Make sure you are invoking your function after defining it in order to view results in the console.
+Make sure you are invoking your function after defining and wrapping a console.log around the invocation in order to view results in the console.
 
 ## Resources
 
