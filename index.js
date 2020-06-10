@@ -136,11 +136,13 @@ and should return a new array that is identical to the old array. You can name t
 
 // LOGIC the goal of this function is to take the array originalFlavors and make a copy of it
 
-function copy(newArr, arr){
+function copy(arr){
     const newArr = arr.slice();
-}
-console.log(copy(copyOfMaster, originalFlavors));
+    return newArr;
+} 
+console.log(copy(originalFlavors));
 
+// why would we rather put the console.log inside the function here? 
 
     
 
@@ -159,11 +161,19 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+// Logic, search array named originalFlavors for the indexes that include the string (chocolate), and return to me a new list with those items. 
 
-    /*code here*/
+function filterByWord(arr, string){ // LOGIC the goal of this function is to search originalFlavors, and for every item that contains a string, remove them and push them to a new array 
+        let newArr = []; // newArr is ____ it's empty here? 
+        for(let i = 0; i < arr.length; i++){ // started loop through the array, searching the length of the index from 0-end
+            if(arr[i].includes(string)){ // if array item include the string
+                newArr.push(arr[i]); //push the array items containing the string to newArr 
+            }
+        }
 
+    return newArr; // then return newArr content to me 
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 
@@ -172,7 +182,7 @@ function filterByWord(/*code here*/){
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
 
 Your function should accept: 
-
+//joins and splits
 (1) an array
 
 and should return the average number of words per item in the array. 
@@ -267,8 +277,11 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
+function getRandomFlavors(arrOne, arrTwo, arrThree, arrFour){
 
-    /*code here*/
+
+        console.log(arguments)
 
 }
+
+getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors)
