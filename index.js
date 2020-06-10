@@ -160,19 +160,17 @@ hint - you can use the .includes method to help you solve this */
 
 function filterByWord(arr, str){
     let newArr = [];
+
     for(let i = 0; i<arr.length; i++){ 
         let item = arr[i];
         if (item.includes(str)){
-            newArr.push(item);
-        }else{
-            continue;
+            newArr.push(item)
         }
+       
     }return newArr
-
-    /*code here*/
 }
 
-filterByWord(originalFlavors, "chocolate");
+filterByWord(originalFlavors, "Chocolate");
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
@@ -180,7 +178,7 @@ filterByWord(originalFlavors, "chocolate");
 
 Your function should accept: 
 
-(1) an array
+(1) an array    
 
 and should return the average number of words per item in the array. 
 
@@ -283,7 +281,6 @@ var regionalFlavors = ["Pink Bubblegum",
 
 function getRandomFlavors(arr1, arr2, arr3, arr4){
     let arr = arr1.concat(arr2, arr3, arr4);
-    console.log(arr)
     let newArr = [];
     while(newArr.length < 31){
         let item = arr[Math.floor(Math.random()*arr.length)]
