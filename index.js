@@ -163,12 +163,11 @@ function filterByWord(arr, str){
     for(let i = 0; i<arr.length; i++){ 
         let item = arr[i];
         if (item.includes(str)){
-            console.log(item)
             newArr.push(item);
         }else{
             continue;
         }
-    }return console.log(newArr)
+    }return newArr
 
     /*code here*/
 }
@@ -194,7 +193,7 @@ for (let i = 0; i<arr.length; i++){
     counter +=1;
    itemLength += arr[i].split(' ').length;
 }
-return console.log(itemLength/counter)
+return itemLength/counter;
     /*code here*/
 
 }
@@ -282,8 +281,17 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
+function getRandomFlavors(arr1, arr2, arr3, arr4){
+    let arr = arr1.concat(arr2, arr3, arr4);
+    console.log(arr)
+    let newArr = [];
+    while(newArr.length < 31){
+        let item = arr[Math.floor(Math.random()*arr.length)]
+        newArr.push(item);
+    }
+return newArr;
 
     /*code here*/
 
 }
+getRandomFlavors(newFlavors, seasonalFlavors, originalFlavors, regionalFlavors)
