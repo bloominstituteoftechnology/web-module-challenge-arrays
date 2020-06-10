@@ -138,7 +138,7 @@ Your function should accept:
 
 and return a new array. 
 
-For example, filterByWord(originalFlavors, "chocolate") should return ["Chocolate", "Chocolate Almond",..."Chocolate Ribbon"].
+For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolate", "Chocolate Almond",..."Chocolate Ribbon"].
 
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
