@@ -181,6 +181,9 @@ console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
 
+//the average number of words in an array is found by adding up the number of words in each array and diving by the number of arrays. 
+
+
 Your function should accept: 
 //joins and splits
 (1) an array
@@ -277,11 +280,14 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(arrOne, arrTwo, arrThree, arrFour){
-
-
-        console.log(arguments)
-
+function getRandomFlavors(arr1, arr2, arr3, arr4){
+        const allTheFlavors = [...arr1, ...arr2, ...arr3, ...arr4]; // create an array, allTheFlavors, that is arr1-4 combined using spread 
+        const totalFlavors = allTheFlavors.length; 
+        const randomFlavors = []; 
+        for (let i = 0; i < 31; i++){
+            let randomNum = Math.floor(Math.random() * totalFlavors);
+            randomFlavors.push(allTheFlavors[randomNum]);
+        }
+        return randomFlavors;      
 }
-
-getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors)
+console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
