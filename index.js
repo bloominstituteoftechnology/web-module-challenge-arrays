@@ -155,9 +155,9 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(){
-
-    
+function copy(newAr, orgAr){
+newAr = orgAr.slice();
+    return newAr;
 
 }
 
@@ -185,9 +185,13 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(){
-
-    
+function filterByWord(arr, word){
+let nr = [];
+    for(let v = 0; v < arr.length; v++){
+        if(arr[i].includes(word) === true){ 
+            nr.unshift(arr[i]);
+        }
+    }
 
 }
 
