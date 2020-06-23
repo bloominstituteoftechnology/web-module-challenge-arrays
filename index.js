@@ -41,8 +41,13 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(){
+function is31Flavors(arr){
+if(arr.length === 31){
+    return true;
 
+}else{
+    return false;
+}
     
 
 }
@@ -60,8 +65,10 @@ Your function should add the flavor to the front of the array and console.log th
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
  */ 
 
-function addFlavor(){
-
+function addFlavor(flavor,arr){
+arr.unshift(flavor);
+arr.forEach( r => console.log(r));
+//return arr;
     
 
 }
@@ -77,8 +84,10 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-function removeLastFlavor(){
-
+function removeLastFlavor(arr){
+arr.pop();
+arr.forEach( r => console.log(r));
+return arr;
     
 
 }
@@ -92,9 +101,11 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(){
+function getFlavorByIndex(arr,indx){
 
-    
+    let v = arr[indx];
+    console.log(v);
+    return v;
 
 }
 
