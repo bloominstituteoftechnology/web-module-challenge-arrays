@@ -127,7 +127,7 @@ function removeFlavorByName(originalFlavors, string){
 
     console.log(originalFlavors);
 }
-removeFlavorByName(originalFlavors, "Eggnog");
+removeFlavorByName(originalFlavors, "Vanilla");
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -162,12 +162,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+function filterByWord(originalFlavors, string){
+    let filteredArray = [];
+    for (let i = 0; i < originalFlavors.length; i++) {
+        if(originalFlavors[i].includes(string)) {
+            filteredArray.push(originalFlavors[i]);
+        }
+    }
+   console.log(filteredArray);
 }
-
+filterByWord(originalFlavors, "Chocolate");
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
