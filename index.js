@@ -130,7 +130,12 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 Hint: You can use .splice() for this
 
 */
-let newAr = originalFlavors;
+// Make a copy of the array that does not share a spot in memory to the original array
+let newAr = [];
+for(let i = 0; i < originalFlavors.length; i++){
+    newAr[i] = originalFlavors[i];
+}
+
 function removeFlavorByName(arr,flavor){
     let theFlav;
 for(let i = 0; i < flavor.length; i++){
@@ -164,7 +169,9 @@ newAr = orgAr.slice();
     return newAr;
 
 }
-
+let r = copy(newAr,originalFlavors);
+newAr.forEach(rr => console.log('its new ar'+rr));
+r.forEach(rr => console.log('its r array ' + rr));
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting
  all of their 
 chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array 
