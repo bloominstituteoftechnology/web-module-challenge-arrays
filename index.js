@@ -199,13 +199,15 @@ hint - you can use the .includes method to help you solve this */
 function filterByWord(arr, word){
 let nr = [];
     for(let v = 0; v < arr.length; v++){
-        if(arr[i].includes(word) === true){ 
-            nr.unshift(arr[i]);
+        if(arr[v].includes(word) === true){ 
+            nr.unshift(arr[v]);
         }
     }
+    return nr;
 
 }
-
+let myNr = filterByWord(originalFlavors,'Chocolate');
+myNr.forEach(z => console.log(z));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
