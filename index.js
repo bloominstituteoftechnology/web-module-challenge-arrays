@@ -100,7 +100,7 @@ for ( i = 0; i < arrayProvided.length; i++) {
     
 }
 
-(removeFlavorByName(originalFlavors, 'Vanilla'));
+// (removeFlavorByName(originalFlavors, 'Vanilla'));
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -111,30 +111,12 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(arrayProvided, arrayCop){
-    
+ function copy(arrayCop, arrayProvided)  {
+    arrayCop = [...arrayProvided];
+    return arrayCop;
+ }
 
-   
-    console.log(arrayCop = [...arrayProvided]);
-}
-
-
-copy(originalFlavors, arrayCop);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ console.log(copy([], originalFlavors));
 
 
 
@@ -153,11 +135,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(arrayProvided, flavorName){
 
-    /*code here*/
-
+    let newArray=[];
+    for ( i = 0; i < arrayProvided.length; i++){
+        if ( arrayProvided[i].includes(flavorName)){
+            newArray.push(arrayProvided[i])
+        }
+    }
+    return newArray;
 }
+
+console.log(filterByWord(originalFlavors, "Vanilla"));
 
 
 
