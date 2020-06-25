@@ -31,7 +31,7 @@ var originalFlavors = ["Banana Nut Fudge",
     "Vanilla Burnt Almond"]
 
     // kjwbfbkwefbkwebbfkweblw
-    var originalFlavors1 = ["Banana Nut Fudge",
+    var originalFlavorsOrigin = ["Banana Nut Fudge",
     "Black Walnut",
     "Burgundy Cherry",
    "Butterscotch Ribbon",
@@ -200,13 +200,18 @@ Your function should accept:
 and should return a new array that is identical to the old array. 
 You can name the new array however you'd like. */
 
-function copy(OriginalArray, newArray){
+function copy(originalArray, newArray){
 
     /*code here*/
     console.log(`TASK 6`);
-    newArray = [...OriginalArray]
+    originalArray = originalFlavorsOrigin;
+    newArray = originalFlavors;
+    console.log('-->ORIGINAL ARRAY<--');
+    console.log(originalFlavorsOrigin);
+    console.log('-->NEW ARRAY<--');
+    console.log(newArray);
 }
-console.log(copy(originalFlavors1));
+copy();
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants 
 to create promotional materials highlighting all of their chocolate 
@@ -231,17 +236,21 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(){
+function filterByWord(array7, string7){
 
     /*code here*/
     console.log(`TASK 7`);
-    // let = newArray =[];
-    for(i=0; i < flavorArray.length;i++){
-        if(flavorArray[i].includes(arrayString)){
-
+    let newArray =[];
+    for(let i=0; i<array7.length; i++){
+        if(array7[i].includes(string7)){
+            newArray.push(array7[i]);
+            console.log(newArray);
+        }
         }
     }
-}
+    
+filterByWord(originalFlavors, 'Chocolate');
+
 
 
 
