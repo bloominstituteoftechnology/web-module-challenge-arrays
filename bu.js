@@ -273,14 +273,17 @@ function getAverageWordLength(nar){
 console.log('Average words ' +getAverageWordLength(originalFlavors));
 
 
-/* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will 
-randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
+/* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. 
+Write a function that will 
+randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and 
+regionalFlavors.
 
 Your function should accept 4 different arrays,
 
 and should return a new array called randomFlavors with a length 31.
 
-forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", 
+forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return 
+["Strawberry Cheesecake", 
 "Eggnog,"..."Chocolate"].*/
 
 // Data ⬇️
