@@ -193,10 +193,12 @@ if(newAr === null){
     
 }else{
     if (newAr === undefined){
-
+        for(let i = 0; i < originalFlavors.length; i++){
+            newAr[i] = originalFlavors[i];
+        }
     }else{
 
-        newAr = removeFlavorByName(newAr,'Chocolate Fudge');
+        newAr = removeFlavorByName(newAr,'Chocolate Ribbon');
         // newAr.forEach(function(task){
         //     console.log('task 5 ' +task);
         //   });
@@ -240,13 +242,15 @@ let nr = [];
     return nr;
 
 }
-let myNr = filterByWord(originalFlavors,'Chocolate');
-myNr.forEach(z => console.log(z));
+let wrd = 'Chocolate';
+let myNr = filterByWord(originalFlavors,wrd);
+myNr.forEach(z => console.log('These are the kinds of flavors with the word ' + wrd + ' ' + z));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
-/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function 
+/* STRETCH 1: Write a function that returns the average number of words in an array. 
+You should be able to use this function 
 for any array, but can test with originalFlavors.
 
 Your function should accept: 
@@ -257,11 +261,16 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(){
-
-    
+function getAverageWordLength(nar){
+    let wrds = 0;
+    for(let i  = 0; i < nar.length; i++){
+            wrds = wrds + nar[i].length;
+    }
+    re = wrds/nar.length;
+    return re;
 
 }
+console.log('Average words ' +getAverageWordLength(originalFlavors));
 
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will 
