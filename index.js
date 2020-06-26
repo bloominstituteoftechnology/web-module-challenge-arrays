@@ -52,7 +52,7 @@ if(arr.length === 31){
 
 }
 
-console.log('Do you have 31 Flavors? '+ is31Flavors(originalFlavors));
+console.log('Do you have 31 Flavors? ', is31Flavors(originalFlavors));
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. 
 You need to modify the array to include this flavor. 
 
@@ -68,13 +68,15 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(flavor,arr){
 arr.unshift(flavor);
-arr.forEach( r => console.log(r));
+//arr.forEach( r => console.log(r));
 //return arr;
     
 
 }
 
-addFlavor('What', originalFlavors);
+addFlavor('What', originalFlavors ); 
+console.log(originalFlavors);
+
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item
  from the end of the array. 
 
@@ -88,13 +90,15 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 
 function removeLastFlavor(arr){
 arr.pop();
-arr.forEach( r => console.log(r));
-return arr;
+//arr.forEach( r => console.log(r));
+//return arr;
     
 
 }
 let f = removeLastFlavor(originalFlavors);
-f.forEach(r => console.log(r));
+console.log(originalFlavors);
+
+//f.forEach(r => console.log(r));
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
 Your function should accept:
@@ -108,12 +112,16 @@ function getFlavorByIndex(arr,indx){
 
     let v = arr[indx];
     console.log(v);
-    return v;
+  //  return v;
 
 }
 let indexnum = 1;
 let whatflavor = getFlavorByIndex(originalFlavors,indexnum);
-console.log(indexnum + " is the "+ whatflavor);
+//console.log(originalFlavors);
+
+
+
+//console.log(indexnum + " is the "+ whatflavor);
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based
  on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and
   remove that flavor from the array. 
@@ -129,9 +137,10 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 
 Hint: You can use .splice() for this
 
-*/
+*/ // remove flavor by name get flavor by index
 // Make a copy of the array that does not share a spot in memory to the original array
-let newAr = [];
+let newAr = [originalFlavors.length];
+
 for(let i = 0; i < originalFlavors.length; i++){
     newAr[i] = originalFlavors[i];
 }
@@ -152,8 +161,13 @@ for(let i = 0; i < flavor.length; i++){
     
 
 }
- newAr = removeFlavorByName(newAr,'Chocolate');
+ newAr = removeFlavorByName(newAr,'Butterscotch Ribbon');
+ for(let f = 0; f < newAr.length; f++){
+     
+     console.log('task 5' +newAr[f]);
+ }
 newAr.forEach(e => console.log(e));
+//console.log(originalFlavors);
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a 
 function
  called copy that makes a copy of the array. 
@@ -170,8 +184,8 @@ newAr = orgAr.slice();
 
 }
 let r = copy(newAr,originalFlavors);
-newAr.forEach(rr => console.log('its new ar'+rr));
-r.forEach(rr => console.log('its r array ' + rr));
+newAr.forEach(rr => console.log('the other'+rr));
+r.forEach(rr => console.log('Task 6 ' + rr));
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting
  all of their 
 chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array 
