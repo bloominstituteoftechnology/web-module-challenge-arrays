@@ -118,6 +118,35 @@ function getFlavorByIndex(arr,indx){
 let indexnum = 1;
 let whatflavor = getFlavorByIndex(originalFlavors,indexnum);
 console.log(indexnum + " is the "+ whatflavor);
+
+let newAr = [originalFlavors.length];
+// for(let i = 0; i < originalFlavors.length; i++){
+//     newAr[i] = originalFlavors[i];
+// }
+
+
+
+/* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a 
+function
+ called copy that makes a copy of the array. 
+
+Your function should accept: 
+
+2 arguments 1 for your new array and one for your original array
+
+and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+
+function copy(newAa, orgAr){
+    newAa = orgAr.slice();
+        return newAa;
+    
+    }
+    let r = copy(newAr,originalFlavors);
+    newAr.forEach(rr => console.log('task 6 '+rr));
+    r.forEach(rr => console.log('task 6 ' + rr));
+
+
+    newAr = originalFlavors.slice();
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based
  on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and
   remove that flavor from the array. 
@@ -135,47 +164,66 @@ Hint: You can use .splice() for this
 
 */
 // Make a copy of the array that does not share a spot in memory to the original array
-let newAr = [];
-for(let i = 0; i < originalFlavors.length; i++){
-    newAr[i] = originalFlavors[i];
-}
 
 function removeFlavorByName(arr,flavor){
     let theFlav;
-for(let i = 0; i < flavor.length; i++){
-    if(arr[i] === flavor){
-        theFlav = i;
-    } else {
-        theFlav  = null;
-    }
+for(let i = 0; i < arr.length; i++){
     if( theFlav != null){
         arr.splice(theFlav,1);
         return arr
     }
+    if(arr[i] === flavor){
+        theFlav = i;
+        arr.splice(theFlav,1);
+        return arr
+    } 
+   
 }
     
 
 }
- newAr = removeFlavorByName(newAr,'Chocolate');
-newAr.forEach(e => console.log(e));
-/* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a 
-function
- called copy that makes a copy of the array. 
 
-Your function should accept: 
 
-2 arguments 1 for your new array and one for your original array
-
-and should return a new array that is identical to the old array. You can name the new array however you'd like. */
-
-function copy(newAr, orgAr){
-newAr = orgAr.slice();
-    return newAr;
+function removeFlavorByName2(arr,flavor){
+    let theFlav;
+for(let i = 0; i < flavor.length; i++){
+    if( theFlav != null){
+        arr.splice(theFlav,1);
+        return arr
+    }
+    if(arr[i] === flavor){
+        theFlav = i;
+        arr.splice(theFlav,1);
+        return arr
+    } else {
+        theFlav  = null;
+    }
+   
+}
+    
 
 }
-let r = copy(newAr,originalFlavors);
-newAr.forEach(rr => console.log('its new ar'+rr));
-r.forEach(rr => console.log('its r array ' + rr));
+
+if(newAr === null){
+    for(let i = 0; i < originalFlavors.length; i++){
+        newAr[i] = originalFlavors[i];
+    }
+    
+}else{
+    if (newAr === undefined){
+
+    }else{
+
+        newAr = removeFlavorByName(newAr,'Eggnog');
+        // newAr.forEach(function(task){
+        //     console.log('task 5 ' +task);
+        //   });
+
+newAr.forEach(e => { console.log('task 5 ' + e);});
+
+    }
+}
+
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting
  all of their 
 chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array 
