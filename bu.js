@@ -95,7 +95,7 @@ arr.pop();
     
 
 }
-let f = removeLastFlavor(originalFlavors);
+ removeLastFlavor(originalFlavors);
 console.log(originalFlavors);
 
 //f.forEach(r => console.log(r));
@@ -115,7 +115,7 @@ function getFlavorByIndex(arr,indx){
     return v;
 
 }
-let indexnum = 1;
+let indexnum = 30;
 let whatflavor = getFlavorByIndex(originalFlavors,indexnum);
 console.log(indexnum + " is the "+ whatflavor);
 
@@ -184,25 +184,7 @@ for(let i = 0; i < arr.length; i++){
 }
 
 
-function removeFlavorByName2(arr,flavor){
-    let theFlav;
-for(let i = 0; i < flavor.length; i++){
-    if( theFlav != null){
-        arr.splice(theFlav,1);
-        return arr
-    }
-    if(arr[i] === flavor){
-        theFlav = i;
-        arr.splice(theFlav,1);
-        return arr
-    } else {
-        theFlav  = null;
-    }
-   
-}
-    
 
-}
 
 if(newAr === null){
     for(let i = 0; i < originalFlavors.length; i++){
@@ -214,7 +196,7 @@ if(newAr === null){
 
     }else{
 
-        newAr = removeFlavorByName(newAr,'Eggnog');
+        newAr = removeFlavorByName(newAr,'Chocolate Fudge');
         // newAr.forEach(function(task){
         //     console.log('task 5 ' +task);
         //   });
