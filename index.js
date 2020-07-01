@@ -146,7 +146,7 @@ function filterByWord(arrayProvided, flavorName){
     return newArray;
 }
 
-console.log(filterByWord(originalFlavors, "Vanilla"));
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 
