@@ -279,8 +279,40 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
-
-    /*code here*/
-
+function getRandomFlavors( arr1, arr2, arr3, arr4 ){
+    let masterFlavors = [];
+    let randomFlavors = [];
+    masterFlavors = masterFlavors.concat(arr1, arr2, arr3, arr4);
+    console.log(masterFlavors);
+    // 2 methods of shuffling: first is my brute take where we'll run through the masterList multiple times to slowly populate the new array, removing already selected flavors as we go. Mathematically, my goal is to run through the entire array of ~100 items 3 times. So pick about 10 items/full array runthrough => 10% chance of each item beign picked. (I think).
+    for ( i = 0 ; randomFlavors.length < 31 ; i++ ) {
+        if (Math.random() < 0.1 ) {
+            randomFlavors.push(masterFlavors[i]);
+            masterFlavors.splice( i ,1 );
+        }
+        if ( i >= masterFlavors.length - 1 ) {
+            i = 0 ;
+        }
+    }
+    return randomFlavors
 }
+console.log(`get random flavors1: `, getRandomFlavors(newFlavors, seasonalFlavors, regionalFlavors, originalFlavors));
+
+
+// // Second is the beginnin of a more elegant better version built by people way more knowledgeable.
+// function getRandomFlavors( arr1, arr2, arr3, arr4 ){
+//     let masterFlavors = [];
+//     masterFlavors = masterFlavors.concat(arr1, arr2, arr3, arr4);
+//     console.log(masterFlavors);
+//     // this magically shuffles my array.
+//     for(let i = masterFlavors.length — 1; i > 0; i--){
+//         const j = Math.floor(Math.random() * i)
+//         const temp = array[i]
+//         array[i] = array[j]
+//         array[j] = temp
+//     }
+//     //end magic shuffler. still needs variables fixed though
+//     masterArray.splice(31, array.length)
+//     return masterFlavors
+// }
+// console.log(getRandomFlavors(newFlavors, seasonalFlavors, regionalFlavors, originalFlavors));
