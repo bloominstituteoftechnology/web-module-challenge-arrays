@@ -186,12 +186,17 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
-
-    /*code here*/
-
+// Note: this should ideally also remove any spaces @ start/end of string that might have been accidentally typed & edit any multiple-spaces as the first part of the for loop. But bs I don't actually understand how those work yet, I left them commented out. I did test that they worked within the code when they're active.
+function getAverageWordLength(arr){
+    let wordCount = 0 ;
+    for ( i = 0 ; i < arr.length ; i++ ) {
+        // arr[i].replace(/(^\s*)|(\s*$)/gi,"");
+        // arr[i].replace(/[ ]{2,}/gi," ");
+        return wordCount + arr[i].split(" ").length;
+    }
+    return wordCount / arr.length ;
 }
-
+console.log(`getAveWordLength:`, getAverageWordLength(originalFlavors));
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
