@@ -40,11 +40,18 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
-
+function is31Flavors(arr){
+    console.log(arr.length)
+    if (arr.length === 31){
+        return true;
+    }else {
+        return false;
+    }
+    
     /*code here*/
 
 }
+
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -57,8 +64,9 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(/*code here*/){
-
+function addFlavor(arr, newFlavor){
+     arr.unshift(newFlavor);
+    console.log(originalFlavors);
     /*code here*/
 
 }
@@ -74,7 +82,10 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-function removeLastFlavor(/*code here*/){
+function removeLastFlavor(arr){
+    
+    arr.pop();
+    console.log(originalFlavors);
 
     /*code here*/
 
@@ -89,7 +100,8 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
+function getFlavorByIndex(arr, index){
+    return arr[index]
 
     /*code here*/
 
@@ -108,7 +120,14 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
+function removeFlavorByName(arr, string){
+    for(let i = 0 ; i < arr.length; i++){
+        if (arr[i] === string){
+            arr.splice(i, 1)
+        }
+    }
+console.log(arr);
+
 
     /*code here*/
 
@@ -123,7 +142,9 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+function copy(arr){
+    let newArr = [...arr];
+    return newArr;
 
     /*code here*/
 
@@ -144,8 +165,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
+function filterByWord(arr, string){
+    let newArray = []
+    for (let i = 0; i < arr.length ; i++){
+        if (arr[i].includes(string)){
+            newArray.push(arr[i])
+            
+        }
+        
+    }
+return newArray;
     /*code here*/
 
 }
