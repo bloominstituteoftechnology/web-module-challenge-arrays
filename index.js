@@ -40,10 +40,15 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(){
-   
-   
+function is31Flavors(anyArray){
+
+   if (anyArray.length === 31) {
+       return true;
+   }else{ return false;
 }
+}
+
+console.log (is31Flavors (originalFlavors))
 
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -118,7 +123,7 @@ Hint: You can use .splice() for this
 function removeFlavorByName(array,flavor){
     for (let i = 0; i < array.length; i++)
     if (array[i] === flavor){
-        array.splice(i,1)
+        array.splice(i,1)  // why did I add the 1 here again? 
         return array
     }
     } 
@@ -135,10 +140,9 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(oldArray, newArray){
+function copy(oldArray){
     const arrNew = [...oldArray]
     return arrNew;
-
 }
 
 console.log (copy (originalFlavors));
@@ -165,10 +169,10 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(array,string){
+function filterByWord(array,flavor){
     let filteredArray = [];
     for (let i = 0; i < array.length; i++){
-    if (array[i].includes(string)){ 
+    if (array[i].includes(flavor)){ 
     filteredArray = [...filteredArray,array[i]] 
     }
     
