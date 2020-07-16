@@ -41,7 +41,7 @@ To save you from having to count the items above, you can assume that length of 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(originalFlavors.length){
-    if(is31Flavors == 31){
+    if(is31Flavors === 31){
         answer = true;
     } else {
         answer = false;
@@ -61,11 +61,10 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(/*code here*/){
-
-    /*code here*/
-
+function addFlavor("Rainbow Sherbert", originalFlavors){
+    return["Rainbow Sherbert"]
 }
+console.log(addFlavor)
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
