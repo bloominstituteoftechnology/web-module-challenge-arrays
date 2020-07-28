@@ -104,7 +104,7 @@ For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", a
 
 function getFlavorByIndex(originalFlavors,a){
 
-    console.log(originalFlavors[a])
+    console.log(originalFlavors[a]);
 }
 
 getFlavorByIndex(originalFlavors,2);
