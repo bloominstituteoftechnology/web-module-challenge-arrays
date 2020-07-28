@@ -165,11 +165,13 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(originalFlavors, "Chocolate"){
 
-    /*code here*/
-
+var chocolate = originalFlavors.includes("Chocolate");
+    return chocolate
 }
+
+filterByWord();
 
 
 
