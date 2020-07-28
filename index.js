@@ -123,11 +123,15 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
+function removeFlavorByName(originalFlavors,a){
 
-    /*code here*/
+    originalFlavors.splice(a);
+
 
 }
+removeFlavorByName(originalFlavors,"Vanilla");
+console.log(originalFlavors);
+
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -138,7 +142,7 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+function copy(a,b){
 
     /*code here*/
 
