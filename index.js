@@ -46,10 +46,10 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 /*code here*/
 
 function is31Flavors(originalFlavors) {
-  if (originalFlavors.length === 31){
+  if (originalFlavors.length === 31) {
     console.log('True')
   }
-  else if (originalFlavors !== 31){
+  else if (originalFlavors !== 31) {
     console.log('False')
   }
 }
@@ -153,6 +153,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 hint - you can use the .includes method to help you solve this */
 
 function filterByWord(/*code here*/) { }
+
+
+
+
+
+
+
+
+
+
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
