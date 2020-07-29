@@ -125,8 +125,8 @@ Hint: You can use .splice() for this
 
 function removeFlavorByName(a,b){
 
-a.splice(a.indexOf(b),1)
-return a
+a.splice(a.indexOf(b),1);
+return a;
 }
 removeFlavorByName(originalFlavors,"Vanilla");
 console.log(originalFlavors);
@@ -165,17 +165,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-var choc_array = []
 
 function filterByWord(a,b){
 
-    if(a.includes(b)){
-    choc_array.push(a[b])
-}
+    var choc_array = [];
     for (let i = 0; i <a.length; i++){
+    if(a[i].includes(b)){
+    choc_array.unshift(a[i]);
 
     }
-
+}
+return choc_array;
 }
 
 console.log(filterByWord(originalFlavors, "Chocolate"));
