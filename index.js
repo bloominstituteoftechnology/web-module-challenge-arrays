@@ -98,9 +98,13 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
+function getFlavorByIndex(array, index){
+    return array[index]
+}
+    console.log('get flavor by index' getFlavorByIndex(originalFlavors,2))
 
-    /*code here*/
+
+    
 
 }
 
