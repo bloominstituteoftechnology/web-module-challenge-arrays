@@ -123,11 +123,13 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(originalFlavors,a){
+function removeFlavorByName(a,b){
 
-    originalFlavors.splice(a);
-
-
+var search = b;
+for (var i=a.length-1; i>=0; i--)
+  if (a[i]===b) {
+    a.splice(b,1);
+  } 
 }
 removeFlavorByName(originalFlavors,"Vanilla");
 console.log(originalFlavors);
