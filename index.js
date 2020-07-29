@@ -42,12 +42,12 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(flavors){
 
-    console.log(flavors.length)
     if (flavors.length === 31){
         return true;
     }else{
         return false;
             }
+            return flavors.length
     }
 }
 
@@ -62,10 +62,9 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(/*code here*/){
-
-    /*code here*/
-
+function addFlavor(flavor, array){
+    array.unshift(flavor);
+    console.log(array)
 }
 
 
