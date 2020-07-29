@@ -125,11 +125,8 @@ Hint: You can use .splice() for this
 
 function removeFlavorByName(a,b){
 
-var search = b;
-for (var i=a.length-1; i>=0; i--)
-  if (a[i]===b) {
-    a.splice(b,1);
-  } 
+a.splice(a.indexOf(b),1)
+return a
 }
 removeFlavorByName(originalFlavors,"Vanilla");
 console.log(originalFlavors);
@@ -176,7 +173,7 @@ function filterByWord(a,b){
     choc_array.push(a[b])
 }
     for (let i = 0; i <a.length; i++){
-        
+
     }
 
 }
