@@ -42,11 +42,11 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(originalFlavors){
     if (originalFlavors.length === 31){
-    console.log(true);
+    return true;
     } else 
-      console.log(false);
+    return false;
     }
-is31Flavors(originalFlavors);
+console.log(is31Flavors(originalFlavors));
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Your function should accept:
@@ -107,12 +107,18 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(originalFlavors){
-
+function removeFlavorByName(a,b){
+    let removeFlavorByName = "";
+    for (i=0; i<a.length; i++){
+        if (a[i] === b){
+            removeFlavorByName = a.splice(i,1)
+        }
+    }
+console.log(a)
     
 
 }
-
+console.log(originalFlavors, "vanilla");
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
