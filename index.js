@@ -152,16 +152,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
  
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/) { }
+function filterByWord(menu, filterFlavor) {
+  let myNewList = []
 
-
-
-
-
-
-
-
-
+  for (let i = 0; i < menu.length; i++) {
+    if (menu[i].includes(filterFlavor)) {
+      myNewList.push(menu[i])
+    }
+  }
+  return myNewList
+}
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
