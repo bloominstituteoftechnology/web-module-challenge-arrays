@@ -254,6 +254,6 @@ var regionalFlavors = ["Pink Bubblegum",
 
 function getRandomFlavors(/*code here*/){
 
-    /*code here*/testtets
+    /*code here*/testtetstest
 
 }
