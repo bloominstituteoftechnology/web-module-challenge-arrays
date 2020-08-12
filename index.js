@@ -161,8 +161,6 @@ For example, getAverageWordLength(originalFlavors) should return a number betwee
 
 function getAverageWordLength(/*code here*/){
 
-    /*code here*/
-
 }
 
 
@@ -247,8 +245,21 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
-
-    /*code here*/
-
+function getRandomFlavors(arr0, arr1, arr2, arr3){
+    var RandomFlavors = [];
+    for(let i = 0; i < 31; i++){
+        let nextflavorlist = Math.floor(Math.random() * 4);
+        if(nextflavorlist === 0){
+            RandomFlavors.unshift(arr0[Math.floor(Math.random() * arr0.length)]);
+        }else if(nextflavorlist === 1){
+            RandomFlavors.unshift(arr1[Math.floor(Math.random() * arr1.length)]);
+        }else if(nextflavorlist === 2){
+            RandomFlavors.unshift(arr2[Math.floor(Math.random() * arr2.length)]);
+        }else if(nextflavorlist === 3){
+            RandomFlavors.unshift(arr3[Math.floor(Math.random() * arr3.length)]);
+        }
+        
+    }
+    return RandomFlavors;
 }
+console.log(getRandomFlavors(regionalFlavors, seasonalFlavors, newFlavors, originalFlavors));
