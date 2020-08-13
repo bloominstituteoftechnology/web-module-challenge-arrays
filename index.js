@@ -40,11 +40,22 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
+// originalFlavors [originalFlavors.length - 1];
+//  if (originalFlavors.length === 31) {
+//     return "True"
+//  } else {
+//      return "False"
+//  }
 
-    /*code here*/
+orignalFlavors [originalFla]
 
-}
+// function is31Flavors(/*code here*/){
+
+//     // console.log (originalFlavors.length);
+//     // function flavors (array: any):boolean
+//     // if (array.length === 31) {
+//     //     return ("True")
+//     // } else return ("False")
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -56,11 +67,11 @@ Your function should accept:
 Your function should add the flavor to the front of the array and console.log the resulting array.
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
+ originalFlavors.unshift ('Rainbow Sherbert');
+ console.log (originalFlavors)
 
-function addFlavor(/*code here*/){
-
-    /*code here*/
-
+ function addFlavor(array,flavorToBeAdded){
+        return ('Rainbow Sherbert')
 }
 
 
@@ -74,11 +85,15 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
+
 function removeLastFlavor(/*code here*/){
 
     /*code here*/
 
 }
+
+originalFlavors.pop();
+console.log (originalFlavors)
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -90,7 +105,6 @@ Your function should accept:
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
 function getFlavorByIndex(/*code here*/){
-
     /*code here*/
 
 }
@@ -108,9 +122,11 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
 
-    /*code here*/
+
+// function removeFlavorByName(/*code here*/){
+
+//     /*code here*/
 
 }
 
@@ -144,11 +160,20 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+function filterByWord(arr, string){
+    let newARR =[];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr [i].inlcludes(string)) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
 }
+console.log (filterByWord)
+
+
+
+
 
 
 
@@ -254,6 +279,6 @@ var regionalFlavors = ["Pink Bubblegum",
 
 function getRandomFlavors(/*code here*/){
 
-    /*code here*/testtetstest
+    /*code here*/
 
 }
