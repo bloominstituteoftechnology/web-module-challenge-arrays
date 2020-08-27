@@ -163,12 +163,11 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
-}
-
+function filterByWord(string , originalFlavors){
+    console.log(originalFlavors.includes(string , originalFlavors))
+  }
+  string =
+  filterByWord("Chocolate" , originalFlavors)
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
