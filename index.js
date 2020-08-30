@@ -141,8 +141,8 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(array){
-    array.copyWithin("newFlavors")
+function copy(array, newArray){
+    array.slice("newFlavors")
     return array
 
     /*code here*/
@@ -166,11 +166,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(array, string){
-    array.includes("chocolate")
-    return new array
+function filterByWord(originalFlavors, item){
+    let filteredArray = [];
+    for (let i = 0; i < originalFlavors.length; i++) {
+        if (originalFlavors[i].includes(item)) {
+            filteredArray.push(originalFlavors[i])
+        }
+    }
+    
+    return filteredArray;
 }
-console.log(filterByWord[originalFlavors, "chocolate"]);
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
