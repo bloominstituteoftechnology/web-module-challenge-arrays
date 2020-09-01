@@ -48,7 +48,7 @@ function is31Flavors(/*code here*/ number, arr){
 
 }
 
-console.log(is31Flavors(31, originalFlavors));
+// console.log(is31Flavors(31, originalFlavors));
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -70,7 +70,7 @@ function addFlavor(/*code here*/ newFlavor, arr){
 
 addFlavor('Rainbow Sherbert', originalFlavors);
 
-console.log(originalFlavors);
+// console.log(originalFlavors);
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -90,7 +90,7 @@ function removeLastFlavor(/*code here*/arr){
 }
 
 removeLastFlavor(originalFlavors);
-console.log(originalFlavors);
+// console.log(originalFlavors);
 
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
@@ -130,10 +130,10 @@ function removeFlavorByName(/*code here*/ arr, flavor){
     return arr.splice(indxFlv, 1);
 
 }
-// removeFlavorByName(originalFlavors, 'Vanilla');
-removeFlavorByName(originalFlavors, 'French Vanilla');
+removeFlavorByName(originalFlavors, 'Vanilla');
+// removeFlavorByName(originalFlavors, 'French Vanilla');
 // removeFlavorByName(originalFlavors, 'Rainbow Sherbert');
-console.log(originalFlavors);
+// console.log(originalFlavors);
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -144,11 +144,17 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+function copy(/*code here*/ arr, newArr){
 
+    return newArr = [...arr];
     /*code here*/
+};
 
-}
+const ogFlavors = copy(originalFlavors, 'ogFlavors');
+
+// console.log(ogFlavors);
+
+
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -165,12 +171,23 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(/*code here*/arr, word){
 
+    let result = [];
     /*code here*/
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].match(word)) {
+            result.push(word)
+        } else {
+            result.push('EAT SHIT');
+        }
+    }
+
+    return result;
 
 }
 
+console.log(filterByWord(originalFlavors, 'chocolate'));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
