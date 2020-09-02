@@ -173,13 +173,12 @@ hint - you can use the .includes method to help you solve this */
 
 function filterByWord(/*code here*/arr, word){
 
+    let upWord = word.charAt(0).toUpperCase() + word.substr(1);
     let result = [];
     /*code here*/
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].match(word)) {
-            result.push(word)
-        } else {
-            result.push('EAT SHIT');
+        if (arr[i].includes(upWord)) {
+            result.push(arr[i]);
         }
     }
 
