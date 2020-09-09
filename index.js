@@ -40,12 +40,19 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
-
-    /*code here*/
+function is31Flavors(originalFlavors){
+    for(var i = 0; i < originalFlavors.length; i++) {
+        if(originalFlavors === 31)  {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    return originalFlavors[i];/*code here*/
 
 }
-
+console.log(is31Flavors());
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Your function should accept:
