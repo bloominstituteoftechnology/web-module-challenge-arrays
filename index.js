@@ -69,6 +69,8 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(newFlavor, oldFlavor){
 
+
+
     originalFlavors.unshift(newFlavor);
     return originalFlavors
     
@@ -136,7 +138,11 @@ Hint: You can use .splice() for this
 
 function removeFlavorByName(arr, flavor){
 
-    originalFlavors.splice[flavor]
+    for(let i = 0; i < arr.length; i++ )
+    if (arr[i] === flavor) {
+        arr.splice(i,1);
+    }
+   
     return arr
 
 }
