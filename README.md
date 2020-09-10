@@ -28,12 +28,6 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 
 Find the file `index.js` and complete the tasks until your returns look like the expected returns. Do not use any of the forbidden methods!
 
-### Task 2b: Exit Ticket
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/38ztAXr6mzpDqSfXn/BGqHXsWCL8s6oB).
-
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
 ### Task 3: Stretch
 
 There are several stretch goals inside `index.js`. You may work on these once you have finished MVP requirements for the day!
