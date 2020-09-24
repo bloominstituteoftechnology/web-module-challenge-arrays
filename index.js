@@ -77,7 +77,7 @@ function addFlavor(flavorList, newFlavor) {
 
 }
 
-function multiply2nums(a,b){
+function multiply2nums(a, b) {
     return a * b;
 }
 
@@ -107,8 +107,8 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(originalFlavors,index) {
-    return console.log (originalFlavors[index]);
+function getFlavorByIndex(originalFlavors, index) {
+    return console.log(originalFlavors[index]);
 }
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
@@ -121,7 +121,7 @@ Your function should accept:
 For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla. 
 
 Hint: You can use .splice() for this
-
+ 
 */
 
 function removeFlavorByName(flavorList, flavorToRemove) {
@@ -139,10 +139,20 @@ Your function should accept:
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
 function copy(flavorList, newFlavorList) {
-    const newFlavorList = [...flavorList];
+    newFlavorList = flavorList.map((x) => x);
     console.log(newFlavorList);
 
 }
+
+copy(originalFlavors, "newFlavors")
+
+function copy(flavorList, newFlavorList) {
+    newFlavorList = [...flavorList]
+    console.log(newFlavorList);
+
+}
+
+copy(originalFlavors, "newFlavors2")
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -160,9 +170,21 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 hint - you can use the .includes method to help you solve this */
 
 function filterByWord(flavorList, criteria) {
-    if (flavorList.includes(criteria) = true) {
-        return console.log(flavorList[criteria]);
+    newArray = [];
+    for (i = 0; i < flavorList.length; i++) {
+
+        if (flavorList[i].includes(criteria)) {
+
+            newArray.push(flavorList[i])
+
+        }
+
     }
+
+    console.log(newArray)
+}
+
+filterByWord(originalFlavors, "Choc")
     
 
 }
@@ -181,9 +203,12 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/) {
+function getAverageWordLength(list) {
+    for (i = 0; i < list.length; i++){
+        str = list[i].length;
+        console.log(str)
 
-    /*code here*/
+    }
 
 }
 
