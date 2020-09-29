@@ -21,6 +21,8 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 - [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [ ] Install npm in project by typing `npm install` in terminal
+- [ ] Run Tests by tying `npm run test:watch` in terminal
 - [ ] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: MVP
