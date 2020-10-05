@@ -70,10 +70,11 @@ Use the is31Flavors function below to do the following:
     2. Check to see if the array has exactly 31 flavors in it
     3. Return true if it is does, return false if it does not
 
-For Example: if you run is31Flavors(originalFlavors) it will return TRUE if your code is working properly.
+For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 
-HINT - You may want to test your function by creating and passing an array of a different length.  It should return FALSE if length is not 31. 
+HINT - You may want to test your function by creating and passing an array of a different length.  It should return false if length is not 31. 
 */
+
 
 function is31Flavors(/*your code here*/){
    /*your code here*/
@@ -82,14 +83,15 @@ function is31Flavors(/*your code here*/){
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
-Your function should accept:
+Use the addFlavor function below to do the following:
+    1. Receive the originalFlavors array
+    2. Receive a new flavor
+    3. Add the passed flavor to the front of the array
+    4. Return the resulting array
 
-(1) an array 
-(2) a flavor
+    For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
+*/
 
-Your function should add the flavor to the front of the array and return the resulting array.
-
-For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
 function addFlavor(/*your code here*/){
    /*your code here*/
@@ -97,15 +99,15 @@ function addFlavor(/*your code here*/){
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
+Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
 
-Your function should accept:
+Use the removeLastFlavor function below to do the following:
+    1. Receive the originalFlavors array that now contains 32 flavors from Task 3
+    2. Remove the last item from the array
+    3. Return the resulting array
 
-(1) an array 
-
-Your function should remove a flavor from the end of the array and return the resulting array.
-
-For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
+    For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
+*/
 
 function removeLastFlavor(/*your code here*/){
    /*your code here*/
