@@ -116,14 +116,15 @@ function removeLastFlavor(/*your code here*/){
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Write a function that returns a flavor at a given index in the array.
+Write a function that returns a flavor at a given index in the originalFlavors array.
 
-Your function should accept:
+Use the getFlavorByIndex function below to do the following:
+    1. Receive the originalFlavors array (with the last item removed and Rainbow Sherbert added) 
+    2. Receive an index position
+    3. Return the flavor located at the received index position
 
-(1) an array 
-(2) an index
-
-For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
+    For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
+*/
 
 function getFlavorByIndex(/*your code here*/){
     /*your code here*/
