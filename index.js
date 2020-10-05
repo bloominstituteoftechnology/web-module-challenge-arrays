@@ -186,32 +186,39 @@ function filterByWord(/*your code here*/){
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
 
-Your function should accept: 
+Use the getAverageWordLength function below to do the following:
+    1. Receive the originalFlavors array
+    2. Count how many words per item in the array
+    3. Return the average number of words per item in the array
 
-(1) an array
-
-and should return the average number of words per item in the array. 
-
-For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
+    For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
+*/
 
 function getAverageWordLength(/*code here*/){
-
     /*code here*/
-
 }
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
-Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
+Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
+from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors and store it in an array called randomFlavors.
 
-Your function should accept 4 different arrays,
+Use the getRandomFlavors function and new arrays below to do the following:
+    1. Receive the four arrays with all the differnet flavors (originalFlavors is above, the others are below)
+    2. Randomly pick flavors from all four arrays
+    3. Return a new array called randomFlavors that has a lenght of 31
 
-and should return a new array called randomFlavors with a length 31.
+    For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
+*/
 
-forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].*/
 
-// Data ⬇️
-const newFlavors = ["Date night",
+function getRandomFlavors(/*code here*/){
+    /*code here*/
+}
+
+// NEW DATA ARRAYS FOR STRETCH 2 ⬇️
+const newFlavors = [
+    "Date night",
     "U.S.S Butterscotch (Stranger Things special)",
     "Honey Almond",
     "Mint Chocolate Chip",
@@ -233,8 +240,11 @@ const newFlavors = ["Date night",
     "Chocolate Fudge",
     "Daiquiri Ice",
     "Rainbow Sherbet",
-    "Rainbow Swirl"] 
-const seasonalFlavors = ["America's Birthday Cake",
+    "Rainbow Swirl"
+] 
+
+const seasonalFlavors = [
+    "America's Birthday Cake",
     "Baseball Nut®",
     "Blueberry Cheesecake",
     "Bourbon Street Pecan Pie",
@@ -257,8 +267,11 @@ const seasonalFlavors = ["America's Birthday Cake",
     "made with Snickers®",
     "made with M&M's®",
     "Heath®",
-    "Mango Tango",]
-const regionalFlavors = ["Pink Bubblegum",
+    "Mango Tango"
+]
+
+const regionalFlavors = [
+    "Pink Bubblegum",
     "Caramel Macchiato",
     "York Peppermint Pattie",
     "Cotton Candy",
@@ -281,13 +294,10 @@ const regionalFlavors = ["Pink Bubblegum",
     "Cotton Candy Crackle",
     "Quarterback Crunch",
     "Chocolate Chocolate Chip Cheesecake",
-    "Caramel 'n' Cookies"]
+    "Caramel 'n' Cookies"
+]
 
-function getRandomFlavors(/*code here*/){
 
-    /*code here*/
-
-}
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo(){
