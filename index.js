@@ -1,8 +1,17 @@
+/*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+
+/*
+When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
+This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
+returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
+*/
+
 /* 👀 This is your data ⬇ */
-const originalFlavors = ["Banana Nut Fudge",
+const originalFlavors = [
+    "Banana Nut Fudge",
     "Black Walnut",
     "Burgundy Cherry",
-   "Butterscotch Ribbon",
+    "Butterscotch Ribbon",
     "Cherry Macaron",
     "Chocolate",
     "Chocolate Almond",
@@ -29,16 +38,21 @@ const originalFlavors = ["Banana Nut Fudge",
     "Rocky Road",
     "Strawberry",
     "Vanilla",
-    "Vanilla Burnt Almond"]
+    "Vanilla Burnt Almond"
+]
 
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
+/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
+With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So that brings us to task 1 
 
-Your function should accept: 
+/*
+Use the copy function below to do the following:
+    1. Receive two arguments: One should contain a new empty array (name this whatever you like), the other should contain the old array stored in originalFlavors
+    2. Make a copy of the originalFlavors array and store it in the empty one
+    2. Return the new array that holds an exact copy of the old array  
 
-2 arguments 1 for your new array and one for your original array
-
-and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+    HINT: You can use ..., a loop, or slice() to copy an array
+*/
 
 function copy(/*your code here*/){
     /*your code here*/
