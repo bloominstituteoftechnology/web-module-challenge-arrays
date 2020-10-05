@@ -154,20 +154,28 @@ function removeFlavorByName(/*your code here*/){
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
+July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
+Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
+that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around 
+by passing in those specific strings.
 
-Your function should accept: 
+Use the filterByWord function below to do the following:
+    1. Receive the originalFlavors array
+    2. Receive a string (the word the flavors will be filtered by)
+    3. Check to see if any of the flavors in the array contain that string
+    4. If they do, add those flavors to filteredArray
+    5. Return the resulting array that contains the filtered flavors
 
-(1) an Array
-(2) a string (i.e. "chocolate")
+    For example: filterByWord(originalFlavors, "Chocolate") should return ["Chocolate", "Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon"]
 
-and return a new array. 
+    also
+    
+    filterByWord(originalFlavors, "Ribbon") should return ["Butterscotch Ribbon", "Chocolate Ribbon", "Peppermint Fudge Ribbon"]
 
-For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolate", "Chocolate Almond",..."Chocolate Ribbon"].
+    HINT - you can use the .includes method to help you solve this
 
-DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
-
-hint - you can use the .includes method to help you solve this */
+    DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
+*/
 
 function filterByWord(/*your code here*/){
     /*your code here*/
