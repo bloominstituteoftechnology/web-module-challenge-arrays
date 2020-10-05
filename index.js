@@ -43,7 +43,7 @@ const originalFlavors = [
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
-With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So that brings us to task 1 
+With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So we need to copy the original array!
 
 /*
 Use the copy function below to do the following:
@@ -63,15 +63,17 @@ function copy(/*your code here*/){
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Confirm that the array is exactly 31 flavors. Your function should accept:
+Now that we've copied the array, we need to confirm that the original is still intact with 31 flavors
 
-(1) an array 
+Use the is31Flavors function below to do the following:
+    1. Receive the originalFlavors array
+    2. Check to see if the array has exactly 31 flavors in it
+    3. Return true if it is does, return false if it does not
 
-Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
+For Example: if you run is31Flavors(originalFlavors) it will return TRUE if your code is working properly.
 
-To save you from having to count the items above, you can assume that length of originalFlavors is 31. You may also want to test your function by creating and passing an array of a different length, to make sure it returns FALSE if length is not 31. 
-
-i.e. is31Flavors(originalFlavors) will return TRUE.*/
+HINT - You may want to test your function by creating and passing an array of a different length.  It should return FALSE if length is not 31. 
+*/
 
 function is31Flavors(/*your code here*/){
    /*your code here*/
