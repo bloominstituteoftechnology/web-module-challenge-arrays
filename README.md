@@ -17,13 +17,12 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 
 ### Task 1: Set up Project
 
-- [ ] Create a forked copy of this project
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Install npm in project by typing `npm install` in terminal
-- [ ] Run Tests by tying `npm run test:watch` in terminal
-- [ ] Push commits: git push origin `<firstName-lastName>`
+1. Fork the repo
+2. Clone your forked version of the repo
+3. cd into your repo and create a branch with your first and last name
+4. open the terminal in your vs code and type `npm install`
+5. next type `npm run test:watch` in your terminal
+6. Complete your work making regular commits, once you have all your tests passing and you are ready to submit your work please see canvas for instructions on how to submit
 
 ### Task 2: MVP
 
