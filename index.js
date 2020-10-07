@@ -91,7 +91,7 @@ function addFlavor(someArray, string){
     someArray.unshift(string);
     return someArray;
 }
-addFlavor(originalFlavors, 'Moose Tracks')
+// addFlavor(originalFlavors, 'Moose Tracks')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -109,7 +109,7 @@ function removeLastFlavor(someArray){
    someArray.pop();
    return someArray;
 }
-removeLastFlavor(originalFlavors);
+// removeLastFlavor(originalFlavors);
 
 
 
@@ -123,10 +123,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(someArray, index){
+    return someArray[index];
 }
-
+getFlavorByIndex(originalFlavors, 2)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -142,9 +142,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(someArray, string){
+    for (let i = 0; i < someArray.length; i++) {
+        if (someArray[i] === string){
+            someArray.splice(i,1);
+        }
+    }
+    return someArray;
 }
+console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
 
 
