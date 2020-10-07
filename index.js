@@ -150,7 +150,7 @@ function removeFlavorByName(someArray, string){
     }
     return someArray;
 }
-console.log(removeFlavorByName(originalFlavors, "Vanilla"));
+// console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
 
 
@@ -196,9 +196,15 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(someArray){
+    let wordCount = 0;
+    for (let i = 0; i < someArray.length; i++) {
+        const x = someArray[i].split(' ').length
+        wordCount = wordCount + x;
+    }
+    return (wordCount / someArray.length)
 }
+console.log(getAverageWordLength(originalFlavors));
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
