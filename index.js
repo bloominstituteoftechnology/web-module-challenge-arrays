@@ -219,10 +219,28 @@ Use the getRandomFlavors function and new arrays below to do the following:
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
+// Code commented out here for answer
+// Functional code written below "NEW DATA ARRAYS FOR STRETCH 2"
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
-}
+
+// function getRandomFlavors(arrayOne, arrayTwo, arrayThree, arrayFour){
+//     let randomFlavors = []
+//     for (let i = 0; i < 8; i++){
+//       let one = Math.floor(Math.random() * (arrayOne.length));
+//       randomFlavors.push(arrayOne[one]);
+//       let two = Math.floor(Math.random() * (arrayTwo.length));
+//       randomFlavors.push(arrayTwo[two]);
+//       let three = Math.floor(Math.random() * (arrayThree.length));
+//       randomFlavors.push(arrayThree[three]);
+//       let four = Math.floor(Math.random() * (arrayFour.length));
+//       randomFlavors.push(arrayFour[four]); 
+//     }
+//     randomFlavors.pop();
+//     return randomFlavors;
+    
+// }
+// console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors).length);
+// console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors));
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
@@ -304,6 +322,25 @@ const regionalFlavors = [
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"
 ]
+
+function getRandomFlavors(arrayOne, arrayTwo, arrayThree, arrayFour){
+    let randomFlavors = []
+    for (let i = 0; i < 8; i++){
+      let one = Math.floor(Math.random() * (arrayOne.length));
+      randomFlavors.push(arrayOne[one]);
+      let two = Math.floor(Math.random() * (arrayTwo.length));
+      randomFlavors.push(arrayTwo[two]);
+      let three = Math.floor(Math.random() * (arrayThree.length));
+      randomFlavors.push(arrayThree[three]);
+      let four = Math.floor(Math.random() * (arrayFour.length));
+      randomFlavors.push(arrayFour[four]); 
+    }
+    randomFlavors.pop();
+    return randomFlavors;
+    
+}
+console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors).length);
+console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors));
 
 
 
