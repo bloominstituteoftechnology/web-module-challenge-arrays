@@ -16,7 +16,7 @@ const originalFlavors = [
     "Coffee",
     "Coffee Candy",
     "Date Nut",
-    "Eggnog",
+    "Eggnog", 
     "French Vanilla",
     "Green Mint Stick",
     "Lemon Crisp",
