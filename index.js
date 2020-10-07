@@ -84,9 +84,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(array, flavor){
-   array.unshift(flavor);
-   return array;
+ function addFlavor(array, flavor){
+    array.unshift(flavor);
+    return array;
 }
 
 
@@ -137,8 +137,9 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array){
+    array.splice(array.length - 2, 1);
+    return array;
 }
 
 
