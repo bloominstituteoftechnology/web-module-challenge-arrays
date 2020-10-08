@@ -97,15 +97,16 @@ Houston, we have a problem! There are now 32 flavors in the originalFlavors arra
 Use the removeLastFlavor function below to do the following:
     1. Receive receive an array
     2. Remove the last item from the array
-    3. Return the resulting array
+    3. Return the resulting array 
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(arr){
+   arr.pop();
+   return arr
 }
-
+removeLastFlavor(originalFlavors)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
