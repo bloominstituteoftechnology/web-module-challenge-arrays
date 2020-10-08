@@ -124,10 +124,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(array, string){
-   
-  }
-  console.log(getFlavorByIndex(originalFlavors, 2));
+function getFlavorByIndex(array, index){
+    return array[index];
+     } console.log(getFlavorByIndex(originalFlavors, 2));
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -171,9 +171,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(array, string){
-    if
-}
+function filterByWord(array, string){ 
+    const filteredFlavors = []; 
+    for(let i = 0; i < array.length; i++){
+        if(array[i] .includes(string))
+        {
+       filteredFlavors.push(array[i]);
+        }
+    }
+   return filteredFlavors;
+ }
+ console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -211,85 +219,85 @@ function getRandomFlavors(/*code here*/){
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-const newFlavors = [
-    "Date night",
-    "U.S.S Butterscotch (Stranger Things special)",
-    "Honey Almond",
-    "Mint Chocolate Chip",
-    "Chocolate",
-    "Oreo® Cookies'n Cream",
-    "Chocolate Chip",
-    "Pralines 'n Cream",
-    "Very Berry Strawberry",
-    "Chocolate Chip Cookie Dough",
-    "Old Fashioned Butter Pecan",
-    "Jamoca®",
-    "Jamoca® Almond Fudge",
-    "Reese's® Peanut Butter Cup",
-    "Rocky Road",
-    "Peanut Butter ’n Chocolate",
-    "Gold Medal Ribbon®",
-    "World Class® Chocolate",
-    "Cherries Jubilee",
-    "Chocolate Fudge",
-    "Daiquiri Ice",
-    "Rainbow Sherbet",
-    "Rainbow Swirl"
-] 
+// const newFlavors = [
+//     "Date night",
+//     "U.S.S Butterscotch (Stranger Things special)",
+//     "Honey Almond",
+//     "Mint Chocolate Chip",
+//     "Chocolate",
+//     "Oreo® Cookies'n Cream",
+//     "Chocolate Chip",
+//     "Pralines 'n Cream",
+//     "Very Berry Strawberry",
+//     "Chocolate Chip Cookie Dough",
+//     "Old Fashioned Butter Pecan",
+//     "Jamoca®",
+//     "Jamoca® Almond Fudge",
+//     "Reese's® Peanut Butter Cup",
+//     "Rocky Road",
+//     "Peanut Butter ’n Chocolate",
+//     "Gold Medal Ribbon®",
+//     "World Class® Chocolate",
+//     "Cherries Jubilee",
+//     "Chocolate Fudge",
+//     "Daiquiri Ice",
+//     "Rainbow Sherbet",
+//     "Rainbow Swirl"
+// ] 
 
-const seasonalFlavors = [
-    "America's Birthday Cake",
-    "Baseball Nut®",
-    "Blueberry Cheesecake",
-    "Bourbon Street Pecan Pie",
-    "Brownie Bar Mashup",
-    "Cherry Cordial with Kisses",
-    "Chocolate Mousse Royale",
-    "French Vanilla",
-    "Eggnog",
-    "German Chocolate Cake",
-    "Icing on the Cake",
-    "Love Potion #31",
-    "New York Cheesecake",
-    "Nutty Coconut",
-    "Peppermint",
-    "Strawberry Cheesecake",
-    "Rock ’n Pop Swirl",
-    "Reese’s Peanut Butter Cup",
-    "Trick Oreo Treat",
-    "Winter White Chocolate",
-    "made with Snickers®",
-    "made with M&M's®",
-    "Heath®",
-    "Mango Tango"
-]
+// const seasonalFlavors = [
+//     "America's Birthday Cake",
+//     "Baseball Nut®",
+//     "Blueberry Cheesecake",
+//     "Bourbon Street Pecan Pie",
+//     "Brownie Bar Mashup",
+//     "Cherry Cordial with Kisses",
+//     "Chocolate Mousse Royale",
+//     "French Vanilla",
+//     "Eggnog",
+//     "German Chocolate Cake",
+//     "Icing on the Cake",
+//     "Love Potion #31",
+//     "New York Cheesecake",
+//     "Nutty Coconut",
+//     "Peppermint",
+//     "Strawberry Cheesecake",
+//     "Rock ’n Pop Swirl",
+//     "Reese’s Peanut Butter Cup",
+//     "Trick Oreo Treat",
+//     "Winter White Chocolate",
+//     "made with Snickers®",
+//     "made with M&M's®",
+//     "Heath®",
+//     "Mango Tango"
+// ]
 
-const regionalFlavors = [
-    "Pink Bubblegum",
-    "Caramel Macchiato",
-    "York Peppermint Pattie",
-    "Cotton Candy",
-    "Orange Sherbet",
-    "Grape Ice",
-    "Watermelon Ice",
-    "Miami Vice Sorbet",
-    "Splish Splash®",
-    "Wild 'n Reckless Sherbet",
-    "Lemon Custard",
-    "Oregon Blackberry",
-    "Bananas ‘n Strawberries",
-    "Mississippi Mud",
-    "Rum Raisin",
-    "Creole Cream Cheese",
-    "Chocolate Almond",
-    "Fudge Brownie",
-    "Banana Nut",
-    "Black Walnut",
-    "Cotton Candy Crackle",
-    "Quarterback Crunch",
-    "Chocolate Chocolate Chip Cheesecake",
-    "Caramel 'n' Cookies"
-]
+// const regionalFlavors = [
+//     "Pink Bubblegum",
+//     "Caramel Macchiato",
+//     "York Peppermint Pattie",
+//     "Cotton Candy",
+//     "Orange Sherbet",
+//     "Grape Ice",
+//     "Watermelon Ice",
+//     "Miami Vice Sorbet",
+//     "Splish Splash®",
+//     "Wild 'n Reckless Sherbet",
+//     "Lemon Custard",
+//     "Oregon Blackberry",
+//     "Bananas ‘n Strawberries",
+//     "Mississippi Mud",
+//     "Rum Raisin",
+//     "Creole Cream Cheese",
+//     "Chocolate Almond",
+//     "Fudge Brownie",
+//     "Banana Nut",
+//     "Black Walnut",
+//     "Cotton Candy Crackle",
+//     "Quarterback Crunch",
+//     "Chocolate Chocolate Chip Cheesecake",
+//     "Caramel 'n' Cookies"
+// ]
 
 
 
