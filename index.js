@@ -45,10 +45,12 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+function copy(anArray){ // Create a function which takes 'anArray' as an argument.
+let anArrayCopy = [...anArray]; // Create a new array 'anArrayCopy', which is populated via spreading 'anArray'.
+return anArrayCopy; // Return the copied array 'anArrayCopy'.
+}
 
+console.log(copy(originalFlavors)); // Console Log the copy function being used with an exsisting array 'originalFlavors'.
 
 
 
