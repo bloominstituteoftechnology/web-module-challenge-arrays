@@ -207,10 +207,25 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
-}
+function getAverageWordLength(array){
+    let totalWords = 0;
+   
 
+    for (let i = 0; i < array.length; i++) {
+      let string = array[i];
+      let arrayOfSubstrings = string.split(" ");
+      totalWords += arrayOfSubstrings.length;
+
+    } // end of for loop   
+    
+    let averageWordLength = totalWords / array.length;
+    return Math.round(averageWordLength);
+    
+} // end of function
+
+ // TEST CODE:
+ var output = getAverageWordLength(originalFlavors);
+ console.log(output); // should equal 2
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
@@ -224,10 +239,26 @@ Use the getRandomFlavors function and new arrays below to do the following:
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
+function getRandomFlavors(array1, array2, array3, array4){
+  // combine the 4 arrays
+  let combinedArray = array1.concat(array2, array3, array4);
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
-}
+  // total length is 102, confirming the combined array
+  // console.log(combinedArray.length);
+
+  let randomFlavors = []; // declare new empty array
+
+  // begin for loop to randomly pick & add 31 flavors to new randomFlavors array
+  for (let i = 0; i < 31; i++) {
+    let randomIndex = Math.floor(Math.random() * 103);  // returns a random integer from 0 to 102
+    randomFlavors.push(combinedArray[randomIndex]); // adds random flavor to new randomFlavors array
+  } // end of loop
+  return randomFlavors;
+} // end of function
+
+ // TEST CODE:
+ var output = getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
+ console.log(output);
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
@@ -309,8 +340,6 @@ const regionalFlavors = [
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"
 ]
-
-
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo(){
