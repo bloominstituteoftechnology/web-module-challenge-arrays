@@ -49,20 +49,17 @@ function copy(array){
     return array.slice(0, array.length);
 }    
 
-
 // TEST CODE:
 var output = copy(originalFlavors);
 console.log(output);
 var outputLenghth = output.length;
 console.log(outputLength);
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
     1. an array
     2. Check to see if the array given is 31 falvors
     3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
-  
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
@@ -111,11 +108,14 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(array){
+   array.pop();
+   return array;
 }
 
-
+ // TEST CODE:
+ var output = removeLastFlavor(originalFlavors)
+ console.log(output); // should return array - last flavor
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -127,10 +127,13 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(array, index){
+    return array[index];
 }
 
+ // TEST CODE:
+ var output = getFlavorByIndex(originalFlavors, 2);
+ console.log(output); // should return "Burgundy Cherry" on originalFlavors array
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -146,11 +149,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array, removeFlavor){
+  index = array.indexOf(removeFlavor);
+  array.splice(index,1);
+  return array;
 }
 
-
+ // TEST CODE:
+ var output = removeFlavorByName(originalFlavors, "Rocky Road");
+ console.log(output); // should return originalFlavors array - "Rocky Road"
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -171,10 +178,22 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
-
+function filterByWord(array, substring){
+    let newArray = [];
+  
+    for (let i = 0; i < array.length; i++) {
+      let string = array[i];
+      
+      if (string.includes(substring)) {
+        newArray.push(string);
+      }  // end of conditional
+    } // end of for loop
+    return newArray;
+  }
+  
+// TEST CODE:
+var output = filterByWord(originalFlavors, "Chocolate");
+console.log(output); // should return new array with substring "Chocolate" in the item names
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
