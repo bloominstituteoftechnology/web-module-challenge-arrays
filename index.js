@@ -33,6 +33,7 @@ const originalFlavors = [
     "Strawberry",
     "Vanilla",
     "Vanilla Burnt Almond"
+    
 ]
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,10 +46,17 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
+function copy(arrayOne){
+    return arrayOne.slice(0, arrayOne.length);
+}
+    
     /*your code here*/
-}    
+    
+    var flavors = copy(originalFlavors);
+    console.log(flavors);
 
+    var flavorCount = flavors.length;
+    console.log(flavorCount);
 
 
 
@@ -64,9 +72,20 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(placeholder){
    /*your code here*/
+    if (placeholder.length === 31) {
+        return true;
+
+    } else {
+        return false;    
 }
+}
+
+console.log(is31Flavors(originalFlavors));
+
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -284,7 +303,7 @@ function foo(){
     return 'bar';
 }
 
-export default{
+/*export default{
     foo,
     is31Flavors,
     addFlavor,
@@ -295,5 +314,5 @@ export default{
     filterByWord,
     getAverageWordLength,
     getRandomFlavors
-}
+}*/
 
