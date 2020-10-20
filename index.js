@@ -130,6 +130,7 @@ function getFlavorByIndex(array, index){
 
 getFlavorByIndex(originalFlavors, 2);
 
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
 as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
@@ -144,11 +145,17 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array, flavor){
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === flavor) {
+            let removed = [];
+            removed = array.splice(i, 1);
+            console.log(array);
+        }
+    }
 }
 
-
+removeFlavorByName(originalFlavors, "Rocky Road");
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -169,17 +176,20 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-// function filterByWord(array){
-//     for (i = 0; i < array.length; i++) {
-//         if (array[i][0].toLowerCase() === 'i') {
-//             console.log(array);
-//         } else {
-//             console.log('Oof, your code is... strange...');
-//         }
-//     }
-// }
+function filterByWord(array, filter){
+    let narr = [];
 
-// filterByWord(originalFlavors);
+    for (i = 0; i < array.length; i++) {
+        if (array[i].includes(filter) === true) {
+            narr.push(array[i]);
+        }
+    }
+
+    console.log(narr);
+}
+
+filterByWord(originalFlavors, "Chocolate");
+
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
