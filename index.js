@@ -50,10 +50,10 @@ function copy(array){
 }    
 
 // TEST CODE:
-var output = copy(originalFlavors);
-console.log(output);
-var outputLenghth = output.length;
-console.log(outputLength);
+// var output = copy(originalFlavors);
+// console.log(output);
+// var outputLenghth = output.length;
+// console.log(outputLength);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -89,7 +89,7 @@ Use the addFlavor function below to do the following:
 */
 
 function addFlavor(array, newFlavor){
-    array.push(newFlavor);
+    array.unshift(newFlavor);
     return array;
  }
  
@@ -150,7 +150,7 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, removeFlavor){
-  index = array.indexOf(removeFlavor);
+  let index = array.indexOf(removeFlavor);
   array.splice(index,1);
   return array;
 }
