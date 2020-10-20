@@ -92,7 +92,7 @@ function addFlavor(array, newFlavor){
    return console.log(array);
 }
 
-addFlavor(originalFlavors, "Ghost Pepper");
+addFlavor(originalFlavors, "Rainbow Sherbert");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -122,10 +122,13 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+
+function getFlavorByIndex(array, index){
+    let newArray = array.slice(index-1, index);
+    console.log(newArray.toString());
 }
 
+getFlavorByIndex(originalFlavors, 2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -166,10 +169,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
+// function filterByWord(array){
+//     for (i = 0; i < array.length; i++) {
+//         if (array[i][0].toLowerCase() === 'i') {
+//             console.log(array);
+//         } else {
+//             console.log('Oof, your code is... strange...');
+//         }
+//     }
+// }
 
+// filterByWord(originalFlavors);
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
