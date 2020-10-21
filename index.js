@@ -137,13 +137,20 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 /*the position you want to start removing things, #things you want to remove, (optional,)thing you want to replace */
-function removeFlavorByName(array, flavorName){
-    let index = array.findIndex( flavor=>flavor===flavorName); 
-    array.splice(index, 1);
-    return array;
+function removeFlavorByName(arrayOfFlavors, flavorName){
+    let index = arrayOfFlavors.findIndex( flavor => flavor === flavorName); /*flavor here is just a placeholder, could be named anything*/
+
+
+    //Things to know about methods: name
+    // paramaters, and their types
+    // what it returns
+    // what/if it modifies
+    arrayOfFlavors.splice(index, 1);
+
+    return arrayOfFlavors;
 }
 
-removeFlavorByName(originalFlavors, "Rocky Road")
+// removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -165,8 +172,15 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(arrayOfFlavors, string){
+
+    // From the first flavor... to the last flavor...
+    for (let i=0; i == arrayOfFlavors.length; i++) {            // Get current flavor, from index
+        let currentFlavor = arrayOfFlavors[i];                  // Does the current flavor, contain the string?
+        //if (currentFlavor ==)
+
+    }
+    return
 }
 
 
