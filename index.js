@@ -68,14 +68,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(copy){
-    if(copy.length === 31)
-    {
-        return true;
-    }
-    else(copy.length != 31)
-    {
-        return false
-    }
+    // if(copy.length === 31)
+    // {
+    //     return true;
+    // }
+    // else(copy.length != 31)
+    // {
+    //     return false
+    // }
  }
 console.log(is31Flavors(originalFlavors))
 
@@ -93,8 +93,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(originalFlavors){
-   return originalFlavors.unshift("Rainbow Sherbert")
+function addFlavor(copy){
+    copy.unshift("Rainbow Sherbert")
+    return originalFlavors.unshift("Rainbow Sherbert")
 }
 console.log(addFlavor(originalFlavors))
 
