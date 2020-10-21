@@ -48,10 +48,11 @@ Use the copy function below to do the following:
 
 
 
-function copy(flavorsCopy){
-    return flavorsCopy.slice()
+function copy(originalFlavors){
+    originalFlavors.slice()
+    return originalFlavors
 }    
-console.log(copy(originalFlavors))
+let flavorsCopy = copy(originalFlavors)
 
 
 
@@ -67,17 +68,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(copy){
-    // if(copy.length === 31)
-    // {
-    //     return true;
-    // }
-    // else(copy.length != 31)
-    // {
-    //     return false
-    // }
+function is31Flavors(flavorsCopy){
+    if(flavorsCopy.length === 31)
+    {
+        return true;
+    }
+    else(flavorsCopy.length != 31)
+    {
+        return false
+    }
  }
-console.log(is31Flavors(originalFlavors))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -93,11 +94,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(copy){
-    copy.unshift("Rainbow Sherbert")
-    return originalFlavors.unshift("Rainbow Sherbert")
+function addFlavor(flavorsCopy){
+    flavorsCopy.unshift("Rainbow Sherbert");
+    
+    return flavorsCopy
+    
 }
-console.log(addFlavor(originalFlavors))
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -110,10 +113,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(originalFlavors){
-   return originalFlavors.pop()
+function removeLastFlavor(flavorsCopy){
+    flavorsCopy.pop();
+    return flavorsCopy
 }
-console.log(removeLastFlavor(originalFlavors))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -126,10 +130,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors){
-    return originalFlavors[2] 
+function getFlavorByIndex(flavorsCopy){
+    return flavorsCopy[2];
 }
-console.log (getFlavorByIndex(originalFlavors))
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -146,14 +150,11 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors){
-//    return originalFlavors.splice(29, 1)
+function removeFlavorByName(flavorsCopy){
+    flavorsCopy.splice(29, 1)
+    return flavorsCopy;
     
 }
-console.log(originalFlavors.length)
-// create an index
-// let index = array.findIndex(flavor=>flavor===flavorName);
-//array.splice(29, 1)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
