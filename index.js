@@ -45,8 +45,8 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(xxx){
+      return xxx;
 }    
 
 
@@ -64,8 +64,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(){
+  if (originalFlavors.length === 31) {
+      return true
+  }
+  else if (originalFlavors.length != 31){
+      return false
+
+  }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,9 +87,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
+function addFlavor(receiveingArray, flavor){
+    receiveingArray.unshift(flavor);
+    return receiveingArray;
+ }
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,9 +104,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-}
+function removeLastFlavor(receiveingArray, flavor){
+    receiveingArray.pop(flavor);
+    return receiveingArray;
+ }
 
 
 
@@ -113,8 +121,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(array, index){
+    return array[index];
 }
 
 
@@ -132,8 +140,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array, flavor){
+    let returnedArray = [];
+    array.forEach(
+        function(item){
+        if(!(item === flavor)){
+            returnedArray.push(item);
+        }
+    });
+    return returnedArray;
 }
 
 
@@ -157,9 +172,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, flavor){
+    let returnedArray = [];
+    array.forEach(function(item){
+        if(item.includes(flavor)){
+            returnedArray.push(item);
+        }
+    });
+    return returnedArray;
 }
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
