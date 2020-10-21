@@ -313,16 +313,16 @@ function foo(){
     return 'bar';
 }
 
-export default{
-    foo,
-    is31Flavors,
-    addFlavor,
-    removeLastFlavor,
-    getFlavorByIndex,
-    removeFlavorByName,
-    copy,
-    filterByWord,
-    getAverageWordLength,
-    getRandomFlavors
-}
+//export default{
+//    foo,
+//    is31Flavors,
+//    addFlavor,
+//    removeLastFlavor,
+//    getFlavorByIndex,
+//    removeFlavorByName,
+//    copy,
+//    filterByWord,
+//    getAverageWordLength,
+ //   getRandomFlavors
+//}
 
