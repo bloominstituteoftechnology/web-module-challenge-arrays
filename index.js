@@ -51,7 +51,7 @@ function copy(copiedFlavors){
     return copiedFlavors.slice();
   }    
  
-//console.log(copy(originalFlavors))
+copy(originalFlavors)
 
 
 
@@ -76,7 +76,7 @@ function is31Flavors(array){
          }
           
         }
-//console.log(is31Flavors(originalFlavors));
+is31Flavors(originalFlavors)
   
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -95,7 +95,7 @@ function addFlavor(newFlavor, array){
    array.unshift(newFlavor);
    return array;
 }
-//console.log(addFlavor("Rainbow Sherbert", originalFlavors))
+addFlavor("Rainbow Sherbert", originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -113,7 +113,7 @@ function removeLastFlavor(array){
    return array;
 }
 
-//console.log(removeLastFlavor(originalFlavors));
+removeLastFlavor(originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -153,7 +153,7 @@ function removeFlavorByName (array, flavorName){
 
 }
 removeFlavorByName(originalFlavors, "Rocky Road")
-console.log(originalFlavors);
+//console.log(originalFlavors);
 
 
 
