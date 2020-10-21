@@ -66,8 +66,8 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
-function is31Flavors(array){
-        const myArgument = array.length;
+function is31Flavors(flavorCheck){
+        const myArgument = flavorCheck.length;
          //console.log(myArgument);
          if (myArgument === 31){
              console.log(true);
@@ -91,9 +91,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(newFlavor, array){
-   array.unshift(newFlavor);
-   return array;
+function addFlavor(newFlavor, addSherbert){
+   addSherbert.unshift(newFlavor);
+   return newFlavor;
 }
 addFlavor("Rainbow Sherbert", originalFlavors)
 
@@ -108,9 +108,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(array){
-    array.pop();
-   return array;
+function removeLastFlavor(flavorSnip){
+    flavorSnip.pop();
+   return flavorSnip;
 }
 
 removeLastFlavor(originalFlavors)
@@ -125,12 +125,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(array, index){
-    return array[index];
+function getFlavorByIndex(flavorList, index){
+    return flavorList[index];
      
 }
 
-console.log(getFlavorByIndex(originalFlavors, 5));
+getFlavorByIndex(originalFlavors, 5)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -146,10 +146,10 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName (array, flavorName){
- let index = array.findIndex( flavor => flavor===flavorName);
- array.splice(index, 1);
- return array;
+function removeFlavorByName (standardList, flavorName){
+ let index = standardList.findIndex( flavor => flavor===flavorName);
+ standardList.splice(index, 1);
+ return standardList;
 
 }
 removeFlavorByName(originalFlavors, "Rocky Road")
