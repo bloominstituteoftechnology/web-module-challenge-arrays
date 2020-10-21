@@ -46,11 +46,11 @@ Use the copy function below to do the following:
 */
 
 function copy(originalFlavors){
-    let copy = originalFlavors.slice();
-    return copy;
+    originalFlavors.slice();
+    return (originalFlavors);
  }    
- const copyFlavors = copy(originalFlavors);
- console.log(copyFlavors);
+ let copyFlavors = copy(originalFlavors);
+
 
 
 
@@ -66,8 +66,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(copyFlavors){
-    if( copyFlavors.length === 31){
-     return true;
+    if( copyFlavors.length === 31)
+    {
+        return true;
     } 
     else( copyFlavors.length != 31)
     {
@@ -75,7 +76,7 @@ function is31Flavors(copyFlavors){
     }
     }
 
-console.log(is31Flavors(copyFlavors));
+
 
 
 
@@ -94,11 +95,12 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(copyFlavors){
-    copyFlavors.unshift("Rainbow Sherbert");{
+    copyFlavors.unshift("Rainbow Sherbert");
+    {
        return copyFlavors;
     }
   }
-  console.log(addFlavor(copyFlavors));
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -113,11 +115,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(copyFlavors){
-    copyFlavors.pop();{
+    copyFlavors.pop();
+    {
        return copyFlavors;
-   }
+    }
 }
-console.log(removeLastFlavor(copyFlavors))
+
 
 
 
@@ -135,7 +138,7 @@ Use the getFlavorByIndex function below to do the following:
 function getFlavorByIndex(copyFlavors){
     return copyFlavors[2];
 }
-console.log(getFlavorByIndex(copyFlavors))
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -156,7 +159,8 @@ function removeFlavorByName(copyFlavors){
     copyFlavors.splice(29, 1);
     return copyFlavors;
 }
-console.log(removeFlavorByName(copyFlavors))
+
+
 
 
 
@@ -179,17 +183,19 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(copyFlavors, string){
-    let copyFlavors2 = []
-        for(let i=0; i<copyFlavors.length; i++){
-            if(copyFlavors[i].includes(string)){
-                copyFlavors2.push(copyFlavors[i])
-            }
+function filterByWord(copyFlavors, name){
+    const newArray = [];
+
+    for (let i = 0; i < copyFlavors.length; i++) 
+    {
+        if ( copyFlavors[i].includes(name) )
+        {
+            newArray.push(copyFlavors[i])
         }
-        return copyFlavors2
     }
-    
-    console.log(filterByWord(copyFlavors, "Chocolate"))
+
+    return newArray 
+}
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -314,16 +320,16 @@ function foo(){
     return 'bar';
 }
 
-// export default{
-//     foo,
-//     is31Flavors,
-//     addFlavor,
-//     removeLastFlavor,
-//     getFlavorByIndex,
-//     removeFlavorByName,
-//     copy,
-//     filterByWord,
-//     getAverageWordLength,
-//     getRandomFlavors
-// }
+export default{
+    foo,
+    is31Flavors,
+    addFlavor,
+    removeLastFlavor,
+    getFlavorByIndex,
+    removeFlavorByName,
+    copy,
+    filterByWord,
+    getAverageWordLength,
+    getRandomFlavors
+}
 
