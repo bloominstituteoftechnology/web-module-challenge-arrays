@@ -1,4 +1,4 @@
-/*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*/*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
@@ -44,14 +44,29 @@ Use the copy function below to do the following:
     1. An array as an argument
     2. Return a copy of the received array  
 */
-
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(array){
+    return array.slice(0, array.length);
 }    
 
 
 
 
+
+/*
+function foo(){
+    return 'bar';
+}
+export default{
+    foo,
+    is31Flavors,
+    addFlavor,
+    removeLastFlavor,
+    copy,
+    filterByWord,
+    getAverageWordLength,
+    getRandomFlavors
+}
+*/
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -62,12 +77,22 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
+function is31Flavors(iceCreamFlavors){
+    
+    if (iceCreamFlavors.length === 31) {
+        return true;
+    }
+    else if (iceCreamFlavors.length !== 31) {
+        return false;
+    }
 
-
-function is31Flavors(/*your code here*/){
-   /*your code here*/
 }
 
+console.log(is31Flavors(originalFlavors)); 
+
+
+
+ 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -79,11 +104,14 @@ Use the addFlavor function below to do the following:
 
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
-
-
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(flavor, iceCreamFlavors){
+   
+    iceCreamFlavors.unshift(flavor);
+    console.log(iceCreamFlavors);
 }
+
+addFlavor("Rainbow Shebert", originalFlavors);
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,9 +125,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(iceCreamFlavors){
+   iceCreamFlavors.pop();
+   console.log(iceCreamFlavors);
 }
+
+removeLastFlavor(originalFlavors);
 
 
 
@@ -112,10 +143,8 @@ Use the getFlavorByIndex function below to do the following:
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
-}
+var getFlavorByIndex
+console.log(originalFlavors[2]);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -131,12 +160,11 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
-
-
+function removeFlavorByName(newFlavorList){
+    originalFlavors.splice(0, 1);
+    return (newFlavorList);
+  }
+  console.splice("Peppermint Stick")
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -280,7 +308,7 @@ const regionalFlavors = [
 
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-function foo(){
+/*function foo(){
     return 'bar';
 }
 
@@ -296,4 +324,4 @@ export default{
     getAverageWordLength,
     getRandomFlavors
 }
-
+*/
