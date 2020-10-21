@@ -51,7 +51,7 @@ function copy(copiedFlavors){
     return copiedFlavors.slice();
   }    
  
-copy(originalFlavors)
+console.log(copy(originalFlavors));
 
 
 
@@ -96,6 +96,7 @@ function addFlavor(newFlavor, addSherbert){
    return newFlavor;
 }
 addFlavor("Rainbow Sherbert", originalFlavors)
+console.log(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -114,6 +115,7 @@ function removeLastFlavor(flavorSnip){
 }
 
 removeLastFlavor(originalFlavors)
+console.log(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -130,7 +132,7 @@ function getFlavorByIndex(flavorList, index){
      
 }
 
-getFlavorByIndex(originalFlavors, 5)
+console.log(getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -153,7 +155,7 @@ function removeFlavorByName (standardList, flavorName){
 
 }
 removeFlavorByName(originalFlavors, "Rocky Road")
-//console.log(originalFlavors);
+console.log(originalFlavors);
 
 
 
