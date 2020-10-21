@@ -45,10 +45,13 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(originalFlavors){
-    let copy = originalFlavors.slice()
-    return copy
+
+
+
+function copy(flavorsCopy){
+    return flavorsCopy.slice()
 }    
+console.log(copy(originalFlavors))
 
 
 
@@ -74,6 +77,8 @@ function is31Flavors(copy){
         return false
     }
  }
+console.log(is31Flavors(originalFlavors))
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -88,11 +93,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(copy){
-   copy.unshift("Rainbow Sherbert")
-   return copy
+function addFlavor(originalFlavors){
+   return originalFlavors.unshift("Rainbow Sherbert")
 }
-
+console.log(addFlavor(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -105,11 +109,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(copy){
-   copy.pop()
-   return copy
+function removeLastFlavor(originalFlavors){
+   return originalFlavors.pop()
 }
-
+console.log(removeLastFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -122,9 +125,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(copy){
-    return copy[2] 
+function getFlavorByIndex(originalFlavors){
+    return originalFlavors[2] 
 }
+console.log (getFlavorByIndex(originalFlavors))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -141,12 +145,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(copy){
-   copy.splice(29, 1)
-   return copy
+function removeFlavorByName(originalFlavors){
+//    return originalFlavors.splice(29, 1)
     
 }
-
+console.log(originalFlavors.length)
+// create an index
+// let index = array.findIndex(flavor=>flavor===flavorName);
+//array.splice(29, 1)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -168,8 +174,8 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(){
+ 
 }
 
 
