@@ -173,14 +173,18 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arrayOfFlavors, string){
-
+    let newArray = [];
     // From the first flavor... to the last flavor...
-    for (let i=0; i == arrayOfFlavors.length; i++) {            // Get current flavor, from index
+    for (let i=0; i < arrayOfFlavors.length; i++) {            // Get current flavor, from index
         let currentFlavor = arrayOfFlavors[i];                  // Does the current flavor, contain the string?
-        //if (currentFlavor ==)
+            
+        //if the currentFlavor's string has any word that matches the string passed into the function, then add it to a new array
+        if (currentFlavor.includes(string)) { //if true, then add that currentFlavor into a new array
+            newArray.push(currentFlavor);
+        } 
 
     }
-    return
+    return newArray;
 }
 
 
