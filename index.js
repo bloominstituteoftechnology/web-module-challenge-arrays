@@ -1,5 +1,5 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
-
+let log = console.log();
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
     "Banana Nut Fudge",
@@ -155,9 +155,18 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(array, removeFlavor){
+
     /*your code here*/
+    // let removed = originalFlavors.splice(29, 1);
+    // return array [index];
+
+    const index = array.indexOf(removeFlavor);
+    array.splice(index, 1);
+    return array;
+
 }
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
