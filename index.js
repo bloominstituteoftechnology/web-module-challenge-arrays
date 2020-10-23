@@ -68,7 +68,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(flavorArray) {
     (flavorArray.length === 31);
-
+    
 }
 
 
@@ -137,11 +137,13 @@ Use the removeFlavorByName function below to do the following:
 
     For example: running removeFlavorByName(originalFlavors, "Rocky Road") would return an array with the a length of 30 because Rocky Road would have been removed. 
 
-    HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(newFlavorEditor , flavorName){
-  
+function removeFlavorByName(newFlavorEditor , flavorName)
+{
+    let removedFlavorIndex = newFlavorEditor.indexOf(flavorName);
+    newFlavorEditor.splice(removedFlavorIndex, 1);
+    return newFlavorEditor;
 }
 
 
@@ -165,8 +167,8 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(newArrayToFilter, filterString){
+   
 }
 
 
