@@ -46,7 +46,7 @@ Use the copy function below to do the following:
 */
 
 function copy(){
-    let newFlavors = originalFlavors.slice(0, 32);
+    let newFlavors = originalFlavors.slice(0, 31);
     return newFlavors;
 
 }    
@@ -67,7 +67,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(flavorArray) {
-    (flavorArray.length === 31);
+    return(flavorArray.length === 31);
     
 }
 
@@ -167,8 +167,20 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(newArrayToFilter, filterString){
-   
+function filterByWord(newArrayToFilter, filterString)
+{ 
+  let i;
+  let filteredArray = [];
+  for (i =0; i < newArrayToFilter.length; i++) 
+  {
+     if  (newArrayToFilter[i].includes(filterString))
+         {
+         filteredArray.push(newArrayToFilter[i]); 
+         }
+     
+  }   
+  console.log(filteredArray);
+  return filteredArray;
 }
 
 
