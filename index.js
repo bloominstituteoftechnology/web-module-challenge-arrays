@@ -45,6 +45,7 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
+
 function copy(){
    return originalFlavors;
 } copy();
@@ -63,12 +64,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(){
-   if (originalFlavors.length === 31) {
-    console.log("true");
-} else {
-    (console.log("false"));
+    if (originalFlavors.length === 31){
+                 return true;
+            } else {
+                    return false;
+             }
 }
-}is31Flavors();
+is31Flavors(originalFlavors);
 
 
 
@@ -86,9 +88,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
+function addFlavor(originalFlavors, newFlavor){
+   originalFlavors.unshift(newFlavor);
+   return originalFlavors;
+}addFlavor(originalFlavors,"Rainbow Sherbert");
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
