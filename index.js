@@ -82,7 +82,7 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(newFlavor, arr){
+function addFlavor(arr, newFlavor){
   arr.unshift(newFlavor);
   return arr;
 }
