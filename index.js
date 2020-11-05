@@ -47,10 +47,9 @@ Use the copy function below to do the following:
 
 function copy(array){
     let arrayCopy = [...array];
-    
-    return arrayCopy 
-}
-console.log(copy(originalFlavors));  
+
+    return arrayCopy;
+} 
 
 
 
@@ -67,8 +66,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(array){
+   if(array.length === 31){
+       return true;
+   }else{
+       return false;
+   }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -84,8 +87,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(array, flavor){
+    array.unshift(flavor);
+    
+    return array;
 }
 
 
