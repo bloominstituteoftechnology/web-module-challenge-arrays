@@ -136,7 +136,7 @@ Use the removeFlavorByName function below to do the following:
 
     function removeFlavorByName(arr, str) {
         arr.splice(arr.indexOf(str), 1);
-            return originalFlavors;
+            return arr;
     }
     console.log(removeFlavorByName(originalFlavors, "Black Walnut"))
 
@@ -160,12 +160,20 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr, str) {
-    for(let i=0 i < arr.length; i++)
-
-   arr.includes(fromIndex())
-    
-    newArray=
+    // funtion that takes in a new array
+    const newArr = []
+    // new variable
+    for (let i = 0; i < arr.length; i++) {
+        // as long as the array length is less than 0, this loop will continue to run.
+        if (arr[i].includes(str)) {
+            // if the array of flavors index includes chocolate
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+    // this is the for loop above
 }
+filterByWord(originalFlavors, "Chocolate")
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
@@ -179,8 +187,8 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/) {
-  /*code here*/
+function getAverageWordLength(originalFlavors) {
+    return
 }
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
