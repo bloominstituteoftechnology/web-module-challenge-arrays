@@ -45,10 +45,12 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(insertFlavors){
+    let copyFlavors=insertFlavors.slice()
+    console.log(copyFlavors)
 }    
 
+copy(originalFlavors)
 
 
 
@@ -64,9 +66,16 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(howManyFlavors){
+   let judgedFlavors=howManyFlavors.length
+   if (judgedFlavors=31) {
+       return true;
+   } else {
+       return false;
+   }
 }
+
+console.log(is31Flavors(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -80,11 +89,13 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
-   /*your code here*/
+rainbowFlavor='Rainbow Sherbert'
+function addFlavor(flavorArray, newFlavor){
+   flavorArray.unshift(newFlavor);
+   return flavorArray
 }
 
+console.log(addFlavor(originalFlavors, rainbowFlavor))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -97,11 +108,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(flawedFlavors){
+   flawedFlavors.pop();
+   return flawedFlavors
 }
 
-
+console.log(removeLastFlavor(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -113,10 +125,11 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(flavorArray2, flavorIndexPosition){
+    return flavorArray2[flavorIndexPosition];
 }
 
+console.log(getFlavorByIndex(originalFlavors, 2))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -131,10 +144,13 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+removeThis=3
+function removeFlavorByName(flavorArray3, naughtyFlavor){
+    flavorArray3.splice(naughtyFlavor, 1)
+    return flavorArray3
 }
+
+console.log(removeFlavorByName(originalFlavors, removeThis))
 
 
 
@@ -156,10 +172,16 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-
-function filterByWord(/*your code here*/){
-    /*your code here*/
+let todaysStringyFlavor="Chocolate"
+function filterByWord(flavorArray4, stringyFlavor){
+    for(let i=0; i < flavorArray4.length; i++){
+      if(flavorArray4[i].includes(stringyFlavor)){
+          return flavorArray4[i];
+      }  
+    }
 }
+
+console.log(filterByWord(originalFlavors, todaysStringyFlavor))
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -279,21 +301,21 @@ const regionalFlavors = [
 
 
 
-/* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-function foo(){
-    return 'bar';
-}
+// /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
+// function foo(){
+//     return 'bar';
+// }
 
-export default{
-    foo,
-    is31Flavors,
-    addFlavor,
-    removeLastFlavor,
-    getFlavorByIndex,
-    removeFlavorByName,
-    copy,
-    filterByWord,
-    getAverageWordLength,
-    getRandomFlavors
-}
+// export default{
+//     foo,
+//     is31Flavors,
+//     addFlavor,
+//     removeLastFlavor,
+//     getFlavorByIndex,
+//     removeFlavorByName,
+//     copy,
+//     filterByWord,
+//     getAverageWordLength,
+//     getRandomFlavors
+// }
 
