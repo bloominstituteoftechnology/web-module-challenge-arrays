@@ -48,5 +48,5 @@ Make sure you are invoking your function after defining and wrapping a console.l
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request.**
+- Please submit via code grade 
 
