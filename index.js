@@ -41,7 +41,7 @@ With all of these changes going on, we don't want to lose track of the actual, o
 
 /*
 Use the copy function below to do the following:
-    1. An array as an argument
+    1. receive an array as a parameter - you will pass in originalFlavors as an argument when the function is invoked.
     2. Return a copy of the received array  
 */
 
@@ -55,8 +55,8 @@ function copy(/*your code here*/){
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
-    1. an array
-    2. Check to see if the array given is 31 falvors
+    1. an array as a parameter
+    2. Check to see if the array given is 31 flavors
     3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
   
 
@@ -74,8 +74,8 @@ Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They 
 Use the addFlavor function below to do the following:
     1. Receive an array
     2. Receive a new flavor as a string
-    3. Add the passed flavor to the front of the array
-    4. Return the resulting array
+    3. The function adds the passed flavor to the front of the passed array
+    4. The function should return the resulting array
 
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
@@ -90,8 +90,8 @@ function addFlavor(/*your code here*/){
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
 
 Use the removeLastFlavor function below to do the following:
-    1. Receive receive an array
-    2. Remove the last item from the array
+    1. Receive an array
+    2. Remove the last item from the received array
     3. Return the resulting array
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
@@ -107,8 +107,9 @@ function removeLastFlavor(/*your code here*/){
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-    1. Recieve an array and an index
-    2. Return the flavor located at the received index position
+    1. Recieve an array
+    2. Receive a number (the desired index)
+    3. Return the flavor located at the received index position
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
@@ -123,9 +124,10 @@ As corporate wants to add more and more flavors to their lineup, they've realize
 as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
 
 Use the removeFlavorByName function below to do the following:
-    1. Receive an array and a string (the flavour to be removed)
-    2. Remove that flavor from the array
-    5. Return the resulting array that now contains one less flavor
+    1. Receive an array
+    2. Receive a flavor as a string
+    3. Remove the received flavor from the received array
+    4. Return the resulting array that now contains one less flavor
 
     For example: running removeFlavorByName(originalFlavors, "Rocky Road") would return an array with the a length of 30 because Rocky Road would have been removed. 
 
@@ -145,8 +147,9 @@ that contain the received string. This would allow you to be able to filter for 
 by passing in those specific strings.
 
 Use the filterByWord function below to do the following:
-    1. Receive an array and a string ("chocolate")
-    2. Check to see if any of the flavors in the array contain that string
+    1. Receive an array
+    2. Receive a string (example: "chocolate")
+    3. Check to see if any of the flavors in the array contain that string
     4. If they do, add them to a new array
     5. Return the new array that contains the filtered flavors
 
