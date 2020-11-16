@@ -46,7 +46,5 @@ Make sure you are invoking your function after defining and wrapping a console.l
 
 ## Submission format
 
-Follow these steps for completing your project.
-
-- Please submit via code grade 
+Please see canvas for cohort specific submission instructions
 
