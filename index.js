@@ -120,10 +120,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(){
-    let i = originalFlavors[i];
-    return i;
-    /*your code here*/
+function getFlavorByIndex(originalFlavors){
+    return originalFlavors[2]
 }
 
 
@@ -143,11 +141,11 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(flavorsArray, flavorName) {
-    for (var i = 1; i < flavorsArray.length; i++) {
-      if (flavorsArray[i] === flavorName) {
-        flavorsArray.splice(i, 1);
-        return flavorsArray;
+function removeFlavorByName(array, flavorName) {
+    for (var i = 1; i < array.length; i++) {
+      if (array[i] === flavorName) {
+        array.splice(i, 1);
+        return array;
       }
     }
   }
@@ -174,9 +172,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(originalFlavors, newFlavor){
+    let newArray = []
+    for(let i = 0; i < originalFlavors.length; i++) {
+        if(originalFlavors[i].includes(newFlavor)){
+            newArray.push(originalFlavors[i])
+        }
+    }
+    return newArray
 }
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
