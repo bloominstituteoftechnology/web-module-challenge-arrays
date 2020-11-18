@@ -45,10 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(originalArray){
+    return [...originalArray]
 }    
-
+console.log(copy(originalFlavors))
 
 
 
@@ -64,8 +64,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(originalArray){
+    if(originalArray.length === 31) {
+        return true
+    } else {
+        return false
+    }
+
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,9 +86,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(originalArray, flavor){
+    originalArray.unshift(flavor)
+    return originalArray
 }
+addFlavor(originalFlavors, 'Rainbow Sherbert')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,10 +104,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(lastArray){
+     lastArray.pop();
+     return lastArray
 }
-
+removeLastFlavor(originalFlavors)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -114,9 +122,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(array, num){
+    return array[num]
 }
+getFlavorByIndex(originalFlavors, 2)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -127,15 +136,21 @@ Use the removeFlavorByName function below to do the following:
     1. Receive an array
     2. Receive a flavor as a string
     3. Remove the received flavor from the received array
-    4. Return the resulting array that now contains one less flavor
+    4. Return the resulting array that now contains one less flavor 
 
     For example: running removeFlavorByName(originalFlavors, "Rocky Road") would return an array with the a length of 30 because Rocky Road would have been removed. 
 
     HINT: You can use .splice() for this
 */
+        
+// console.log(originalFlavors.findIndex(flavor => flavor === 'Rocky Road')) RETURNS 27
+// console.log(originalFlavors[27]) TESTING TOP CONSOLE.LOG
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+
+function removeFlavorByName(array, remFlavor){
+    let index = array.findIndex(bob => bob === remFlavor)
+    array.splice (index, 1)
+    return array
 }
 
 
@@ -158,10 +173,20 @@ Use the filterByWord function below to do the following:
     HINT - you can use the .includes method to help you solve this
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
+
+    ${sentence.includes(word)
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, str){
+    let newArray = []
+    for(let i = 0; i < array.length; i++){
+        let indexString = array[i]
+        if (indexString.includes(str)){
+            newArray.push(indexString)
+
+        }
+    }
+    return newArray 
 }
 
 
