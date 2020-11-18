@@ -148,12 +148,12 @@ Use the removeFlavorByName function below to do the following:
 function filterByWord(/*your code here*/){
     /*your code here*/
 }
-function filterByWord(origFlavors, flavorFilter){
+function filterByWord(originalFlavors, flavorFilter){
     const filteredArray = []
-    for (i=0; i < origFlavors.length; i++){
+    for (i=0; i < originalFlavors.length; i++){
 
-        if (origFlavors[i].includes(flavorFilter)){
-            filteredArray.push(origFlavors[i]);
+        if (originalFlavors[i].includes(flavorFilter)){
+            filteredArray.push(originalFlavors[i]);
         }
     }
     return filteredArray
@@ -182,11 +182,11 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(origFlavors, flavorFilter){
+function filterByWord(originalFlavors, flavorFilter){
     const filteredArray = []
-    for (i=0; i < origFlavors.length; i++){
+    for (i=0; i < originalFlavors.length; i++){
 
-        if (origFlavors[i].includes(flavorFilter)){
+        if (originalFlavors[i].includes(flavorFilter)){
             filteredArray.push(origFlavors[i]);
         }
     }
