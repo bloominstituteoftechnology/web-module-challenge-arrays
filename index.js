@@ -159,7 +159,7 @@ July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
 that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around 
 by passing in those specific strings.
-
+        b
 Use the filterByWord function below to do the following:
     1. Receive an array
     2. Receive a string (example: "chocolate")
