@@ -2,7 +2,7 @@
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
-    "Banana Nut Fudge",
+    "Banana Nut Fudge", 
     "Black Walnut",
     "Burgundy Cherry",
     "Butterscotch Ribbon",
