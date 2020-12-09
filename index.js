@@ -69,7 +69,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(array){
-   return (array.length === 31);
+    return (array.length === 31);
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -141,9 +141,13 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, flavor){
-    
+    for (let i = 0; i < array.length; i++) {
+        if (i === flavor) {
+            array.splice(i, 1);
+        }
+    }
+    return array;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -166,8 +170,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    let tempArr = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(string)) {
+            tempArr.push(array[i]);
+        }
+    }
+    return tempArr;
 }
 
 
