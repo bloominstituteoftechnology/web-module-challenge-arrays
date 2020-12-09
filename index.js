@@ -142,7 +142,7 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array, flavor){
     for (let i = 0; i < array.length; i++) {
-        if (i === flavor) {
+        if (array[i] === flavor) {
             array.splice(i, 1);
         }
     }
@@ -193,8 +193,13 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(array){
+    // seen online counting spaces was the go-to (requires a clean array though, otherwise could error)
+    let count = array.length;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(' ')) count++;
+    }
+    return (count / array.length); //test: success
 }
 
 
@@ -212,7 +217,14 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 function getRandomFlavors(/*code here*/){
-    /*code here*/
+    /* code here
+        Outline:
+            1. Add indices from all arrays into a master array
+            2. Random an index between 0 and array.length
+            3. Add the resulting index to a return array
+            4. Remove index from master array, so it can't be added to return array twice
+            5. Repeat 2-4 until return array.length is 31
+    */
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
