@@ -1,5 +1,7 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+import { TestWatcher } from "jest";
+
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
     "Banana Nut Fudge",
@@ -45,10 +47,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(originalFlavors){
-    let copy = [...originalFlavors];
-}    
-console.log(originalFlavors)
+function is31Flavors(originalFlavors){
+  
+ 
+ is31Flavors(originalFlavors)
 
 
 
@@ -64,16 +66,15 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
-
-
 function is31Flavors(originalFlavors){
-   if (originalFlavors ===31){
-   console.log("its true baybeee theres 31 of these bois");
-   } else
-   console.log("noep");
-
-}
-
+    if (originalFlavors.length === 31){
+    console.log("ok.yes");
+    } else
+    console.log("noep");
+ 
+ }
+ 
+ is31Flavors(originalFlavors)
 
 
 
@@ -93,7 +94,7 @@ function addFlavor(originalFlavors){
     originalFlavors.unshift("Rainbow Sherbert")
     console.log(originalFlavors);
 }
-
+addFlavor(originalFlavors)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -107,11 +108,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(originalFlavors){
-   originalFlavors.pop();
-   console.log(originalFlavors);
-}
 
+function removeLastFlavor(originalFlavors){
+    originalFlavors.pop();
+    console.log(originalFlavors);
+ }
+ removeLastFlavor(originalFlavors)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -129,6 +131,7 @@ function getFlavorByIndex(originalFlavors){
     flavoratindex2 =originalFlavors[2];
     console.log(flavoratindex2);
 }
+getFlavorByIndex(originalFlavors)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -206,7 +209,7 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(originalFlavors){
     /*code here*/
 }
 
