@@ -65,9 +65,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 function is31Flavors(arrFlavors){
     
     if (arrFlavors.length === 31){
-        return 'true';
+        return true;
     }else{
-        return "false";
+        return false;
     }
 }
 console.log(is31Flavors(originalFlavors));
@@ -136,20 +136,17 @@ Use the removeFlavorByName function below to do the following:
 
     For example: running removeFlavorByName(originalFlavors, "Rocky Road") would return an array with the a length of 30 because Rocky Road would have been removed. 
 
-    HINT: You can use .splice() for this
+    HINT: You can use .splice() for this 
+    // splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 */
 
-function removeFlavorByName(fakeArray, fakeItem){
-    fakeItem = [];
-    fakeArray.splice();
+function removeFlavorByName(fakeArray, fakeI){ // recieve an array(fakeArray) and also a string
 
-    return fakeArray;
+    fakeArray = originalFlavors.splice(0,fakeI);
+    return fakeArray();
+
 }
-
-    // let flavorString = [];
-    // array = originalFlavors.splice(29,1);
-
-
+// console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -171,8 +168,15 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(arr,str){ 
+    const arrArr = [];
+    for(let i = 0; i < arr.length;i++){
+        if(arr[i].includes(str)){
+            arrArr.push(arr[i]);
+        }
+    }
+    return arrArr;
+
 }
 
 
