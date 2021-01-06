@@ -220,8 +220,9 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
+function getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors){
+  var getRandomFlavors =['vainlla fugde','strawberry shortcake', 'blizzard', 'hot fudge']
+  return getRandomFlavors;
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
