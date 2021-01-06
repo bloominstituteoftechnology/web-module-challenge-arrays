@@ -195,10 +195,17 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
-}
+function getAverageWordLength(wordsArr){
+    var totalWords = 0;
 
+    for(var i = 0; i < wordsArr.length; i++) {
+      var str = wordsArr[i];
+      var res = str.split(" ");
+      totalWords = totalWords + res.length;
+    }
+    return totalWords / wordsArr.length;
+}
+console.log(getAverageWordLength(originalFlavors));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors
@@ -213,9 +220,6 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
-}
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
@@ -298,7 +302,17 @@ const regionalFlavors = [
     "Caramel 'n' Cookies"
 ]
 
+function getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors){
+    var tmpFlavors = originalFlavors.concat(newFlavors, seasonalFlavors, regionalFlavors);
 
+    var randomFlavors = [];
+    for(var j = 0; j < 31; j++) {
+      var i = Math.floor(Math.random() * (tmpFlavors.length - 1 + 1) + 1);
+      randomFlavors.push(tmpFlavors[i]);
+    }
+    return randomFlavors;
+}
+console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo(){
