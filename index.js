@@ -45,7 +45,7 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(array)
+function copy(flavors)
 {
   return flavors.slice();
 }    
@@ -67,8 +67,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(flavors){
-for (i = 0; i < originalFlavors.length; i++){
-    if (originalFlavors.length === 31){
+for ( let i = 0; i < flavors.length; i++){
+    if (flavors.length === 31){
         return true;
     } else{
         return false;
@@ -129,9 +129,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex( flavors, i){
+    return flavors[i].toString();
+    
 }
+
+console.log(getFlavorByIndex(originalFlavors, 2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -149,9 +152,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+function removeFlavorByName(flavors, name){
+    return flavors.filter(function(ele){
+      return ele != name;
+    })
+       
+       
+     }
+    
+    
+    console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
