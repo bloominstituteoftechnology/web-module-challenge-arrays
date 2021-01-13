@@ -174,13 +174,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(anArray,Chocolate){
+function filterByWord(arr, str){
     var newArray = [];
-    let i = anArray.index;
-    for(i=0; i< anArray.length; i++){
-    i.includes("Chocolate") === true;
-    return newArray.push(i);
+    for(let i=0; i< arr.length; i++){
+    if (arr[i].includes(str,0)) {
+    newArray.push(arr[i])
 }
+}
+return newArray;
 }
 console.log(filterByWord(originalFlavors,"Chocolate"));
 
