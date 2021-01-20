@@ -45,9 +45,8 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(originalFlavors) {
-    const copiedArray = [...originalFlavors]
-    return copiedArray;
+function copy(array) {
+    return [...array]
 }    
 
 
@@ -65,8 +64,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(originalFlavors) {
-        return is31Flavors;
+function is31Flavors(array) {
+      if(array.length === 31){
+          return true;
+      }else{
+          return false;
+      }
+        
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -82,9 +86,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(originalFlavors) {
-   copiedArray.unshift('Rainbow Sherbert');
-   return addFlavor
+function addFlavor(array, string) {
+   array.unshift(string);
+   return array;
 }
 
 
@@ -99,8 +103,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(array){
+   array .pop();
+   return array;
 }
 
 
@@ -116,7 +121,7 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, index){
     /*your code here*/
 }
 
