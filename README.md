@@ -2,7 +2,7 @@
 
 ## Arrays
 
-## Objectives
+## Objectives.
 
 - use arrays to store and access data
 - use array properties and array methods
