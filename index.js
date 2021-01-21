@@ -77,7 +77,7 @@ Use the addFlavor function below to do the following:
     3. The function adds the passed flavor to the front of the passed array
     4. The function should return the resulting array
 
-    For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
+    For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
 
