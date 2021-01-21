@@ -35,6 +35,7 @@ const originalFlavors = [
     "Vanilla Burnt Almond"
 ]
 
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
 With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So we need to copy the original array!
@@ -75,7 +76,7 @@ function is31Flavors(element){
     }
 
 }
-console.log(is31Flavors(originalFlavors));
+console.log(is31Flavors(copy(originalFlavors)));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -94,7 +95,7 @@ function addFlavor(line,newflavor){
     line.unshift(newflavor);
     return line;
 }
-console.log(addFlavor(originalFlavors,"Rainbow Sherbert"));
+console.log(addFlavor(copy(originalFlavors),"Rainbow Sherbert"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,7 +113,7 @@ function removeLastFlavor(line){
    line.pop();
    return line;
 }
-
+console.log(copy(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -130,7 +131,7 @@ function getFlavorByIndex(line,number){
     return(line[number])
     }
     
-
+    console.log(copy(originalFlavors),2)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -203,9 +204,36 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(line){
+    let k=[];
+    let s=0;
+
+    for (let i=0;i<line.length;i++) {
+        k[i]=0;
+    }
+
+    for (let i=0;i<line.length;i++) {
+      for (let m=0;m<line[i].length;m++){
+        if (line[i].charAt(m)==" "){
+          k[i]++;
+        }
+      }
+    }
+
+    for (let i=0;i<line.length;i++){
+            k[i]++;
+    }
+    for (let i=0;i<line.length;i++){
+        s=s+k[i];
+    }
+    return(s);
 }
+
+console.log(getAverageWordLength(originalFlavors));
+
+
+
+
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -221,9 +249,37 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
-}
+function getRandomFlavors(line1,line2,line3,line4){
+    let newmassive=[];
+    for (let i=0;i<31;i++){
+        let num=Math.floor(Math.random()*4)+1;
+        if (num==1){
+            let k=0;
+            k=Math.floor(Math.random()*line1.length);
+            newmassive.push(line1[k])
+            }
+        else if (num==2){
+            let k=0;
+            k=Math.floor(Math.random()*line2.length);
+            newmassive.push(line2[k])
+            }
+        else if (num==3){
+            let k=0;
+            k=Math.floor(Math.random()*line3.length);
+            newmassive.push(line3[k])
+            }
+        else if (num==4){
+            let k=0;
+                        k=Math.floor(Math.random()*line4.length);
+
+            newmassive.push(line4[k])
+            }
+        }
+   console.log(newmassive.length)
+        return newmassive;
+ 
+    }
+
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
