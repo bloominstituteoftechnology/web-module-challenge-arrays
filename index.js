@@ -141,9 +141,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, string){
-   
-}   
+function removeFlavorByName(flavorList, flavorToRemove){
+    const index = flavorList.indexOf(flavorToRemove);
+    console.log(index);
+    const removedFlavor = flavorList.splice(index, 1);
+    return flavorList;
+  }
 
 
 
