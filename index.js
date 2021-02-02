@@ -45,8 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
+function copy(originalFlavors){
     /*your code here*/
+    let newArray = originalFlavors.slice();
+    return newArray;
 }    
 
 
@@ -64,8 +66,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(originalFlavors){
    /*your code here*/
+   if (originalFlavors.length ===31){
+       return true;
+   } else{
+       return false;
+   }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +88,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
+function addFlavor(originalFlavors){
    /*your code here*/
+   originalFlavors.unshift("Rainbow Sherbert");
+   return originalFlavors;
 }
 
 
@@ -97,8 +106,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(originalFlavors){
    /*your code here*/
+   originalFlavors.splice(-1,1);
+   return originalFlavors;
 }
 
 
@@ -114,8 +125,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(originalFlavors, index){
     /*your code here*/
+    return originalFlavors[index];
+
 }
 
 
@@ -134,8 +147,11 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(originalFlavors, removeItem){
     /*your code here*/
+    let index = originalFlavors.indexOf(removeItem)
+    originalFlavors.splice(index,1);
+    return originalFlavors;
 }
 
 
@@ -160,8 +176,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(originalFlavors, keyword){
     /*your code here*/
+    var newArray =[];
+    for (let i = 0; i< originalFlavors.length; i++){
+       
+        if (originalFlavors[i].includes(keyword) == true){
+            newArray.push(originalFlavors[i])
+        }
+    }
+    return newArray;
 }
 
 
@@ -177,9 +201,21 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(originalFlavors){
     /*code here*/
+    let arrayNum = [];
+    for(let i = 0; i< originalFlavors.length; i++) {
+        let newArray = originalFlavors[i].split(" ");
+        arrayNum.push(newArray.length);
+    }
+    let sum =0;
+    for(let i = 0; i< arrayNum.length; i++){
+        sum += arrayNum[i];
+    }
+    return sum/arrayNum.length;
 }
+
+
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -195,8 +231,19 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
+function getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors){
     /*code here*/
+    const newArray1 = originalFlavors.concat(newFlavors);
+    const newArray2 = seasonalFlavors.concat(regionalFlavors);
+    const newArray = newArray1.concat(newArray2);
+    const finalList = [];
+    for(let i = 0; i<31; i++){
+        let index = Math.random()* newArray2.length;
+        finalList.push(newArray[index]);
+    }
+    return finalList;
+    
+
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
