@@ -48,8 +48,10 @@ Use the copy function below to do the following:
 function copy(/*your code here*/){
     /*your code here*/
 }    
-
-
+function copy(anArray){
+    let arrayCopy = anArray;
+    return arrayCopy
+}
 
 
 
@@ -66,6 +68,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(/*your code here*/){
    /*your code here*/
+   function is31Flavors(anArray){
+       if (anArray.length === 31)
+       return true
+}
+else{
+    return false;
+}
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -84,6 +93,11 @@ Use the addFlavor function below to do the following:
 function addFlavor(/*your code here*/){
    /*your code here*/
 }
+function addFlavor(line,newFlavor){
+    line.unshift(newFlavor);
+    return line;
+}
+console.log(addFlavor(originalFlavors,"Vanilla bean"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -100,7 +114,10 @@ Use the removeLastFlavor function below to do the following:
 function removeLastFlavor(/*your code here*/){
    /*your code here*/
 }
-
+function removeLastFlavor(line){
+    line.pop();
+    return line;
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -116,6 +133,9 @@ Use the getFlavorByIndex function below to do the following:
 
 function getFlavorByIndex(/*your code here*/){
     /*your code here*/
+}
+function getFlavorsByIndex(line,number){
+    return(line[number]);
 }
 
 
@@ -136,6 +156,13 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(/*your code here*/){
     /*your code here*/
+}
+function removeFlavorByName(line,flavortoremove){
+    for (let i=0;i<line.length;i++){
+        if (flavortoremove===line[i]){
+            line.splice(i,1)}}
+            return line;
+    }
 }
 
 
@@ -163,7 +190,15 @@ Use the filterByWord function below to do the following:
 function filterByWord(/*your code here*/){
     /*your code here*/
 }
-
+function filterByWord(arr,string){
+    const newArray = [];
+    for(let i=0; i>arr.length;i++){
+        newArray.push(arr[i]);
+    }
+}
+    return newArray;
+}
+console.log(filterByWord(originalFlavors;'vanilla'))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
