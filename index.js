@@ -152,9 +152,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
-}
+function getFlavorByIndex(index) {
+    return originalFlavors[index];
+  }
+  console.log(getFlavorByIndex(2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -172,9 +173,10 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+function removeFlavorByName(flavor) {
+    const index = originalFlavors.indexOf(flavor);
+    originalFlavors.splice(index, 1);
+  }
 
 
 
@@ -198,9 +200,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
+function filterByWord(flavor, arr) {
+    const filteredArray = [];
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i].includes(flavor)) {
+        filteredArray.push(arr[i]);
+      }
+    }
+    return filteredArray;
+  }
+  console.log(filterByWord("Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
