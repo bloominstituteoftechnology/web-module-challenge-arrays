@@ -175,7 +175,7 @@ Use the filterByWord function below to do the following:
 
 function filterByWord(originalFlavors, keyword) {
     const results = []
-      for (let i = 1; i < originalFlavors.length; i++) {
+      for (let i = 0; i < originalFlavors.length; i++) {
         if (originalFlavors[i].includes(keyword) == true) {
           results.push(originalFlavors[i]) ;
         }
@@ -197,9 +197,23 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(originalFlavors){
+    const numberOfWords = []
+      for (let i = 0; i < originalFlavors.length; i++) {
+        let newItem = originalFlavors[i].split(' ');
+          numberOfWords.push(newItem.length);
+        {
+  
+    const summation = 0 ;
+      for (let i = 0; i < numberOfWords.length; i++) {
+        summation += numberOfWords[i] ;
+      }
+    
+    const averageWordLength = summation / originalFlavors.length;
+    return averageWordLength
+  
 }
+  
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
