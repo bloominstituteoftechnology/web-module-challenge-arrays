@@ -150,11 +150,11 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+var flavorRemoval =''
+function removeFlavorByName(originalFlavors){
+   flavorRemoval= originalFlavors.splice(4,1)
+  return flavorRemoval;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
