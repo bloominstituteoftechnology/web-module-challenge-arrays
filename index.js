@@ -86,8 +86,6 @@ function addFlavor(flavor, string){
     return flavor;
 }
 
-console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -105,8 +103,6 @@ function removeLastFlavor(flavor){
     return flavor;
 }
 
-console.log(removeLastFlavor(originalFlavors));
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -123,8 +119,6 @@ function getFlavorByIndex(flavors, index){
     return flavors[index];
 }
 
-console.log(originalFlavors, 2);
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
 as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
@@ -140,11 +134,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors){
-    /*your code here*/
-}
-
-
+function removeFlavorByName(flavors, string){
+        for (let i = 0; i < flavors.length; i++){
+            if (flavors[i] === string){
+                flavors.splice(i,1)
+            }
+        }
+        return flavors
+    }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -166,9 +163,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(originalFlavors){
-    /*your code here*/
+function filterByWord(flavor,string){
+    let chocolateArray=[]
+    for (let i=0; i<flavor.length; i++){
+        if (flavor[i].includes(string)){
+            chocolateArray.push(flavor[i])
+        }
+    }
+    return chocolateArray
 }
+console.log(filterByWord(originalFlavors,'Chocolate'));
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
