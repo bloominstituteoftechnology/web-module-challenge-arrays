@@ -53,7 +53,7 @@ function copy(originalFlavors){
     
    }    
   
- /* console.log(copy(originalFlavors));*/
+ console.log(copy(originalFlavors));
   
 
 
@@ -78,7 +78,7 @@ function is31Flavors(originalFlavors){
     return response=`False`;
     }
   }
-  /*console.log(is31Flavors(originalFlavors))*/
+  console.log(is31Flavors(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -98,7 +98,7 @@ function addFlavor(originalFlavor){
 originalFlavor.unshift(newFlavor)
   return originalFlavor;
 }
-
+console.log(addFlavor(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -115,7 +115,8 @@ function removeLastFlavor(originalFlavors){
     originalFlavors.pop();
      return originalFlavors;
   }
-
+  
+  console.log(removeLastFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -155,7 +156,7 @@ function removeFlavorByName(originalFlavors){
    flavorRemoval= originalFlavors.splice(4,1)
   return flavorRemoval;
 }
-
+console.log(removeFlavorByName(originalFlavors))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -186,7 +187,7 @@ function filterByWord(originalFlavors, newString){
  }
   return newArray;
 }
-
+console.log(filterByWord(originalFlavors, 'Chocolate'))
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
