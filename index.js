@@ -129,13 +129,8 @@ Use the getFlavorByIndex function below to do the following:
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-var flavorIndex=''
-function getFlavorByIndex(arr,arIndex){
-    for(let i=0; i < arr.length;i++) 
-    if (arr[i] ===arindex){
-        array.ondex(i, 1);
-}
-console.log(getFlavorByIndex(originalFlavors[2]));
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -329,4 +324,4 @@ export default{
     getAverageWordLength,
     getRandomFlavors
 }
-}
+
