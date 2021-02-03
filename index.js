@@ -72,10 +72,10 @@ function is31Flavors(originalFlavors){
     const countNumber = (originalFlavors.length);
   var  response =''
     if(countNumber == 31){
-   return response=`True`;
+   return response= true;
     }
     if(countNumber !== 31 ){
-    return response=`False`;
+    return response= false;
     }
   }
   console.log(is31Flavors(originalFlavors))
@@ -115,7 +115,7 @@ function removeLastFlavor(originalFlavors){
     originalFlavors.pop();
      return originalFlavors;
   }
-  
+
   console.log(removeLastFlavor(originalFlavors))
 
 
@@ -151,12 +151,16 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-var flavorRemoval =''
-function removeFlavorByName(originalFlavors){
-   flavorRemoval= originalFlavors.splice(4,1)
-  return flavorRemoval;
+
+function removeFlavorByName(array, strg){
+    for(let i=0; i < array.length;i++){
+    if (array[i] ===strg){
+        array.splice(i, 1);
+    }
 }
-console.log(removeFlavorByName(originalFlavors))
+  return array;
+}
+console.log(removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
