@@ -101,7 +101,7 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(flavor){
-    originalFlavors.pop();
+    flavor.pop();
     return flavor;
 }
 
