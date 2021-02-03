@@ -160,11 +160,10 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-function removeFlavorByName(newFlavorList){
-    originalFlavors.splice(0, 1);
-    return (newFlavorList);
-  }
-  console.splice("Peppermint Stick")
+/* const newFlavorList = (originalFlavors)*/
+    let newFlavorList = originalFlavors.splice(0, 1, "Peppermint Stick")
+    return (newFlavorList.length);
+  console.log(newFlavorsList)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -185,9 +184,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    let newArray = [];
+    let newArr = [];
+    for(let i = 0; i < originalFlavors.length; i++){
+        if(originalFlavors[i].includes(string)){
+            newArr.push(originalFlavors,[i])
+        }
+    }
+return newArr;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
