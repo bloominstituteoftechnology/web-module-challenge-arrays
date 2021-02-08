@@ -153,14 +153,11 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(originalFlavors, filterTerm) {
-	let filterFlavors;
-	for (
-		originalFlavors = 0;
-		originalFlavors <= originalFlavors.length;
-		originalFlavors++
-	) {
-		if (originalFlavors.includes(filterTerm)) {
-			filterFlavors.push(originalFlavors);
+	let filterFlavors = [];
+	for (let i = 0; i < originalFlavors.length; i++) {
+		let current = originalFlavors[i];
+		if (current.includes(filterTerm)) {
+			filterFlavors.push(current);
 		}
 	}
 	return filterFlavors;
