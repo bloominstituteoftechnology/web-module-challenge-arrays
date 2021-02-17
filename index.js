@@ -86,8 +86,8 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(array, string) {
-   array.unshift(string);
+function addFlavor(array, newFlav) {
+   array.unshift(newFlav);
    return array;
 }
 
@@ -179,7 +179,7 @@ function filterByWord(array, string){
     }
     return filteredArray;
 }
-console.log(filterByWord(originalFlavors, 'chocolate'));
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
