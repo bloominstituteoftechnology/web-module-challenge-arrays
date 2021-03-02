@@ -125,7 +125,7 @@ Use the getFlavorByIndex function below to do the following:
 function getFlavorByIndex(originalFlavors){
     return originalFlavors[1];
 }
-console.log(getFlavorByIndex(originalFlavors));
+// console.log(getFlavorByIndex(originalFlavors));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -142,11 +142,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(originalFlavors){
+    originalFlavors.splice(27,1);
+    return originalFlavors;
 }
 
-
+console.log(removeFlavorByName(originalFlavors));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
