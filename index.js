@@ -45,9 +45,42 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(originalFlavors){
+    console.log(originalFlavors[0]);
+  console.log(originalFlavors[1]);
+  console.log(originalFlavors[2]);
+  console.log(originalFlavors[3]);
+  console.log(originalFlavors[4]);
+  console.log(originalFlavors[5]);
+  console.log(originalFlavors[6]);
+  console.log(originalFlavors[7]);
+  console.log(originalFlavors[8]);
+  console.log(originalFlavors[9]);
+  console.log(originalFlavors[10]);
+  console.log(originalFlavors[11]);
+  console.log(originalFlavors[12]);
+  console.log(originalFlavors[13]);
+  console.log(originalFlavors[14]);
+  console.log(originalFlavors[15]);
+  console.log(originalFlavors[16]);
+  console.log(originalFlavors[17]);
+  console.log(originalFlavors[18]);
+  console.log(originalFlavors[19]);
+  console.log(originalFlavors[20]);
+  console.log(originalFlavors[21]);
+  console.log(originalFlavors[22]);
+  console.log(originalFlavors[23]);
+  console.log(originalFlavors[24]);
+  console.log(originalFlavors[25]);
+  console.log(originalFlavors[26]);
+  console.log(originalFlavors[26]);
+  console.log(originalFlavors[27]);
+  console.log(originalFlavors[28]);
+  console.log(originalFlavors[29]);
+  console.log(originalFlavors[30]);    
 }    
+
+copy(originalFlavors);
 
 
 
@@ -64,9 +97,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
-}
+function is31Flavors(originalFlavors){
+    if(originalFlavors.length == 31) {
+        console.log(true)
+    }
+ }
+ 
+ is31Flavors(originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,9 +118,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
+function addFlavor(originalFlavors){
+    originalFlavors.unshift("Rainbow Sherbert");
+    console.log(originalFlavors);
+ }
+ 
+ addFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,11 +137,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(originalFlavors){
+   originalFlavors.pop();
+   console.log(originalFlavors);
 }
 
-
+removeLastFlavor(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -114,9 +155,11 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(originalFlavors){
+    console.log(originalFlavors[2]);
 }
+
+getFlavorByIndex(originalFlavors);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -134,9 +177,13 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(originalFlavors){
+    originalFlavors.splice(28, 1)
+    console.log(originalFlavors)
+  console.log(originalFlavors.length)
 }
+
+removeFlavorByName(originalFlavors)
 
 
 
@@ -160,10 +207,19 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
-
+function filterByWord(arr, type) {
+    const chocolateArr = [];
+  
+    for(let i = 0; i < arr.length; i++) {
+      if(arr[i].includes(type)) {
+        chocolateArr.push(arr[i]);
+      }
+    }
+    
+    return chocolateArr;
+  }
+  
+  console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
