@@ -169,15 +169,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(originalFlavors){
-    chocolateFlavors = []
-    for (let i = 0; i < originalFlavors; i++){
-        if (originalFlavors[i].includes("Chocolate")){
-            chocolateFlavors.push(i)
+function filterByWord(arr, str){
+    
+    const strInArr = []
+    for (let i = 0; i < arr.length-1; i++){
+        if (arr[i].includes(str)){
+            strInArr.push(arr[i]);
         }
     }
+    return strInArr;
 }
-console.log(filterByWord(originalFlavors));
+console.log(filterByWord(originalFlavors,"Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
