@@ -133,10 +133,17 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(arr, number){
     /*your code here*/
+
+    let flavors = arr[number];
+    // console.log(flavors);
+    
+    return flavors
+    
 }
 
+getFlavorByIndex(originalFlavors, 4)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -153,11 +160,17 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(arr, flavor){
     /*your code here*/
+    
+    let flavorIndex = arr.findIndex((e) => e == flavor);
+    arr.splice(flavorIndex, 1)
+    // removedFlavor.splice(flavor)
+   
+    return arr
 }
 
-
+removeFlavorByName(originalFlavors, "Rocky Road");
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -179,10 +192,20 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(arr, strings){
     /*your code here*/
+    let filteredFlavors = [];
+
+    for (let i = 0; i <= arr.length -1; i++){
+        let flavors = arr[i];
+        if (flavors.includes(strings)) {
+            filteredFlavors.push(flavors);
+        }
+    }
+    return filteredFlavors;
 }
 
+filterByWord(originalFlavors, "Chocolate")
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
