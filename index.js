@@ -85,19 +85,21 @@ Use the addFlavor function below to do the following:
     1. Receive an array
     2. Receive a new flavor as a string
     3. The function adds the passed flavor to the front of the passed array
-    4. The function should return the resulting array
+    4. yThe function should return the resulting arra
 
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
 
-function addFlavor(arr){
+function addFlavor(arr, flavor){
    /*your code here*/
-   return originalFlavors.unshift(arr);
-
+   let newFlavorList = arr;
+   newFlavorList.unshift(flavor)
+//    console.log(newFlavorList);
+   return newFlavorList
 }
 
-addFlavor('Fudge Brownie');
+addFlavor(originalFlavors, 'Fudge Brownie');
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -110,10 +112,14 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(arr){
    /*your code here*/
+   let lastFlavor = arr
+   lastFlavor.pop();
+   return lastFlavor
 }
 
+removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
