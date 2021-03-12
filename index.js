@@ -40,26 +40,25 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
-
-    /*code here*/
-
-}
-
+ 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Your function should accept:
 
-(1) an array 
+
+
+(1) an array  
 (2) a flavor
+
+
 
 Your function should add the flavor to the front of the array and console.log the resulting array.
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(/*code here*/){
+function addFlavor(arr){
 
-    /*code here*/
+    
 
 }
 
@@ -74,11 +73,14 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-function removeLastFlavor(/*code here*/){
+function removeLastFlavor(arr){
 
-    /*code here*/
+    arr.unshift(flavor)
+    return arr
 
 }
+
+console.log(removeLastFlavor(originalFlavors))
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -144,11 +146,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+function filterByWord(arr, string ){
+    const filteredArray = []; 
+    for(let i =0; i < arr.length; i++){
+        if(arr[i].includes(string)){
+             filteredArray.push(arr[i]); 
+        }
+    }
+    return newArray;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 
