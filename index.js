@@ -45,8 +45,16 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+
+// Syntax reminder 
+// let fruits = ['Apple', 'Banana']
+
+// console.log(fruits.length)
+// 2
+
+function copy(array){
+   let copy=array;
+   return copy;
 }    
 
 
@@ -64,8 +72,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(array){
+   let flavors = array.length;
+   if(flavors = 31) {return true} return false;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,10 +90,18 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
-
+// function addFlavor(array, string){
+//     const flavorFlav = is31Flavors;
+//     flavorFlav.unshift("Rainbow Sherbert");
+//     return flavorFlav;
+//  }
+//  console.log(is31Flavors);
+function addFlavor(array, string){
+    array.unshift(string);
+    return array;
+ }
+ 
+ console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
