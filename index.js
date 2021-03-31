@@ -221,11 +221,10 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
-let randomFlavors = [];
-letemptyarr = [];
 
-function getRandomFlavors(arr1, arr2, arr3, arr4){
-    randomFlavors = [...arr1,...arr2,...arr3]
+
+function getRandomFlavors(){
+    /*code here*/
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
