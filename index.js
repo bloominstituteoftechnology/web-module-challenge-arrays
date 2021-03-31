@@ -130,7 +130,7 @@ as opposed to just arbitrarily removing the first or last flavor. Your task is t
 
 Use the removeFlavorByName function below to do the following:
     1. Receive an array
-    2. Receive a flavor as a string
+    2. Re ceive a flavor as a string
     3. Remove the received flavor from the received array
     4. Return the resulting array that now contains one less flavor
 
