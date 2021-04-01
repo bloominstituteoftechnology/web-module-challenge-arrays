@@ -86,9 +86,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(anArray, newFlavor){
+    anArray.unshift(newFlavor);
+    return anArray;
 }
+console.log(addFlavor(originalFlavors, "Rainbow Sherbet"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
