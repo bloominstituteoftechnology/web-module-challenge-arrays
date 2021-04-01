@@ -144,8 +144,10 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(anArray, stringFlavor){
-    
+    anArray.splice(anArray.indexOf(stringFlavor), 1);
+    return anArray;
 }
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
