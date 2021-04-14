@@ -201,6 +201,12 @@ function getAverageWordLength(/*code here*/){
     /*code here*/
 }
 
+function getAverageWordLength(arr){
+    for (let x=arr[0]; x < arr.length; x++){
+        
+    }
+}
+
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
