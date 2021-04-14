@@ -82,14 +82,12 @@ Use the addFlavor function below to do the following:
 
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
+const mynewarray = [...originalFlavors];
 
-
-function addFlavor(array, String){}
-    
-return(arr(originalFlavors.unshift("Rainbow Sherbert")) 
-
-
-
+function addFlavor(array, String){
+    mynewarray.unshift("Rainbow Sherbert");
+return(mynewarray) ;
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
