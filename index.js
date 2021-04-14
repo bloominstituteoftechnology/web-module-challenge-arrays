@@ -306,4 +306,3 @@ export default{
     getAverageWordLength,
     getRandomFlavors
 }
-
