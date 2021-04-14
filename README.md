@@ -17,7 +17,7 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 
 ### Task 1: Set up Project
 
-1. Fork the repo
+1. Fork the repo.
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
 4. open the terminal in your vs code and type `npm install`
