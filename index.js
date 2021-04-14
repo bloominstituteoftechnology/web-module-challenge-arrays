@@ -72,7 +72,7 @@ function is31Flavors(array){
    }
    return false;
 }
-
+is31Flavors(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -88,9 +88,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor (array){
+    let newFlavor = originalFlavors.unshift("");
+    return newFlavor;
 }
+
+addFlavor(originalFlavors, "Rainbow Sherbert");
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
