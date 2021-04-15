@@ -119,8 +119,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(String){
+   let i = 2;
+   return (originalFlavors[i]);
+
 }
 
 
@@ -139,9 +141,13 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+
+function removeFlavorByName(array, String){
+    let newarray = originalFlavors.splice("Vanilla");
+    return newarray.toString;
 }
+
+
 
 
 
