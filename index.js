@@ -52,6 +52,8 @@ function copy(arr){
 }    
 console.log(copy(originalFlavors));
 
+// When & how is this used on this assignment if at all? It seems below we are consistently referencing originalFlavors array & not the copy. Which one are we mutating? In my mind it makes more sense to mutate the copy?
+
 
 
 
@@ -67,9 +69,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(arr){
    /*your code here*/
+   if (arr.length === 31){
+       return true;
+   }else{
+       return false;
+   }
 }
+console.log(is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -84,10 +92,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
+function addFlavor(arr, newFlavor){
    /*your code here*/
+   arr.unshift(newFlavor);
+   return arr;
 }
-
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
