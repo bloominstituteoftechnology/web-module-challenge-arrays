@@ -163,7 +163,7 @@ function removeFlavorByName(arr, flavor){
 }
 console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
-
+// THIS ONE - I need further explanation on, task 6!!
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -185,10 +185,22 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+    // 1. Receive 2 paramaters
+function filterByWord(array, flavor){
     /*your code here*/
+    // 2. create a new empty array - to receive the new info
+    let newArray = [];
+    
+    // 3. Create a for loop to iterate through array
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(flavor)){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
 }
 
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
