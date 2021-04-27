@@ -110,10 +110,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(arr){
    /*your code here*/
+   arr.pop();
+   return arr;
 }
-
+console.log(removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -127,9 +129,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(arr, number){
     /*your code here*/
+    arr = arr[number];
+    return arr;
 }
+console.log(getFlavorByIndex(originalFlavors, 2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -147,9 +152,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(arr, flavor){
     /*your code here*/
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] === flavor) {
+            arr.splice(i, 1);
+        }
+    }
+    return arr;
 }
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
