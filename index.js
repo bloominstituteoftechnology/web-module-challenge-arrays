@@ -45,9 +45,9 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(firstArray) {
-    /*your code here*/
-    let 
+function copy(originalFlavors) {
+    var firstArray = originalFlavors
+    return firstArray;
 }    
 
 
@@ -66,12 +66,11 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(firstArray) {
-    /*your code here*/
     if (firstArray.length == 31) {
-        return "True!";
+        return true;
     }
     else {
-        return "False!";
+        return false;
     }
 }
 
@@ -89,8 +88,7 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(firstArray, Watermelon){
-    /*your code here*/
-    firstArray.unshift(newFlavor);
+    firstArray.unshift(Watermelon);
     return firstArray
 }
 
@@ -107,7 +105,6 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(firstArray){
-    /*your code here*/
     firstArray.pop();
     return firstArray;
 }
@@ -125,8 +122,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(firstArray, number) {
+    return firstArray[number];
 }
 
 
@@ -145,8 +142,9 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(firstArray, flavorName){
+    firstArray.splice(firstArray.indexOf(flavorName), 1);
+    return firstArray;
 }
 
 
@@ -171,8 +169,9 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(firstArray, flavorName){
+    const results = firstArray.lastIndexOf(flavorName, 0)
+    return results;
 }
 
 
