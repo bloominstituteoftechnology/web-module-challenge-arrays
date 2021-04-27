@@ -165,7 +165,7 @@ function removeFlavorByName(arr, name){
 
     // return returnArr;
 
-    arr.splice(30, 0, name)
+    arr.splice(27, 1, name)
 
 }
 
@@ -192,12 +192,30 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(arr, name){
+function filterByWord(name, arr){
+    var nameArr = name.match(/\w+/g),
 
-    
-    
+    arrObj = {},
+    newNameArr = [],
+    names, i;
+
+    arr = arr.split(',');
+    for ( i = 0; i < arr.lenth; i++) {
+        arrObj[ arr[i].trim() ] = true;
+    }
+
+    for ( i = 0; i < nameArr.length; i++) {
+        names = nameArr[i].trim().toLowerCase();
+        if ( !arrObj[name] ) {
+            newNameArr.push[name]
+        }
+    }
+
+    return newNameArr;
+     
 }
 
+console.log(filterByWord('Chocolate', originalFlavors));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
