@@ -45,10 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(array){
+    return array;
 }    
-
+console.log(originalFlavors);
 
 
 
