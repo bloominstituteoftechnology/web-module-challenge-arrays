@@ -142,8 +142,8 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(firstArray, flavorName){
-    firstArray.splice(firstArray.indexOf(flavorName), 0);
+function removeFlavorByName(firstArray, flavorName) {
+    firstArray.splice(firstArray.indexOf(flavorName), 1);
     return firstArray;
 }
 
@@ -170,8 +170,13 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(filteredArray, flavorName){
-    const results = filteredArray.lastIndexOf(flavorName, 0)
-    return results;
+    let filteredArray2 = [];
+    for (let i = 0; i < filteredArray.length; i++) {
+        if (filteredArray[i].includes(flavorName)) {
+            filteredArray2.push(filteredArray[i]);
+        }
+    }
+    return filteredArray2;
 }
 
 
