@@ -226,9 +226,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(Flavors){
+    Flavors.splice(29, 1);
+    return Flavors;
 }
+
+//getFlavorByIndex(Flavors.splice(27, 1));
+
+console.log(removeFlavorByName);
 
 
 
