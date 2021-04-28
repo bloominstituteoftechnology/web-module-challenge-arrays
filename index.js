@@ -109,7 +109,6 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(originalFlavors) {
     console.log(originalFlavors)
-    let last = originalFlavors.pop("Vanilla Burnt Almond")
     return originalFlavors
 }
 
