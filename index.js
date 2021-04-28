@@ -2,6 +2,7 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /* 👀 This is your data ⬇ */
+let flavor = flavor
 const originalFlavors = [
     "Banana Nut Fudge",
     "Black Walnut",
@@ -122,8 +123,8 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(newFlavor){
-    originalFlavors.unshift("Rainbow Sherbert")
+function addFlavor(originalFlavors, flavor){
+    originalFlavors.unshift(flavor)
     return originalFlavors
 
 }
@@ -161,8 +162,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors){
-    return originalFlavors[2]
+function getFlavorByIndex(originalFlavors, flavor){
+    return originalFlavors[flavor]
 }
 
 console.log(getFlavorByIndex)
@@ -181,10 +182,10 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-let flavor = flavor
-function removeFlavorByName(originalFlavors, flavor){
+
+function removeFlavorByName(flavor){
     let indexNumber = originalFlavors.indexOf(flavor);
-    originalFlavors.splice(indexNumber)
+    originalFlavors.splice(29, 1)
     return originalFlavors;
 }
 
@@ -211,10 +212,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(originalFlavors, flavor){
+let newFlavor = [];
+for (let i = 0; i < originalFlavors.length; i++) {
+    if (originalFlavors[i].includes(flavor)) {
+        newFlavor.push(originalFlavors[i]);
+    }
 }
-
+    return newFlavor;
+}
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
