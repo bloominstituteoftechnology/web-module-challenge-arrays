@@ -46,10 +46,10 @@ Use the copy function below to do the following:
 */
 
 function copy(arr){
-    let arr = [originalFlavors];
-    return copy
+    
+    return arr
 }
-console.log(copy)
+
 
 
 
