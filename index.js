@@ -87,10 +87,10 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(originalFlavors) {
-    let newFlavors = "Rainbow Sherbert"
+    let newFlavors = ("Rainbow Sherbert" + originalFlavors)
 
-    return (newFlavors.indexOf + originalFlavors)
-    
+    return newFlavors.unshifted
+}  
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
