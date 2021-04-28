@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --verbose --watchAll" 
+    "test:watch": "jest --verbose --watchAll"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
     "@babel/preset-env": "^7.11.5",
     "babel-jest": "^26.3.0",
     "eslint": "^7.10.0",
-    "jest": "^26.4.2"
+    "jest": "^26.6.3"
   }
 }
