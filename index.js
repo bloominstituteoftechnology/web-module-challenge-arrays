@@ -126,7 +126,7 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(originalFlavors) {
-    return originalFlavors.indexOf(31)
+    return originalFlavors.indexOf("Banana Nut Fudge", (31))
 }
 
 
