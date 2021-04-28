@@ -126,12 +126,10 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(originalFlavors) {
-    return(originalFlavors.indexOf(31))
+    console.log(originalFlavors)
+    let pos = originalFlavors.indexOf("Burgundy Cherry")
     
-    
-    
-
-    
+    return originalFlavors
 }
 
 
