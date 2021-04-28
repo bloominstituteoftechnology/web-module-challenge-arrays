@@ -91,7 +91,7 @@ function addFlavor(originalFlavors) {
     let newFlavor = "Rainbow Sherbert"
     console.log(originalFlavors.unshift(newFlavor))
     
-    return newFlavors
+    return newFlavor + originalFlavors
 
 }
 
