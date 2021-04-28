@@ -173,7 +173,7 @@ Use the filterByWord function below to do the following:
 
 function filterByWord(originalFlavors){
 let result = [];
-for (let i = 0; i < originalFlavors.length; i++) {
+for (let i = 0; i < originalFlavors.length; i++) 
     console.log(filterByWord(originalFlavors, "Chocolate"));
     if (originalFlavors[i].includes(string)) {
         results.push(originalFlavors[i]);
