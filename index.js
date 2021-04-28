@@ -127,7 +127,7 @@ Use the getFlavorByIndex function below to do the following:
 
 function getFlavorByIndex(originalFlavors) {
     console.log(originalFlavors)
-    let pos = originalFlavors.indexOf(1)
+    let pos = indexOf(31)
     console.log(originalFlavors.indexOf("Banana Nut Fudge", (1)))
     return originalFlavors
 }
