@@ -86,10 +86,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(newFlavors, originalFlavors) {
-    let (newFlavors + originalFlavors) === newArr
-    return unshift.newArr
-}
+function addFlavor(originalFlavors) {
+    let newFlavors = "Rainbow Sherbert"
+
+    return (newFlavors.indexOf + originalFlavors)
+    
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
