@@ -87,7 +87,9 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(newFlavors, originalFlavors) {
-    return newFlavors.unshift(0) + originalFlavors
+    console.log(newFlavors)
+    return newFlavors.unshift() + originalFlavors
+   
     
 }
 
