@@ -87,7 +87,7 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(originalFlavors) {
-    console.log (newFlavors = ["Rainbow Sherbert"] + originalFlavors)
+    const newFlavors = (["Rainbow Sherbert" + originalFlavors])
 
     return newFlavors.unshift
 }  
