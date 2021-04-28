@@ -135,10 +135,11 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(array, number){
+    let location = array[number]
+    console.log(location)
 }
-
+getFlavorByIndex(originalFlavors, 2)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -155,9 +156,13 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+function removeFlavorByName(array, string){
+    let position = array.indexOf(string, 0);
+     array.splice(position, 1);
+     console.log(originalFlavors)
+  }
+  
+  removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 
