@@ -125,10 +125,7 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors) {
-    return originalFlavors.indexOf("Black Walnut")
-}
-
+function getFlavorByIndex(originalFlavors)
 
 
 
@@ -174,9 +171,18 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(arr, string){
     /*your code here*/
+let result = [];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i].includes(string))
+    if (arr[i].includes(string)) {
+        results.push(arr[i]);
+    }
 }
+    return result;
+}
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
