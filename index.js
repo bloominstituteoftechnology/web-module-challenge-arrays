@@ -213,9 +213,35 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+
+function getAverageWordLength(arrayName){
+    
+    const wordCount = [];
+    for(let i = 0; i < arrayName.length; i++){
+        if(arrayName[i].includes(" ")){
+          const newWordCount = [];
+          wordCount.push(arrayName[i].split(" ").length);
+    }
+        else(wordCount.push(1))
+    
+    
 }
+return wordCount
+}
+
+
+
+function getAverageWordLengthPart2(array) {
+let x = 0;
+for(let i = 0; i < array.length; i++){
+  (array[i] + x)
+ } 
+ return (x/array.length)
+}
+
+const arrayCount = getAverageWordLength(originalFlavors)
+
+console.log(getAverageWordLengthPart2(arrayCount))
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
