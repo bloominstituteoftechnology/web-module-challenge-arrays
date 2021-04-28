@@ -172,7 +172,6 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr, string){
-    /*your code here*/
 let result = [];
 for (let i = 0; i < arr.length; i++) {
     console.log(filterByWord(originalFlavors, "Chocolate"));
