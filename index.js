@@ -51,7 +51,7 @@ const newArray = function(array){
   
   newArray(originalFlavors)
 
-            // --OR--
+            // --OR to get list of array items--
 
 const copyArray = function(array){
     return array.forEach(function(item) {
@@ -97,9 +97,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
+function addFlavor(array, flavor){
+    array.unshift(flavor);
+    console.log(array);
+  }
+  
+  addFlavor(originalFlavors, 'Pizza Flavored Ice Cream')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -113,9 +116,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-}
+function removeLastFlavor(array){
+    array.pop();
+    console.log(array);
+  }
+removeLastFlavor(originalFlavors)
 
 
 
