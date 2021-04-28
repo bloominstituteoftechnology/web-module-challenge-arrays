@@ -149,8 +149,6 @@ function removeFlavorByName(arr, flavorName) {
 }
 
 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
@@ -189,8 +187,10 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/) {
-    /*code here*/
+function getAverageWordLength(arr) {
+    for (let item in arr) {
+
+    }
 }
 
 
@@ -207,8 +207,15 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/) {
-    /*code here*/
+function getRandomFlavors(flav1, flav2, flav3, flav4) {
+    const allFlavors = flav1.concat(flav1, flav2, flav3);
+    const randomFlavors = []
+    for (let x = 0; x < 31; x++) {
+        const rand = allFlavors[Math.floor(Math.random() * 31) + 1];
+        randomFlavors.push(rand);
+    }
+    return randomFlavors
+}
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
