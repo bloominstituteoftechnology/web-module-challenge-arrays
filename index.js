@@ -65,8 +65,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(arr){
-    return arr
-   /*your code here*/
+    
+    return arr.length 
+  
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
