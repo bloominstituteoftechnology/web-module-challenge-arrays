@@ -109,6 +109,7 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(originalFlavors) {
     console.log(originalFlavors)
+    let last = originalFlavors.pop("Vanilla Burnt Almond")
     return originalFlavors
 }
 
@@ -124,10 +125,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors){
+function getFlavorByIndex(originalFlavors) {
     console.log(originalFlavors)
     let pos = originalFlavors.indexOf(4)
-
+    console.log(pos)
     return originalFlavors
 
     
