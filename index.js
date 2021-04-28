@@ -46,11 +46,10 @@ Use the copy function below to do the following:
 */
 
 function copy(arr){
-    const arr = {originalFlavor}
-    /*your code here*/
-    return arr
+    let arr = [originalFlavors];
+    return copy
 }
-
+console.log(copy)
 
 
 
@@ -65,7 +64,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(arr){
+    return arr
    /*your code here*/
 }
 
