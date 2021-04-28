@@ -114,7 +114,6 @@ function removeLastFlavor(originalFlavors) {
 }
 
 
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
 
@@ -126,7 +125,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(originalFlavors){
+    console.log(originalFlavors)
+    originalFlavors.push(4)
+
+    return originalFlavors
+
     /*your code here*/
 }
 
