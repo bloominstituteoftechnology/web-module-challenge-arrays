@@ -175,14 +175,14 @@ function filterByWord(arr, string){
     /*your code here*/
 let result = [];
 for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i].includes(string))
+    console.log(filterByWord(originalFlavors, "Chocolate"));
     if (arr[i].includes(string)) {
         results.push(arr[i]);
     }
 }
     return result;
 }
-console.log(filterByWord(originalFlavors, "Chocolate"));
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
