@@ -145,10 +145,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+function removeFlavorByName(originalFlavors) {
+    console.log(originalFlavors)
+    let removedFlavor = "Rocky Road"
+    console.log(originalFlavors.splice(removedFlavor))
+    
+    return originalFlavors
 
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
