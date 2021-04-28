@@ -127,11 +127,11 @@ Use the getFlavorByIndex function below to do the following:
 
 function getFlavorByIndex(originalFlavors){
     console.log(originalFlavors)
-    originalFlavors.push(4)
+    let pos = originalFlavors.indexOf(4)
 
     return originalFlavors
 
-    /*your code here*/
+    
 }
 
 
