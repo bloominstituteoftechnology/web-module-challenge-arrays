@@ -56,6 +56,7 @@ originalFlavors.forEach((originalFlavors) => {
     newOriginalFlavors.push(originalFlavors);
 })
 
+
 console.log(newOriginalFlavors);
 
 
@@ -154,23 +155,24 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(arr, name){
-    // const returnArr = [];
+    const returnArr = [];
 
-    // for(let i = 0; i < arr.length; i++) {
+    for(let i = 0; i < arr.length; i++) {
 
-    // if(arr[i].includes(name)) {
-    //         returnArr.push(arr[i])
-    //     }
-    // }
+    if(!arr[i].includes(name)) {
+            returnArr.push(arr[i])
+        }
+    }
 
-    // return returnArr;
+    return returnArr;
 
-    arr.splice(27, 1, name)
+    // arr.splice(27, 1, name)
 
 }
 
 
 console.log(removeFlavorByName(originalFlavors, 'Rocky Road'));
+console.log(returnArr)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -193,30 +195,21 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(name, arr){
-    var nameArr = name.match(/\w+/g),
 
-    arrObj = {},
-    newNameArr = [],
-    names, i;
+    const wordArr = [];
 
-    arr = arr.split(',');
-    for ( i = 0; i < arr.lenth; i++) {
-        arrObj[ arr[i].trim() ] = true;
-    }
+    for(let i = 0; i < arr.length; i++) {
 
-    for ( i = 0; i < nameArr.length; i++) {
-        names = nameArr[i].trim().toLowerCase();
-        if ( !arrObj[name] ) {
-            newNameArr.push[name]
+    if(arr[i].includes(name)) {
+            wordArr.push(arr[i])
         }
     }
 
-    return newNameArr;
+    return wordArr;
      
 }
 
-console.log(filterByWord('Chocolate', originalFlavors));
-
+console.log(filterByWord('Chocolate', originalFlavors))
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
