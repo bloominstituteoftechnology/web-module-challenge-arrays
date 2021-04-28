@@ -126,10 +126,10 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(originalFlavors) {
-    console.log(originalFlavors.indexOf("Banana Nut Fudge", 0))
+    return(originalFlavors.indexOf("Burgundy Cherry", 3))
     
     
-    return originalFlavors
+    
 
     
 }
