@@ -65,8 +65,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(arr){
-    
-    return arr.length === 31 (true)
+   if (arr.length === 31) {
+       return true
+   } 
+   else {
+       return false
+   }   
 } 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
