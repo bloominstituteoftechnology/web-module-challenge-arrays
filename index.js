@@ -91,7 +91,7 @@ function addFlavor(originalFlavors) {
     let newFlavor = "Rainbow Sherbert"
     
     let newFlavors = (originalFlavors + newFlavor)
-     return newFlavors.padStart
+    return newFlavors
 
 }
 
