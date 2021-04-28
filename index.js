@@ -87,9 +87,9 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(originalFlavors) {
-    let newFlavors = ("Rainbow Sherbert" + originalFlavors)
+    let newFlavors = unshifted("Rainbow Sherbert" + originalFlavors)
 
-    return newFlavors.unshifted
+    return newFlavors
 }  
 
 
