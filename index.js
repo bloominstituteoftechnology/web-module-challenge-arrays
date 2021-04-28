@@ -171,15 +171,15 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(arr, string){
+function filterByWord(originalFlavors){
 let result = [];
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i < originalFlavors.length; i++) {
     console.log(filterByWord(originalFlavors, "Chocolate"));
-    if (arr[i].includes(string)) {
-        results.push(arr[i]);
+    if (originalFlavors[i].includes(string)) {
+        results.push(originalFlavors[i]);
     }
 }
-    return result;
+    return result
 }
 
 
