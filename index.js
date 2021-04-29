@@ -145,7 +145,7 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors) {
+function removeFlavorByName(originalFlavors) 
     console.log(originalFlavors)
 
     for (originalFlavors [i] = 0; i < originalFlavors.length; i++) 
@@ -154,7 +154,7 @@ function removeFlavorByName(originalFlavors) {
             result = originalFlavors.splice(i, 5)
             
             return originalFlavors
-}    
+    
 
 
 
