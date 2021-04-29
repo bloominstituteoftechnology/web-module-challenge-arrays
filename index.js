@@ -147,12 +147,15 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(originalFlavors) {
     console.log(originalFlavors)
-    let removedFlavor = "Rocky Road"
-    console.log(originalFlavors.splice(removedFlavor))
-    
-    return originalFlavors
-
 }
+    for (originalFlavors [i] = 0; i < originalFlavors.length; i++) {
+        if (originalFlavors [i] === 5) {
+            originalFlavors.splice(i, 1)
+            return originalFlavors
+        }
+    }
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -177,13 +180,9 @@ Use the filterByWord function below to do the following:
 
 function filterByWord(originalFlavors){
 let filterFlavor = "Chocolate"
-for (let i = 0; i < originalFlavors.length; i++) 
-    console.log(filterFlavor(originalFlavors, "Chocolate"));
-    if (originalFlavors[i].includes("Chocolate")) {
-        results.push(originalFlavors[i]);
+console.log(filterFlavor + originalFlavors)
+return originalFlavors
 
-        return result
-    }
 }
     
 
