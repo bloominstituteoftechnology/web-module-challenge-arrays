@@ -147,13 +147,14 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(originalFlavors) {
     console.log(originalFlavors)
-}
-    for (originalFlavors [i] = 0; i < originalFlavors.length; i++) {
-        if (originalFlavors [i] === 5) {
-            originalFlavors.splice(i, 1)
+
+    for (originalFlavors [i] = 0; i < originalFlavors.length; i++) 
+        if (originalFlavors [i] === 5) 
+        
+            result = originalFlavors.splice(i, 1)
+            
             return originalFlavors
-        }
-    }
+}    
 
 
 
