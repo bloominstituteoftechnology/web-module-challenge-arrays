@@ -125,7 +125,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors)
+function getFlavorByIndex(originalFlavors) {
+    return originalFlavors
+}
 
 
 
@@ -145,7 +147,7 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors) 
+function removeFlavorByName(originalFlavors) {
     console.log(originalFlavors)
 
     for (originalFlavors [i] = 0; i < originalFlavors.length; i++) 
@@ -155,7 +157,7 @@ function removeFlavorByName(originalFlavors)
             
             return originalFlavors
     
-
+}
 
 
 
