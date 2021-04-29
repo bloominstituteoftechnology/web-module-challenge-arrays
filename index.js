@@ -176,10 +176,10 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(originalFlavors){
-let result = [];
+let filterFlavor = "Chocolate"
 for (let i = 0; i < originalFlavors.length; i++) 
-    console.log(filterByWord(originalFlavors, "Chocolate"));
-    if (originalFlavors[i].includes(string)) {
+    console.log(filterFlavor(originalFlavors, "Chocolate"));
+    if (originalFlavors[i].includes("Chocolate")) {
         results.push(originalFlavors[i]);
 
         return result
