@@ -151,7 +151,7 @@ function removeFlavorByName(originalFlavors)
     for (originalFlavors [i] = 0; i < originalFlavors.length; i++) 
         if (originalFlavors [i] === 5) 
         
-            result = originalFlavors.splice(i, 5)
+            result = originalFlavors.splice([i], 5)
             
             return originalFlavors
     
