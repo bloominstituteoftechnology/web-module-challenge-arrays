@@ -46,8 +46,7 @@ Use the copy function below to do the following:
 */
 
 function copy(originalFlavors) {
-  var copyOfOriginalFlavors = originalFlavors;
-  return copyOfOriginalFlavors;
+  return [...originalFlavors];
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -165,11 +164,9 @@ function filterByWord(flavorArray, flavor) {
   let filteredArray = [];
 
   //Looping into 0 is greater than the flavors in flavorArray
-  for (let x = 0; x < flavorArray.length; x++) 
-  {
-  //Checking to see in flavorArray at item flavorArray[x] includes the flavor we're searching for
-    if (flavorArray[x].includes(flavor)) 
-    {
+  for (let x = 0; x < flavorArray.length; x++) {
+    //Checking to see in flavorArray at item flavorArray[x] includes the flavor we're searching for
+    if (flavorArray[x].includes(flavor)) {
       //Add the flavor to new array
       filteredArray.push(flavorArray[x]);
     }
@@ -188,17 +185,17 @@ Use the getAverageWordLength function below to do the following:
 
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
-  function getAverageWordLength(originalFlavors) {
-    var totalList = [];
-    var finalList = [];
-      for (var i = 0; i < originalFlavors.length; i++) {
-        for (var x = originalFlavors.length; x > 0; x--) {
-          if (
-            originalFlavors[i].includes(originalFlavors[x]) &&
-            originalFlavors[i] !== originalFlavors[x]
-            ) {
-              totalList.push(originalFlavors[x]);
-            }
+function getAverageWordLength(originalFlavors) {
+  var totalList = [];
+  var finalList = [];
+  for (var i = 0; i < originalFlavors.length; i++) {
+    for (var x = originalFlavors.length; x > 0; x--) {
+      if (
+        originalFlavors[i].includes(originalFlavors[x]) &&
+        originalFlavors[i] !== originalFlavors[x]
+      ) {
+        totalList.push(originalFlavors[x]);
+      }
     }
   }
   for (let y = 0; y < totalList.length; y++) {
@@ -207,6 +204,7 @@ Use the getAverageWordLength function below to do the following:
     }
   }
   console.log(finalList.length);
+  return finalList.length;
 }
 getAverageWordLength(originalFlavors);
 
@@ -303,20 +301,23 @@ const regionalFlavors = [
   "Caramel 'n' Cookies",
 ];
 
-function getRandomFlavors(array1 = originalFlavors, array2 = newFlavors, array3 = seasonalFlavors, array4 = regionalFlavors)
-{
-  var newlist = []
-  var listOfArrays = [array1, array2, array3, array4]
-    for(var x = 0; x < 31; x++)
-    {
-      var randomNumber1 = Math.floor(Math.random() * 4)
-      var setArray = listOfArrays[randomNumber1]
-      var setLenght = setArray.length
-      var randomNumber2 = Math.floor(Math.random() * setLenght)
-      newlist.push(setArray[randomNumber2]) 
-    }
+function getRandomFlavors(
+  array1 = originalFlavors,
+  array2 = newFlavors,
+  array3 = seasonalFlavors,
+  array4 = regionalFlavors
+) {
+  var newlist = [];
+  var listOfArrays = [array1, array2, array3, array4];
+  for (var x = 0; x < 31; x++) {
+    var randomNumber1 = Math.floor(Math.random() * 4);
+    var setArray = listOfArrays[randomNumber1];
+    var setLenght = setArray.length;
+    var randomNumber2 = Math.floor(Math.random() * setLenght);
+    newlist.push(setArray[randomNumber2]);
+  }
 }
-getRandomFlavors()
+getRandomFlavors();
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo() {
   return "bar";
