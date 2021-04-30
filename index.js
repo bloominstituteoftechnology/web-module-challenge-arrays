@@ -54,6 +54,7 @@ function copy(info){
 } 
 
 
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
     1. an array as a parameter
@@ -86,6 +87,7 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(arr, flavor){
     arr.unshift(flavor);
+    return arr;
  }
 
 
@@ -100,9 +102,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-}
+function removeLastFlavor(arr, flavor){
+    arr.pop(flavor);
+    return arr;
+ }
 
 
 
@@ -117,8 +120,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(arr, index) {
+    let falvorIndex = arr[index];
+    return falvorIndex;
 }
 
 
@@ -137,10 +141,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(arr, flavor){
+    for (let i = 0; i <= arr.length; i++) {
+      if (arr[i] === flavor){
+        arr.splice(i, 1);
+      }
+    }
+    return arr;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -163,8 +171,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(arr, flavor){
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].includes(flavor)){
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
 }
 
 
