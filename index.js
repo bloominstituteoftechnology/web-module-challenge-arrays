@@ -33,7 +33,7 @@ const originalFlavors = [
     "Strawberry",
     "Vanilla",
     "Vanilla Burnt Almond"
-]
+];
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
@@ -45,12 +45,14 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
+function copy(copyArray){
+    return [...copyArray];
+   
+}
 
-
-
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+const copyArray = copy(originalFlavors);
+ 
+console.log(copyArray);
 
 
 
@@ -70,6 +72,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 function is31Flavors(/*your code here*/){
    /*your code here*/
 }
+
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -166,6 +171,9 @@ Use the filterByWord function below to do the following:
 function filterByWord(/*your code here*/){
     /*your code here*/
 }
+
+
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
