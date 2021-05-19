@@ -15,7 +15,7 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 
 ## Instructions
 
-### Task 1: Set up Project
+### Task 1: Set up Project - DONE
 
 1. Fork the repo
 2. Clone your forked version of the repo
