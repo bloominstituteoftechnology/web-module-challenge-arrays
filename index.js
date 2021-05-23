@@ -46,10 +46,9 @@ Use the copy function below to do the following:
 */
 
 function copy(array) {
-    console.log(array);
+    var arraycopy = array.slice();
+    return arraycopy
 }
-
-
 
 
 
@@ -63,13 +62,17 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-
-function is31Flavors(array) {
-    if (array.length === 31) {
-        return true
+function is31Flavors(icecream) {
+    console.log(icecream.length);
+    if (icecream.length === 31) {
+        return true;
+    } else {
+        return false;
     }
-    return false
 }
+
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -83,44 +86,14 @@ Use the addFlavor function below to do the following:
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
+function addFlavor(array, newnew) {
 
-function addFlavor(originalFlavors, 'Rainbow Sherbet') {
-    var originalFlavors = ["Banana Nut Fudge",
-        "Black Walnut",
-        "Burgundy Cherry",
-        "Butterscotch Ribbon",
-        "Cherry Macaron",
-        "Chocolate",
-        "Chocolate Almond",
-        "Chocolate Chip",
-        "Chocolate Fudge",
-        "Chocolate Mint",
-        "Chocolate Ribbon",
-        "Coffee",
-        "Coffee Candy",
-        "Date Nut",
-        "Eggnog",
-        "French Vanilla",
-        "Green Mint Stick",
-        "Lemon Crisp",
-        "Lemon Custard",
-        "Lemon Sherbet",
-        "Maple Nut",
-        "Orange Sherbet",
-        "Peach",
-        "Peppermint Fudge Ribbon",
-        "Peppermint Stick",
-        "Pineapple Sherbet",
-        "Raspberry Sherbet",
-        "Rocky Road",
-        "Strawberry",
-        "Vanilla",
-        "Vanilla Burnt Almond"
-    ];
-    originalFlavors.push("Rainbow Sherbert");
-    originalFlavors.unshift('Rainbow Sherbert');
-    console.log(orginalFlavors);
+    array.unshift(newnew);
+
+    return array
 }
+console.log(addFlavor(originalFlavors));
+
 
 
 
@@ -134,41 +107,12 @@ Use the removeLastFlavor function below to do the following:
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-function removeLastFlavor(originalFlavors) {
-    var originalFlavors = [",Rainbow Sherbet", "Banana Nut Fudge",
-        "Black Walnut",
-        "Burgundy Cherry",
-        "Butterscotch Ribbon",
-        "Cherry Macaron",
-        "Chocolate",
-        "Chocolate Almond",
-        "Chocolate Chip",
-        "Chocolate Fudge",
-        "Chocolate Mint",
-        "Chocolate Ribbon",
-        "Coffee",
-        "Coffee Candy",
-        "Date Nut",
-        "Eggnog",
-        "French Vanilla",
-        "Green Mint Stick",
-        "Lemon Crisp",
-        "Lemon Custard",
-        "Lemon Sherbet",
-        "Maple Nut",
-        "Orange Sherbet",
-        "Peach",
-        "Peppermint Fudge Ribbon",
-        "Peppermint Stick",
-        "Pineapple Sherbet",
-        "Raspberry Sherbet",
-        "Rocky Road",
-        "Strawberry",
-        "Vanilla",
-        "Vanilla Burnt Almond"
-    ];
-    originalFlavors.pop("Vanilla Burnt Almond");
-    console.log(originalFlavors);
+
+function removeLastFlavor(array) {
+
+    array.pop("Vanilla Burnt Almond");
+
+    return array
 }
 
 
@@ -183,41 +127,9 @@ Use the getFlavorByIndex function below to do the following:
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-function getFlavorByIndex(originalFlavors, 3) {
-    var originalFlavors = [",Rainbow Sherbet", "Banana Nut Fudge",
-        "Black Walnut",
-        "Burgundy Cherry",
-        "Butterscotch Ribbon",
-        "Cherry Macaron",
-        "Chocolate",
-        "Chocolate Almond",
-        "Chocolate Chip",
-        "Chocolate Fudge",
-        "Chocolate Mint",
-        "Chocolate Ribbon",
-        "Coffee",
-        "Coffee Candy",
-        "Date Nut",
-        "Eggnog",
-        "French Vanilla",
-        "Green Mint Stick",
-        "Lemon Crisp",
-        "Lemon Custard",
-        "Lemon Sherbet",
-        "Maple Nut",
-        "Orange Sherbet",
-        "Peach",
-        "Peppermint Fudge Ribbon",
-        "Peppermint Stick",
-        "Pineapple Sherbet",
-        "Raspberry Sherbet",
-        "Rocky Road",
-        "Strawberry",
-        "Vanilla",
-        "Vanilla Burnt Almond"
-    ];
+function getFlavorByIndex(array, num3) {
 
-    console.log(originalFlavors[3]);
+    return array[num3];
 
 }
 
@@ -236,43 +148,11 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-function removeFlavorByName(originalFlavors, 'Rocky Road') {
-    var originalFlavors = [",Rainbow Sherbet", "Banana Nut Fudge",
-        "Black Walnut",
-        "Burgundy Cherry",
-        "Butterscotch Ribbon",
-        "Cherry Macaron",
-        "Chocolate",
-        "Chocolate Almond",
-        "Chocolate Chip",
-        "Chocolate Fudge",
-        "Chocolate Mint",
-        "Chocolate Ribbon",
-        "Coffee",
-        "Coffee Candy",
-        "Date Nut",
-        "Eggnog",
-        "French Vanilla",
-        "Green Mint Stick",
-        "Lemon Crisp",
-        "Lemon Custard",
-        "Lemon Sherbet",
-        "Maple Nut",
-        "Orange Sherbet",
-        "Peach",
-        "Peppermint Fudge Ribbon",
-        "Peppermint Stick",
-        "Pineapple Sherbet",
-        "Raspberry Sherbet",
-        "Rocky Road",
-        "Strawberry",
-        "Vanilla",
-        "Vanilla Burnt Almond"
-    ];
-    var x = 'Rocky Road';
+function removeFlavorByName(array, x) {
 
-    originalFlavors.Splice('x');
-    console.log(originalFlavors);
+    let index = array.indexOf(x);
+    array.splice(index, 1);
+    return array
 }
 
 
@@ -297,43 +177,23 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-function filterByWord(originalFlavors, "Sherbet") {
-    var originalFlavors = [",Rainbow Sherbet", "Banana Nut Fudge",
-        "Black Walnut",
-        "Burgundy Cherry",
-        "Butterscotch Ribbon",
-        "Cherry Macaron",
-        "Chocolate",
-        "Chocolate Almond",
-        "Chocolate Chip",
-        "Chocolate Fudge",
-        "Chocolate Mint",
-        "Chocolate Ribbon",
-        "Coffee",
-        "Coffee Candy",
-        "Date Nut",
-        "Eggnog",
-        "French Vanilla",
-        "Green Mint Stick",
-        "Lemon Crisp",
-        "Lemon Custard",
-        "Lemon Sherbet",
-        "Maple Nut",
-        "Orange Sherbet",
-        "Peach",
-        "Peppermint Fudge Ribbon",
-        "Peppermint Stick",
-        "Pineapple Sherbet",
-        "Raspberry Sherbet",
-        "Rocky Road",
-        "Strawberry",
-        "Vanilla",
-        "Vanilla Burnt Almond"
-    ];
-    var flavor = 'Sherbet';
-    var newFlavors = ['Raspberry Sherbert', 'Pineapple Sherbet', 'Orange Sherbet', 'Lemon Sherbet', 'Rainbow Sherbet'];
-    console.log(newFlavors);
+function filterByWord(array, string) {
+
+    let newArray = [];
+
+    for (let item of array) {
+        if (item.includes(string)) {
+            newArray.push(item)
+        }
+
+    }
+
+
+    return newArray
 }
+
+
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
@@ -348,8 +208,8 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength( /*code here*/ ) {
-    /*code here*/
+function getAverageWordLength() {
+
 }
 
 
@@ -370,86 +230,86 @@ function getRandomFlavors( /*code here*/ ) {
     /*code here*/
 }
 
-// NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-const newFlavors = [
-    "Date night",
-    "U.S.S Butterscotch (Stranger Things special)",
-    "Honey Almond",
-    "Mint Chocolate Chip",
-    "Chocolate",
-    "Oreo® Cookies'n Cream",
-    "Chocolate Chip",
-    "Pralines 'n Cream",
-    "Very Berry Strawberry",
-    "Chocolate Chip Cookie Dough",
-    "Old Fashioned Butter Pecan",
-    "Jamoca®",
-    "Jamoca® Almond Fudge",
-    "Reese's® Peanut Butter Cup",
-    "Rocky Road",
-    "Peanut Butter ’n Chocolate",
-    "Gold Medal Ribbon®",
-    "World Class® Chocolate",
-    "Cherries Jubilee",
-    "Chocolate Fudge",
-    "Daiquiri Ice",
-    "Rainbow Sherbet",
-    "Rainbow Swirl"
-]
+//NEW DATA ARRAYS FOR STRETCH 2⬇️
+// const newFlavors = [
+//     "Date night",
+//     "U.S.S Butterscotch (Stranger Things special)",
+//     "Honey Almond",
+//     "Mint Chocolate Chip",
+//     "Chocolate",
+//     "Oreo® Cookies'n Cream",
+//     "Chocolate Chip",
+//     "Pralines 'n Cream",
+//     "Very Berry Strawberry",
+//     "Chocolate Chip Cookie Dough",
+//     "Old Fashioned Butter Pecan",
+//     "Jamoca®",
+//     "Jamoca® Almond Fudge",
+//     "Reese's® Peanut Butter Cup",
+//     "Rocky Road",
+//     "Peanut Butter ’n Chocolate",
+//     "Gold Medal Ribbon®",
+//     "World Class® Chocolate",
+//     "Cherries Jubilee",
+//     "Chocolate Fudge",
+//     "Daiquiri Ice",
+//     "Rainbow Sherbet",
+//     "Rainbow Swirl"
+// ]
 
-const seasonalFlavors = [
-    "America's Birthday Cake",
-    "Baseball Nut®",
-    "Blueberry Cheesecake",
-    "Bourbon Street Pecan Pie",
-    "Brownie Bar Mashup",
-    "Cherry Cordial with Kisses",
-    "Chocolate Mousse Royale",
-    "French Vanilla",
-    "Eggnog",
-    "German Chocolate Cake",
-    "Icing on the Cake",
-    "Love Potion #31",
-    "New York Cheesecake",
-    "Nutty Coconut",
-    "Peppermint",
-    "Strawberry Cheesecake",
-    "Rock ’n Pop Swirl",
-    "Reese’s Peanut Butter Cup",
-    "Trick Oreo Treat",
-    "Winter White Chocolate",
-    "made with Snickers®",
-    "made with M&M's®",
-    "Heath®",
-    "Mango Tango"
-]
+// const seasonalFlavors = [
+//     "America's Birthday Cake",
+//     "Baseball Nut®",
+//     "Blueberry Cheesecake",
+//     "Bourbon Street Pecan Pie",
+//     "Brownie Bar Mashup",
+//     "Cherry Cordial with Kisses",
+//     "Chocolate Mousse Royale",
+//     "French Vanilla",
+//     "Eggnog",
+//     "German Chocolate Cake",
+//     "Icing on the Cake",
+//     "Love Potion #31",
+//     "New York Cheesecake",
+//     "Nutty Coconut",
+//     "Peppermint",
+//     "Strawberry Cheesecake",
+//     "Rock ’n Pop Swirl",
+//     "Reese’s Peanut Butter Cup",
+//     "Trick Oreo Treat",
+//     "Winter White Chocolate",
+//     "made with Snickers®",
+//     "made with M&M's®",
+//     "Heath®",
+//     "Mango Tango"
+// ]
 
-const regionalFlavors = [
-    "Pink Bubblegum",
-    "Caramel Macchiato",
-    "York Peppermint Pattie",
-    "Cotton Candy",
-    "Orange Sherbet",
-    "Grape Ice",
-    "Watermelon Ice",
-    "Miami Vice Sorbet",
-    "Splish Splash®",
-    "Wild 'n Reckless Sherbet",
-    "Lemon Custard",
-    "Oregon Blackberry",
-    "Bananas ‘n Strawberries",
-    "Mississippi Mud",
-    "Rum Raisin",
-    "Creole Cream Cheese",
-    "Chocolate Almond",
-    "Fudge Brownie",
-    "Banana Nut",
-    "Black Walnut",
-    "Cotton Candy Crackle",
-    "Quarterback Crunch",
-    "Chocolate Chocolate Chip Cheesecake",
-    "Caramel 'n' Cookies"
-]
+// const regionalFlavors = [
+//     "Pink Bubblegum",
+//     "Caramel Macchiato",
+//     "York Peppermint Pattie",
+//     "Cotton Candy",
+//     "Orange Sherbet",
+//     "Grape Ice",
+//     "Watermelon Ice",
+//     "Miami Vice Sorbet",
+//     "Splish Splash®",
+//     "Wild 'n Reckless Sherbet",
+//     "Lemon Custard",
+//     "Oregon Blackberry",
+//     "Bananas ‘n Strawberries",
+//     "Mississippi Mud",
+//     "Rum Raisin",
+//     "Creole Cream Cheese",
+//     "Chocolate Almond",
+//     "Fudge Brownie",
+//     "Banana Nut",
+//     "Black Walnut",
+//     "Cotton Candy Crackle",
+//     "Quarterback Crunch",
+//     "Chocolate Chocolate Chip Cheesecake",
+//     "Caramel 'n' Cookies"
+// ]
 
 
 
