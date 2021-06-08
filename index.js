@@ -62,15 +62,23 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
   
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
-
-function is31Flavors(array){
+/*having issues getting this to work with auto grader.*/
+/*function is31Flavors(array){
     if (array.length === 31){
         console.log(true)}
          else{
             console.log(false);
-        }
+        }    
+ }*/
+function is31Flavors(originalFlavors){
+    if (originalFlavors.length === 31){
+        return true
+    }else {
+        return false
+    }
     
- }
+}
+
  is31Flavors(originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -135,10 +143,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array, specFlavor){
+    let init = array.indexOf(specFlavor)
+    array.splice(init, 1)
+    return array
 }
-
+removeFlavorByName(array, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -157,11 +167,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, search){
+    let filtered = [];
+    for (let i=0;i<array.length;i++){
+        if (array[i].includes(search)){
+            filtered.push(array[i])
+        }
+    }
+    return filtered;
 }
 
-
+filterByWord(originalFlavors, "Chocolate")
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
