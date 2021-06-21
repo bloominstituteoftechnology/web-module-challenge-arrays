@@ -49,7 +49,7 @@ function copy(array){
     return [...array];
 }    
 
-console.log('task 1:', copy(originalFlavors));
+console.log('task 1:', copy(originalFlavors)); 
 
 
 
