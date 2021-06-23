@@ -1,4 +1,4 @@
-import functions from '../index';
+import functions from './index';
 // import{originalFlavors}from '../index';
 let originalFlavors;
 beforeEach(()=>{
@@ -179,3 +179,4 @@ describe('filterByWord', ()=>{
           ]);
     })
 });
+
