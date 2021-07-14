@@ -45,12 +45,12 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy([originalFlavors]){
-  console.log([originalFlavors]);
-  return [originalFlavorsCopy];
+function copy(array){
+  return [...array];
+  //return a copy of the original using the spread operator
 }    
 
-
+console.log('task 1', copy([originalFlavors]));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -63,10 +63,18 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-
-function is31Flavors([originalFlavorsCopy]){
- console.log(originalFlavorsCopy.length);
+// taking 1 parameter which is an array so I would call it array
+function is31Flavors(array){
+  //check for the length
+  if (array.length = 30)
+  {
+    return true;
+  }
+  //we need an if statement to check that the length of the array is 31 flavors, if it is we want to return true
+  //boolean - no quotes
 }
+
+console.log('task 2', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,7 +89,11 @@ Use the addFlavor function below to do the following:
 */
 
 
+//2 params the first will be an array, the second will be a string
 function addFlavor(/*your code here*/){
+// we need to add the string to the front of the array - use unshift
+
+//return the array
  /*your code here*/
 }
 
@@ -96,8 +108,9 @@ Use the removeLastFlavor function below to do the following:
 
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-
+//1 param which is an array
 function removeLastFlavor(/*your code here*/){
+  //remove the last item from the array using .pop();
  /*your code here*/
 }
 
@@ -113,7 +126,7 @@ Use the getFlavorByIndex function below to do the following:
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-
+//2 parameters - array, number
 function getFlavorByIndex(/*your code here*/){
   /*your code here*/
 }
@@ -184,7 +197,6 @@ function filterByWord(array, string){
 }
 
 console.log('task 7', filterByWord(originalFlavors, 'Chocolate'));
-console.log('task 7', filterByWord(originalFlavors, 'Vanilla'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
