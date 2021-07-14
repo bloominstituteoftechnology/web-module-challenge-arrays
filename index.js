@@ -45,9 +45,10 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(originalFlavors){
+  return copy = [...originalFlavors]
 }    
+console.log(copy);
 
 
 
@@ -64,9 +65,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(originalFlavors){
+ if (originalFlavors.length === 31){
+   return true;
+ }else{
+   return false
+ }
 }
+console.log(`task 2`, is31Flavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -134,9 +140,16 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, flavor){
+  const newArrayFlavor = [];
+  for(let i =0, i < array.lenght, i++){
+    if(array[i=== flavor]){
+      array.slice(i, 1);
+    }
+  }
+  return array
 }
+console.log(`task 6`, removeFlavorByName(originalFlavors, "rocky road"));
 
 
 
@@ -160,9 +173,16 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+  const filteredArray = [];
+  for(let i=0; i < array.lenght, i++){
+    if(array[i].includes(string)){
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
 }
+console.log(filterByWord(originalFlavors, 'chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
