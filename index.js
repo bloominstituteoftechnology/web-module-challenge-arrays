@@ -88,14 +88,15 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
 //2 params the first will be an array, the second will be a string
-function addFlavor(/*your code here*/){
-// we need to add the string to the front of the array - use unshift
+function addFlavor(array, flavor){
+  
+array.unshift(flavor);
 
-//return the array
- /*your code here*/
+return array;
 }
+
+console.log('task 3', addFlavor(originalFlavors, 'HoneyDew'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -109,9 +110,10 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 //1 param which is an array
-function removeLastFlavor(/*your code here*/){
-  //remove the last item from the array using .pop();
- /*your code here*/
+function removeLastFlavor(array){
+
+  array.pop();
+  return array;
 }
 
 
