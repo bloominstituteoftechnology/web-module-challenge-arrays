@@ -315,7 +315,7 @@ console.log(getAverageWordLength(originalFlavors));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
-from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors and store it in an array called randomFlavors.
+from originalFlavors, newFlavors, seasonalFlavors, and regionalFlavors and store it in an array called randomFlavors.
 
 Use the getRandomFlavors function and new arrays below to do the following:
   1. Receive the four arrays with all the different flavors (originalFlavors is above, the others are below)
@@ -326,10 +326,31 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/)
+function getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors)
 {
-  /*code here*/
+  //Copy originalFlavors into new array concatFlavors
+  let concatFlavors = [...originalFlavors];
+
+  // Concatenate remaining 3 arrays into array concatFlavors
+  concatFlavors = concatFlavors.concat(newFlavors);
+  concatFlavors = concatFlavors.concat(seasonalFlavors);
+  concatFlavors = concatFlavors.concat(regionalFlavors);
+
+  //Create new empty array randomFlavors
+  const randomFlavors = [];
+
+  //Loop through concatFlavors array until we get 31 flavors
+  for (let i = 0; i < 31; i++) 
+  {
+    //Randomly select a flavor from concatFlavors
+    randomFlavors.push(concatFlavors[Math.floor(Math.random() * concatFlavors.length)]);
+  }
+  
+  //Return 31 flavors in array randomFlavors
+  return randomFlavors;
 }
+
+console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
 
 
 
