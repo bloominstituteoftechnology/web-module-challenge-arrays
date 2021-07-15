@@ -36,23 +36,28 @@ const originalFlavors = [
 ]
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
-With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.  So we need to copy the original array!
+We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be 
+reading and writing data to this array.  
+With all of these changes going on, we don't want to lose track of the actual, 
+original 31 flavors.  So we need to copy the original array!
 
 /*
 Use the copy function below to do the following:
-  1. receive an array as a parameter - you will pass in originalFlavors as an argument when the function is invoked.
+  1. receive an array as a parameter - you will pass in originalFlavors as an argument when the function 
+  is invoked.
   2. Return a copy of the received array  
 */
-
-function copy(originalFlavors){
+const cloneOriginalFlavors = [...originalFlavors];
+function copy(cloneOriginalFlavors){
+}
+console.log(' Task 1' , cloneOriginalFlavors);
 
   /*your code here
   add your parameter (array)
   return a copy of the original using the spread operator
   
   */
-}    
+   
 
 
 
@@ -62,15 +67,23 @@ function copy(originalFlavors){
 Confirm that an array is exactly 31 flavors. Your function should accept:
   1. an array as a parameter
   2. Check to see if the array given is 31 flavors
-  3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
+  3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE 
+  if the length of the array is NOT 31.
 
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
+let is31Flavors = originalFlavors.length;
 
-function is31Flavors(/*your code here*/){
- /*your code here
+text = "<ul>";
+for (let i = 0; i < originalFlavors; i++) {
+  text += "<li>" + originalFlavors[i] + "</li>";
+}
+text += "</ul>";
+console.log(' Task 2' , is31Flavors == 31);
+ 
+  /*your code here
  taking 1 parameter which is an array so i would call it array
  array.length[31]
  length of array is 31 flavors if it is we want to return true(boolean -no quotes)
@@ -78,45 +91,49 @@ function is31Flavors(/*your code here*/){
  
  
  */
-}
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
+Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. 
+You need to modify the array to include this flavor. 
 
 Use the addFlavor function below to do the following:
   1. Receive an array
   2. Receive a new flavor as a string
   3. The function adds the passed flavor to the front of the passed array
   4. The function should return the resulting array
- For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
+ For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", 
+ "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 
 
 
 2 parameters the first will be an array, the second will be a string
 use unshift
  */
-function addFlavor(/*your code here*/){
- /*your code here*/
-}
-return array
+let addFlavor = originalFlavors
+
+addFlavor.unshift('Rainbow Sherbert');
+
+console.log(' Task 3' , addFlavor);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
+Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an
+ item from the end of the array. 
 
 Use the removeLastFlavor function below to do the following:
   1. Receive an array
   2. Remove the last item from the received array
   3. Return the resulting array
 
-  For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
+  For example: running removeLastFlavor(originalFlavors) would return 
+  ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-// 1 param which is an array
-function removeLastFlavor(/*your code here*/){
-  // remove the last item from the array using .pop
- /*your code here*/
- return array 
-}
+let removeLastFlavor = addFlavor;
 
+removeLastFlavor.unshift('Rainbow Sherbert');
+removeLastFlavor.pop();
+
+console.log(' Task 4' , removeLastFlavor);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -126,15 +143,16 @@ Use the getFlavorByIndex function below to do the following:
   1. Recieve an array
   2. Receive a number (the desired index)
   3. Return the flavor located at the received index position
+  
+
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 // 2 param - 1 array, 2 number of index []
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-  // array[3] returning
+function getFlavorByIndex(array, number){
+return array[number];  
 }
-
+console.log('Task 5', getFlavorByIndex(originalFlavors, 10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -160,7 +178,7 @@ function removeFlavorByName(array, flavour){
   }
 return array;
 }
-console.log(removeFlavorByName(originalFlavors, 'Rocky Road'));
+console.log(' Task 6' , removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
