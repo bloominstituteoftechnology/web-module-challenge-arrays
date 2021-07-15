@@ -47,11 +47,10 @@ Use the copy function below to do the following:
   is invoked.
   2. Return a copy of the received array  
 */
-const cloneOriginalFlavors = [...originalFlavors];
-function copy(cloneOriginalFlavors){
+function copy(array){
+    return [...array];
 }
-console.log(' Task 1' , cloneOriginalFlavors);
-
+console.log('Task 1' copy(originalFlavors));
   /*your code here
   add your parameter (array)
   return a copy of the original using the spread operator
@@ -74,15 +73,13 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-let is31Flavors = originalFlavors.length;
-
-text = "<ul>";
-for (let i = 0; i < originalFlavors; i++) {
-  text += "<li>" + originalFlavors[i] + "</li>";
+function is31Flavors(array){
+  if(array.lenth ===31);
+  return true;
+}else{
+  return false;
 }
-text += "</ul>";
-console.log(' Task 2' , is31Flavors == 31);
- 
+ console.log('Task2', is31Flavors(originalFlavors));
   /*your code here
  taking 1 parameter which is an array so i would call it array
  array.length[31]
@@ -110,12 +107,11 @@ Use the addFlavor function below to do the following:
 2 parameters the first will be an array, the second will be a string
 use unshift
  */
-let addFlavor = originalFlavors
-
-addFlavor.unshift('Rainbow Sherbert');
-
-console.log(' Task 3' , addFlavor);
-
+function addFlavor(array, string){
+    array.unshift(string)
+    return array;
+}
+console.log('Task 3' , addFlavor(originalFlavors, 'Rainbow Sherbert'));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an
  item from the end of the array. 
@@ -128,13 +124,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return 
   ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-let removeLastFlavor = addFlavor;
-
-removeLastFlavor.unshift('Rainbow Sherbert');
-removeLastFlavor.pop();
-
-console.log(' Task 4' , removeLastFlavor);
-
+function removeLastFlavor(array){
+  array.pop();
+  return array;
+}
+console.log('Task 4' ,removeLastFlavor(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -149,10 +143,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 // 2 param - 1 array, 2 number of index []
-function getFlavorByIndex(array, number){
-return array[number];  
+funcion getFlavorByIndex(array, number){
+  return array[number];
 }
-console.log('Task 5', getFlavorByIndex(originalFlavors, 10));
+  console.log('Task 5' , this.getFlavorByIndex(originalFlavors, 2));
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -169,7 +164,7 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, flavour){
+function removeFlavorByName(array, flavor){
  
   for(let i = 0; i < array.length; i++){
     if(array[i]=== flavor){
