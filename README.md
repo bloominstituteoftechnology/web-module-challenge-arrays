@@ -1,7 +1,8 @@
 ## Advanced CSS and Intro to JavaScript
 
 ## Arrays
-one major change so i can save my forked repo
+
+changing something to save
 ## Objectives
 
 - use arrays to store and access data
