@@ -1,6 +1,6 @@
 ## Advanced CSS and Intro to JavaScript
 
-## Arrays
+# Arrays
 
 ## Objectives
 
@@ -19,7 +19,6 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 
 Using VSCode and Command Line:
 
-
 1. Fork the repo
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
@@ -34,14 +33,13 @@ Find the file `index.js` and complete the tasks until your returns look like the
 ### Testing & Debugging
 
 Open a second terminal inside of your project by clicking on the split terminal icon
-![alt text](assets/split_terminal.png "Split Terminal")
+![alt text](assets/split_terminal.png 'Split Terminal')
 
-Inside of your second terminal type `npm start` 
-![alt text](assets/npm_start.png "type npm start")
+Inside of your second terminal type `npm start`
+![alt text](assets/npm_start.png 'type npm start')
 
 You will be running your tests in one terminal and debugging in the other. As you work on your code you should make use of `console.log` to check your progress and debug.
-![alt text](assets/tests_debug_terminal_final.png "your terminal should look like this")
-
+![alt text](assets/tests_debug_terminal_final.png 'your terminal should look like this')
 
 ### Task 3: Stretch
 
