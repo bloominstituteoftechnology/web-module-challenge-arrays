@@ -46,15 +46,16 @@ Use the copy function below to do the following:
 */
 
 let copArray = [];
+
+
 function copy(arr1){
+  copyArr=[];
   for(let i=0;i<arr1.length;i++){
-    copArray.push(arr1[i]);
+    copyArr[i]= arr1[i];
   }
-  console.log(copArray);
-  return copArray;
+  return copyArr;
 }    
 
-copy(originalFlavors);
 
 
 
