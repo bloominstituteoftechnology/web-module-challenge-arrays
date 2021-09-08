@@ -81,9 +81,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(array){
- Push
-}
+function addFlavor(array, newFlavor){
+  array.unshift(newFlavor)
+  return array
+ }
+ console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
