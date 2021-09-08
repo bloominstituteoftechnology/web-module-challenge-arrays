@@ -1,5 +1,7 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+const { returnStatement, ifStatement } = require("@babel/types");
+
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
   "Banana Nut Fudge",
@@ -46,38 +48,9 @@ Use the copy function below to do the following:
 */
 
 function copy(array){
-  console.log("Banana Nut Fudge",
-  "Black Walnut",
-  "Burgundy Cherry",
-  "Butterscotch Ribbon",
-  "Cherry Macaron",
-  "Chocolate",
-  "Chocolate Almond",
-  "Chocolate Chip",
-  "Chocolate Fudge",
-  "Chocolate Mint",
-  "Chocolate Ribbon",
-  "Coffee",
-  "Coffee Candy",
-  "Date Nut",
-  "Eggnog",
-  "French Vanilla",
-  "Green Mint Stick",
-  "Lemon Crisp",
-  "Lemon Custard",
-  "Lemon Sherbet",
-  "Maple Nut",
-  "Orange Sherbet",
-  "Peach",
-  "Peppermint Fudge Ribbon",
-  "Peppermint Stick",
-  "Pineapple Sherbet",
-  "Raspberry Sherbet",
-  "Rocky Road",
-  "Strawberry",
-  "Vanilla",
-  "Vanilla Burnt Almond")
+  console.log([...array])
 }
+console.log(originalFlavors)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -90,8 +63,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 function is31Flavors(array){
-  if(array.length()=31){
-    console.log(TRUE)}
+  if(array.length){
+    console.log(array.length==31)}
 }
 is31Flavors(originalFlavors)
 
