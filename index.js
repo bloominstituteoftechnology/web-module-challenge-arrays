@@ -301,4 +301,3 @@ module.exports = {
   getRandomFlavors
 }
 
-Krystle Mitchell
