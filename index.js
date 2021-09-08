@@ -45,9 +45,16 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+let copArray = [];
+function copy(arr1){
+  for(let i=0;i<arr1.length;i++){
+    copArray.push(arr1[i]);
+  }
+  console.log(copArray);
+  return copArray;
 }    
+
+copy(originalFlavors);
 
 
 
@@ -64,9 +71,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(arr1){
+  const check = 31;
+  return copArray.length===check
 }
+ 
+console.log(is31Flavors(copArray));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,9 +91,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(arr, newFlavor){
+   arr.unshift(newFlavor);
+   return arr;
 }
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,8 +109,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(arr1){
+  arr1.pop();
+  return arr1;
 }
 
 
@@ -114,9 +127,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(arr, index){
+  return arr[index-1];
 }
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -134,8 +148,12 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(arr,flavor){
+  let index = arr.indexOf(flavor);
+  if(index !== -1){
+    arr.splice(index,1);
+  }
+  return arr;
 }
 
 
@@ -160,9 +178,16 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(arr,str){
+  let newArr = [];
+  for (let i=0;i<arr.length;i++){
+    if(arr[i].includes(str)){
+        newArr.push(arr[i]);
+    }
+  }
+  return newArr;
 }
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -300,4 +325,3 @@ module.exports = {
   getAverageWordLength,
   getRandomFlavors
 }
-
