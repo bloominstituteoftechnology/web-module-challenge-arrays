@@ -127,7 +127,7 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(arr, index){
-  return arr[index-1];
+  return arr[index];
 }
 
 
