@@ -45,9 +45,12 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function originalFlavors(/*your code here*/){
+function originalFlavors (arr) { 
+return arr
   /*your code here*/
 }    
+originalFlavors(originalFlavors)
+
 
 
 
