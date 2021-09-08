@@ -119,7 +119,7 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, number){
-  return array.slice(number-1,number,1)
+  return array.slice(number,number+1,1)
 }
 // console.log(getFlavorByIndex(originalFlavors, 2))
 
