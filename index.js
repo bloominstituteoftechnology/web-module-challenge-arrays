@@ -45,11 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-let copArray = [];
+
 
 
 function copy(arr1){
-  copyArr=[];
+  let copyArr=[];
   for(let i=0;i<arr1.length;i++){
     copyArr[i]= arr1[i];
   }
