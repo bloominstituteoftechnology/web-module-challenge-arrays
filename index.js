@@ -83,9 +83,14 @@ const originalFlavors = [
   */
   
   
-  function addFlavor(/*your code here*/){
+  function addFlavor(ArrayRec, NewFlavString){
    /*your code here*/
+    ArrayRec.unshift(NewFlavString);
+    let newArrayRec = ArrayRec;
+
+    return newArrayRec;
   }
+  console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
   
   
   /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,10 +102,12 @@ const originalFlavors = [
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
   */
   
-  function removeLastFlavor(/*your code here*/){
+  function removeLastFlavor(array4){
    /*your code here*/
+   array4.pop();
+   return array4;
   }
-  
+  console.log(removeLastFlavor(originalFlavors));
   
   
   /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,8 +119,9 @@ const originalFlavors = [
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
   */
   
-  function getFlavorByIndex(/*your code here*/){
+  function getFlavorByIndex(Array5, NumRec){
     /*your code here*/
+
   }
   
   
