@@ -121,8 +121,10 @@ const originalFlavors = [
   
   function getFlavorByIndex(Array5, NumRec){
     /*your code here*/
+    return Array5[NumRec];
 
   }
+  console.log(getFlavorByIndex(originalFlavors,5));
   
   
   /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -137,9 +139,13 @@ const originalFlavors = [
     HINT: You can use .splice() for this
   */
   
-  function removeFlavorByName(/*your code here*/){
+  function removeFlavorByName(Array6, FlavSearch){
     /*your code here*/
+     Array6.splice(Array6.indexOf(FlavSearch),1);
+   return Array6
   }
+  console.log(removeFlavorByName(originalFlavors, "Black Walnut"));
+  
   
   
   
