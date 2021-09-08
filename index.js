@@ -46,9 +46,9 @@ Use the copy function below to do the following:
 */
 
 function copy(originalFlavors){
-  const originalFlavors = [...originalFlavors];
-  const originalFlavors = originalFlavors.slice();
-}    
+  originalFlavors = originalFlavors.slice();
+  return originalFlavors
+} 
 console.log(copy(originalFlavors));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -62,9 +62,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 function is31Flavors(originalFlavors){
-  Array.isArray(original)
+  Array.isArray(originalFlavors)
 }
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -78,11 +77,11 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(originalFlavors, addFlavor){
+  originalFlavors.unshift(addFlavor)
+ return originalFlavors
 }
-
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
