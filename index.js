@@ -165,9 +165,28 @@ const originalFlavors = [
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
   */
   
-  function filterByWord(/*your code here*/){
-    /*your code here*/
+  function filterByWord(Array7, String7){
+   /*your code here*/
+   let i=0;
+   let NewListArray = [];
+   while(i<32){
+    // console.log(Array7.indexOf(String7));
+    // console.log(Array7[Array7.indexOf(String7)]);
+    // let splicenum = Array7.indexOf(String7);
+    // Array7.splice(splicenum,1);
+    // console.log(splicenum);
+    // console.log(Array7);
+    // let newArrayList = []
+    // newArrayList= newArrayList.push(Array7[splicenum]);
+    // console.log(newArrayList);
+    
+           
+    
+       i++;
+      
   }
+}
+  filterByWord(originalFlavors, "Chocolate");
   
   
   /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
