@@ -69,12 +69,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(arr){
  let arr = true;
- for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] <= 0) {
+ for (let i = 0; i < arr.length; i++) {
+  if (arr[i] <= 0) {
       result = false;
       break;
 }
-console.log (result)
+return returnArr
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -89,10 +89,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(arr) {
+ let addFlavor = ["Rainbow Sherbet!"]
+  return arr ( "Rainbow Sherbert")
 }
-
+arr.push(addFlavor(arr, "Rainbow Sherbert"))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
