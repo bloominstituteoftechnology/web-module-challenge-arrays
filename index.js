@@ -119,7 +119,7 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, number){
-  return array.slice(number,number+1,1)
+  return array[number]
 }
 // console.log(getFlavorByIndex(originalFlavors, 2))
 
@@ -141,8 +141,8 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array, flavor){
   for(let i=0; i<array.length; i++){
-    if(array[i].includes(flavor)){
-      console.log(array.splice(i,1))
+    if(array[i]===flavor){
+      array.splice(i,1)
     }
   }
   return array
