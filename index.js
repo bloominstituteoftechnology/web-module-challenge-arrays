@@ -160,11 +160,17 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(arr, string){
+  const newArray = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].inculdes(string)){
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
 }
 
-
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
