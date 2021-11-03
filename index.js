@@ -45,10 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 // take 1 parameter call it anything hold place to pass arguement
-function copy(/*your code here*/){
+function copy(array){
   //taking a spread of parameter 
+  return [...array];
 }    
-
+console.log('task1',copy(originalFlavors));
 
 
 
@@ -64,11 +65,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 //taking 1 parameter- its holding place for an array 
-function is31Flavors(/*your code here*/){
- /*your code here*/
- //conditional here, if true ruetrun true
+function is31Flavors(array){
+ /*your code here*/ 
+if(array.length === 31) {
+  return true;
+} else {
+  return false;
 }
-
+}
+console.log('task 2' , is31Flavors(originalFlavors))
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -82,12 +87,14 @@ Use the addFlavor function below to do the following:
 */
 //recieve array 2 parameter 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+     array.unshift(string)
+ 
+ return array;
  //unshift
  //return array
 }
-
+console.log('task 3:', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -100,11 +107,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 //recieve 1 paramter placeholder
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
-
+function removeLastFlavor(array){
+  array.pop()
+  return array;
 }
-
+console.log('task 4:', removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -118,12 +125,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 //2 parameterr array / number (holding place for an index)
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-  //array[0]
+function getFlavorByIndex(array, number){
+  return array[number];
 
 }
-
+console.log('task 5:',getFlavorByIndex(originalFlavors,2))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -140,14 +146,16 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 //array , string we wanna remove
-function removeFlavorByName(/*your code here*/){
- //loop throu array check index for exact match if exist remove it
- //splice 
-
-
-  /*your code here*/
+function removeFlavorByName(array,string){
+for (let i =0 ; i < array.length; i++) {
+  if (array[i]===string) {
+    array.splice(i,1);
+  }
 }
+return array;
 
+}
+console.log('task 6:', removeFlavorByName(originalFlavors,'Rocky Road'))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
