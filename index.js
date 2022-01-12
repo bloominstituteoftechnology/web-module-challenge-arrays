@@ -193,7 +193,14 @@ Use the filterByWord function below to do the following:
 */
 
 //2 para array, (string)
-function filterByWord(/*your code here*/){
+function filterByWord(array, 'Vanilla'){
+  const filterArray[];
+  for (let i = 0; i < array.length; i++){
+if(array[i].includes('Vanilla')){
+  filterArray.push(array);
+    }
+  }
+  return filterArray;
   /*your code here*/
   //create new array called filterArray to push values to
   //loop thru the array to check for the desired item (includes "=")
