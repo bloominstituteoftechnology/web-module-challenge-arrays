@@ -157,8 +157,13 @@ Use the removeFlavorByName function below to do the following:
 */
 //2 para array, index(string)
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, "Maple Nut"){
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === "Maple Nut"){
+      array.splice(i, 1);
+    }
+  }
+  return array;
   // loop thru array 
   //write a conditional checking to see if the index matches the given flavor 
   //if it does remve it (splice)
