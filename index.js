@@ -112,8 +112,10 @@ Use the removeLastFlavor function below to do the following:
 */
 
 //1 parameter array
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array){
  /*your code here*/
+array.pop();
+return array;
  //use the .pop to remove last item
  //return the array
 }
@@ -133,8 +135,8 @@ Use the getFlavorByIndex function below to do the following:
 
 //2 para array and number(i)
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, 3){
+  return.array[3];
   //return the array and call the desired index return array[i]
 }
 
