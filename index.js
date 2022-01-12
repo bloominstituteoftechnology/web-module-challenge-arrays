@@ -67,7 +67,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 /// 1 parameter array
 function is31Flavors(array){
- /*your code here*/
+ if (array.lenght === 31){
+   return true;
+ }
+ else{
+   return false;
+ }
  //check to see that the lenght of the array is 31
  // if it is we return true
  //else it is false
@@ -86,8 +91,10 @@ Use the addFlavor function below to do the following:
 */
 
 //2 parameters array, flavor
-function addFlavor(array, "flavor"){
+function addFlavor(array, "Luffy Flavor"){
  /*your code here*/
+ array.shift("Luffy Flavor");
+ return array;
  // use unshift to add the flavor to the fromt of the array
  // return the array 
 }
