@@ -49,7 +49,6 @@ function copy(array){
   const newArray = array.slice();
   return newArray;
 }    
-
 copy(originalFlavors);
 
 
@@ -64,9 +63,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+ if(array.length === 31){
+   return true;
+ }else{
+   return false;
+ }
 }
+is31Flavors(originalFlavors);
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,10 +86,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, String){
+ array.unshift(String);
+ return array;
 }
 
+addFlavor(originalFlavors, "Banana Split");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -97,10 +104,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+ array.pop();
+ return array;
 }
-
+removeFlavorByName(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -114,10 +122,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, i){
+  return(array[i]);
 }
-
+getFlavorByIndex(originalFlavors, 2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
