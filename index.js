@@ -76,8 +76,8 @@ console.log(is31Flavors(originalFlavors))
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Use the addFlavor function below to do the following:
-  1. Receive an array in the first parameter
-  2. Receive a new flavor as a string in the second parameter
+  1. Receive an array in the first parameter that will take the flavors array as an argument
+  2. Receive a string in the second parameter that will take the new flavor as as an argument
   3. The function adds the passed flavor to the front of the passed array
   4. The function should return the resulting array
 
@@ -90,7 +90,7 @@ function addFlavor(arr, newFlavor){
   return arr
 }
 
-console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
+console.log('TASK 3', addFlavor(originalFlavors, 'Rainbow Sherbert'))
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
 
