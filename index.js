@@ -1,4 +1,4 @@
-/*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/* ❗❗ REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK ❗❗*/
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
@@ -45,9 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(arr){
+  return arr.slice()
 }    
+
+console.log(copy(originalFlavors))
 
 
 
@@ -64,16 +66,18 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(arr){
+  return arr.length === 31
 }
+
+console.log(is31Flavors(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Use the addFlavor function below to do the following:
-  1. Receive an array
-  2. Receive a new flavor as a string
+  1. Receive an array in the first parameter
+  2. Receive a new flavor as a string in the second parameter
   3. The function adds the passed flavor to the front of the passed array
   4. The function should return the resulting array
 
@@ -81,11 +85,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(arr, newFlavor){
+  arr.unshift(newFlavor)
+  return arr
 }
 
-
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
 
