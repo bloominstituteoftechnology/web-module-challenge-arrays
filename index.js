@@ -129,8 +129,8 @@ console.log(getFlavorByIndex(originalFlavors, 23))
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
 
 Use the removeFlavorByName function below to do the following:
-  1. Receive an array
-  2. Receive a flavor as a string
+  1. Receive an array in the first parameter that will take the flavors array as an argument
+  2. Receive a string in the second parameter that will take the flavor name as as an argument
   3. Remove the received flavor from the received array
   4. Return the resulting array that now contains one less flavor
 
@@ -139,11 +139,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(arr, removeThis){
+  const flavorIndex = arr.indexOf(removeThis)
+  arr.splice(flavorIndex, 1)
+  return arr
 }
 
-
+console.log(removeFlavorByName(originalFlavors, 'Black Walnut'))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
