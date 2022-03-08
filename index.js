@@ -152,8 +152,8 @@ July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around by passing in those specific strings.
 
 Use the filterByWord function below to do the following:
-  1. Receive an array
-  2. Receive a string (example: "chocolate")
+  1. Receive an array in the first parameter that will take the flavors array as an argument
+  2. Receive a string in the second parameter that will take the filter value as as an argument (example: "chocolate")
   3. Check to see if any of the flavors in the array contain that string
   4. If they do, add them to a new array
   5. Return the new array that contains the filtered flavors
@@ -165,10 +165,17 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(arr, word){
+  const filtered = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].includes(word)) {
+        filtered.push(arr[i])
+      }
+      console.log(filtered)
+    }
+  return filtered
 }
-
+console.log('task 7', filterByWord(originalFlavors, "Chocolate"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
