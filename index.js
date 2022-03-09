@@ -1,4 +1,4 @@
-/*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/* ❗❗ REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK ❗❗*/
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
@@ -45,11 +45,10 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
+
 function copy(/*your code here*/){
   /*your code here*/
-}    
-
-
+}
 
 
 
@@ -65,15 +64,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(/*your code here*/){
- /*your code here*/
-}
+  /*your code here*/
+ }
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Use the addFlavor function below to do the following:
-  1. Receive an array
-  2. Receive a new flavor as a string
+  1. Receive an array in the first parameter that will take the flavors array as an argument
+  2. Receive a string in the second parameter that will take the new flavor as as an argument
   3. The function adds the passed flavor to the front of the passed array
   4. The function should return the resulting array
 
@@ -82,8 +83,9 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(/*your code here*/){
- /*your code here*/
-}
+  /*your code here*/
+ }
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,6 +99,7 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
+
 function removeLastFlavor(/*your code here*/){
  /*your code here*/
 }
@@ -107,25 +110,26 @@ function removeLastFlavor(/*your code here*/){
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-  1. Recieve an array
-  2. Receive a number (the desired index)
+  1. Recieve an array in the first parameter that will take the flavors array as an argument
+  2. Receive a number in the second parameter that will take the the desired index as an argument
   3. Return the flavor located at the received index position
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
+
 
 function getFlavorByIndex(/*your code here*/){
   /*your code here*/
 }
 
 
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
-as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
+As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
 
 Use the removeFlavorByName function below to do the following:
-  1. Receive an array
-  2. Receive a flavor as a string
+  1. Receive an array in the first parameter that will take the flavors array as an argument
+  2. Receive a string in the second parameter that will take the flavor name as as an argument
   3. Remove the received flavor from the received array
   4. Return the resulting array that now contains one less flavor
 
@@ -142,13 +146,11 @@ function removeFlavorByName(/*your code here*/){
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
-Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
-that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around 
-by passing in those specific strings.
+Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around by passing in those specific strings.
 
 Use the filterByWord function below to do the following:
-  1. Receive an array
-  2. Receive a string (example: "chocolate")
+  1. Receive an array in the first parameter that will take the flavors array as an argument
+  2. Receive a string in the second parameter that will take the filter value as as an argument (example: "chocolate")
   3. Check to see if any of the flavors in the array contain that string
   4. If they do, add them to a new array
   5. Return the new array that contains the filtered flavors
@@ -160,9 +162,11 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
+
 function filterByWord(/*your code here*/){
   /*your code here*/
 }
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 

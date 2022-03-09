@@ -21,13 +21,13 @@ Using VSCode and Command Line:
 
 
 1. Fork the repo
-2. Go into canvas and connect your reop to codegrade
+2. Go into canvas and connect your repo to codegrade
 3. Clone your forked version of the repo
 4. DO NOT CREATE A BRANCH. You will be pushing your changes to the main/master today
 5. cd into your repo
 6. open the terminal in your vs code and type `npm install`
 7. next type `npm run test` in your terminal
-8. Complete your work making regular commits to main/ master your codegrade score will update each time you make a push.
+8. Complete your work making regular commits to main/master. Your codegrade score will update each time you make a push.
 
 ### Task 2: MVP
 
@@ -55,6 +55,8 @@ There are several stretch goals inside `index.js`. You may work on these once yo
 
 Make sure you are invoking your function after defining and wrapping a console.log around the invocation in order to view results in the console.
 
+EXAMPLE: console.log(myFunction(argument))
+
 ## Resources
 
 🤝[W3 Schools - JavaScript Arrays](https://www.w3schools.com/js/js_arrays.asp)
@@ -63,4 +65,4 @@ Make sure you are invoking your function after defining and wrapping a console.l
 
 ## Submission format
 
-Please submit your project via codegrade by following [these instructions](https://notion.so.bloomtech.BloomTech-Git-Flow-Step-by-step-269f68ae3bf64eb689a8328715a179f9) See part 2, submitting an assignment with codegrade
+Please submit your project via codegrade by following [these instructions](https://bloomtech.notion.site/bloomtech/BloomTech-Git-Flow-Step-by-step-269f68ae3bf64eb689a8328715a179f9) See part 2, submitting an assignment with codegrade
