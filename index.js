@@ -46,9 +46,40 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
-}
+const originalFlavors = [
+  "Banana Nut Fudge",
+  "Black Walnut",
+  "Burgundy Cherry",
+  "Butterscotch Ribbon",
+  "Cherry Macaron",
+  "Chocolate",
+  "Chocolate Almond",
+  "Chocolate Chip",
+  "Chocolate Fudge",
+  "Chocolate Mint",
+  "Chocolate Ribbon",
+  "Coffee",
+  "Coffee Candy",
+  "Date Nut",
+  "Eggnog",
+  "French Vanilla",
+  "Green Mint Stick",
+  "Lemon Crisp",
+  "Lemon Custard",
+  "Lemon Sherbet",
+  "Maple Nut",
+  "Orange Sherbet",
+  "Peach",
+  "Peppermint Fudge Ribbon",
+  "Peppermint Stick",
+  "Pineapple Sherbet",
+  "Raspberry Sherbet",
+  "Rocky Road",
+  "Strawberry",
+  "Vanilla",
+  "Vanilla Burnt Almond"
+]
+
 
 
 
@@ -58,14 +89,15 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
   2. Check to see if the array given is 31 flavors
   3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
 
-
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
+console.log(originalFlavors.length);
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
- }
+(if originalFlavors == 31);{
+console.log("true")
+}
+ 
 
 
 
@@ -82,10 +114,8 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
- }
-
+originalFlavors.unshift("Rainbowsherbert")
+console.log(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -99,10 +129,8 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
-}
+originalFlavors.pop();
+console.log(originalFlavors);
 
 
 
@@ -118,9 +146,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-}
+console.log(originalFlavors[13]);
+/* returns "Coffee Candy"*/
 
 
 
@@ -138,11 +165,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
-}
+let deletedOriginalFlavors = originalFlavors.splice(14,1);
 
-
+console.log(originalFlavors);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -163,9 +188,8 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
-}
+console.log(originalFlavors.includes("Chocolate"));
+
 
 
 
@@ -181,9 +205,15 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+
+let length = originalFlavors.length;
+console.log(length);
+
+let total = 0;
+for (let i = 0; i < originalFlavors.length; i++) {
+    total += originalFlavors[i];
 }
+console.log(total);
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -199,10 +229,10 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-  /*code here*/
-}
-
+for (let i = 0; i < 32; i++){
+  let getRandomFlavors = originalFlavors[Math.floor(Math.random() * originalFlavors.length)] ;
+  }
+  
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 // const newFlavors = [
 //   "Date night",
