@@ -46,8 +46,9 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(flavorArray){
+  const newArr = flavorArray
+  return newArr
 }
 
 
@@ -63,8 +64,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(flavorArray){
+  return flavorArray.length === 31 ? true : false
  }
 
 
@@ -82,8 +83,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(flavorArray, newFlavor){
+  flavorArray.unshift(newFlavor)
+  return flavorArray
  }
 
 
@@ -100,8 +102,9 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(flavorArray){
+ flavorArray.pop()
+ return flavorArray
 }
 
 
@@ -118,8 +121,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavorArray, arrayIndex){
+  return flavorArray[arrayIndex]
 }
 
 
@@ -138,8 +141,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(flavorArray, flavor){
+  for(let i = 0; i <= flavorArray.length; i++){
+    if(flavorArray[i] === flavor){
+     flavorArray.splice([i],1)
+    }
+  }
+  return flavorArray
 }
 
 
@@ -163,8 +171,14 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(flavorArray, flavor){
+	let seasonalFlavors = []
+  for(let i = 0; i < flavorArray.length; i++){
+    if(flavorArray[i].includes(flavor)){
+      seasonalFlavors.push(flavorArray[i])
+    }
+  }
+	return (seasonalFlavors)
 }
 
 
