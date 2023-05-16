@@ -110,7 +110,7 @@ function removeLastFlavor(array){
  return array;
 }
 
-
+console.log('task 4:', removeLastFlavor(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -124,7 +124,7 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array){
   /*your code here*/
 }
 
